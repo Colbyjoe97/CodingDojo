@@ -1,0 +1,32 @@
+<div class="outer">
+  <div class="wrapper">
+    <div class="title">
+      <h1>Anonymous Notes</h1>
+    </div>
+
+
+
+    <div class="creation">
+      <p class="text-danger">{{ error }}</p>
+      <form (submit)="submitNote()">
+        <h4><b>Note:</b></h4>
+        <input type="text" name="newNote.note" [(ngModel)]="newNote.note" class="form-control col-8">
+        <div class="text-center mt-2">
+          <button class="btn btn-success">Submit Note</button>
+        </div>
+      </form>
+    </div>
+
+
+
+    <div class="allNotes">
+      <div *ngFor="let n of notes">
+        <div class="note">
+          <p class="text-right">Noted on: {{ n.createdAt | date:'MMMM dd, yyyy, hh:mm:ss a' }}</p>
+          <p>{{ n.note }}</p>
+          <!-- <button class="btn btn-danger"(click)="deleteNote(n)">Delete</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

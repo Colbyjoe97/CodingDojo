@@ -1,0 +1,17 @@
+#timeouter {
+    margin-left: 35%;
+    margin-top: 10%;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    width: 500px;
+    height: 150px;
+    background-color: black;
+}
+#timeinner {
+    width: 174px;
+    margin-left: 158px;
+}
+#timeinner h1 {
+    margin-top: 35px;
+    color: yellow;
+}

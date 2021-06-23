@@ -1,0 +1,10 @@
+<% @user.each do |user| %>
+    <h1>Editing <%= user.name %></h1>
+
+    <form action="/edit/<%=user.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <p>Name:</p>
+        <input type="text" name="name" placeholder="<%=user.name%>">
+        <button class="btn btn-success">Submit Changes</button>
+    </form>
+<% end %>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ loggedInUser.first_name }}'s Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'success.css' %}">
+</head>
+<body>
+    <h1>Hello {{ loggedInUser.first_name }} {{ loggedInUser.last_name }}</h1>
+    <p><a href="/" id="logout">Logout</a></p>
+    <p><a href="/create" id="create">Create a new movie</a></p>
+    <p>Your favorited movies:</p>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Duration (Min)</th>
+            <th>Release Date</th>
+            <th>Added By</th>
+            <th>Options</th>
+        </tr>
+    {% for movie in favMovies %}
+        <tr>
+            <th><a href="/viewMovie/{{movie.id}}" name="view">{{ movie.title }}</a></th>
+            <th>{{ movie.duration }}</th>
+            <th>{{ movie.release_date }}</th>
+            <th>{{ movie.created_by.first_name }} {{ movie.created_by.last_name }}</th>
+            <th><a href="/removeFav/{{movie.id}}" name="unfav">Unfavorite Movie</a>
+                {% if movie.created_by.id == loggedInUser.id %}
+                <a href="/deleteMovie/{{movie.id}}" name="delete"> | Delete</a><a href="/editMovie/{{movie.id}}" name="edit"> | Edit</a>
+                {% endif %}
+            </th>
+        </tr>
+    {% endfor %}
+    </table>
+    <p>Other Movies:</p>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Duration (Min)</th>
+            <th>Release Date</th>
+            <th>Added By</th>
+            <th>Options</th>
+        </tr>
+    {% for movie in otherMovies %}
+        <tr>
+            <th><a href="/viewMovie/{{movie.id}}" name="view">{{ movie.title }}</a></th>
+            <th>{{ movie.duration }}</th>
+            <th>{{ movie.release_date }}</th>
+            <th>{{ movie.created_by.first_name }} {{ movie.created_by.last_name }}</th>
+            <th><a href="/addFav/{{movie.id}}" name="unfav">Add To Favorites</a>
+                {% if movie.created_by.id == loggedInUser.id %}
+                <a href="/deleteMovie/{{movie.id}}" name="delete"> | Delete</a><a href="/editMovie/{{movie.id}}" name="edit"> | Edit</a>
+                {% endif %}
+            </th>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

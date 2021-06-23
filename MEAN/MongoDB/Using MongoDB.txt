@@ -1,0 +1,47 @@
+use my_first_db
+
+db.createCollection("students")
+
+db.students.insert({name: "Jacob", home_state: "Maryland", lucky_number: 15, birthday: {month:11, day:05, year:2015}})
+db.students.insert({name: "Sean", home_state: "Washington", lucky_number: 5, birthday: {month:06, day:12, year:2000}})
+db.students.insert({name: "Stacie", home_state: "California", lucky_number: 2, birthday: {month:07, day:25, year:2001}})
+db.students.insert({name: "Colby", home_state: "Pennsylvania", lucky_number: 7, birthday: {month:03, day:06, year:1997}})
+db.students.insert({name: "Hank", home_state: "California", lucky_number: 1, birthday: {month:09, day:09, year:2009}})
+
+db.students.find().pretty()
+
+db.students.find({home_state: "California"}).pretty()
+
+db.students.find({lucky_number: {$gt: 3}}).pretty()
+
+db.students.find({lucky_number: {$lte: 10}}).pretty()
+
+db.students.find({lucky_number: {$gte: 2, $lte: 9}}).pretty()
+
+db.students.update({name: "Jacob"}, {$set: {interests: ["Coding", "Brunch", "MongoDB", "Working"]}})
+db.students.update({name: "Sean"}, {$set: {interests: ["Coding", "Brunch", "MongoDB", "Exercising"]}})
+db.students.update({name: "Stacie"}, {$set: {interests: ["Coding", "Brunch", "MongoDB", "Video Games"]}})
+db.students.update({name: "Colby"}, {$set: {interests: ["Coding", "Brunch", "MongoDB", "Working Out"]}})
+db.students.update({name: "Hank"}, {$set: {interests: ["Coding", "Brunch", "MongoDB", "Running"]}})
+
+db.students.updateMany({}, {$set:{interests:["coding", "brunch", "mongoDB"]}})
+
+db.students.update({name: "Colby"}, {$push: {interests: "Taxes"}})     -->     (Adds 'Taxes' to the end of the 'interests' array)
+
+db.students.update({name: "Colby"}, {$pop: {interests: 1}})     -->     (1 means last item in array, -1 would be the first item in array)
+
+db.students.deleteMany({home_state: "California"})
+
+db.students.deleteOne({name: "Colby"})
+
+db.students.deleteOne({lucky_number: {$gte: 5}})
+
+db.students.update({}, {$set: {"number_of_belts": 0}},{multi:true})
+
+db.students.update({home_state: "Washington"}, {$inc: {"number_of_belts":1}},{multi:true})
+
+db.students.updateMany({}, {$rename: {"number_of_belts": "belts_earned"}})
+
+db.students.update({}, {$unset: {lucky_number:1}}, false, true)
+
+db.students.update({}, {$set: {updated_on:Date()}})

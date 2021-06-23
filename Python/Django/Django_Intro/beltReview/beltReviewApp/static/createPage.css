@@ -1,0 +1,16 @@
+#wrap{
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 300px;
+    height: 100%;
+    padding: 7px;
+}
+#wrap h1{
+    margin-left: 10px;
+}
+#submit{
+    margin-left: 100px;
+}
+#message{
+    color: red;
+}

@@ -1,0 +1,40 @@
+﻿@model Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <form asp-action="survey"  method="post">
+        <h2>Please fill out the form below:</h2>
+        <span asp-validation-for="name"></span>
+        <p id="name">Your Name: <input asp-for="name"></p>
+
+        <span asp-validation-for="locations"></span>
+        <label for="locations" id="locations">Dojo Location: </label>
+        <select asp-for="locations" id="loc">
+            <option value="Bellevue">Bellevue</option>
+            <option value="Las Angeles">Las Angeles</option>
+            <option value="Maryland">Maryland</option>
+            <option value="New York">New York</option>
+        </select><br>
+
+        <span asp-validation-for="languages"></span>
+        <label for="languages" id="lan">Favorite Language: </label>
+        <select asp-for="languages" id="lang">
+            <option value="Python">Python</option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+
+        <span asp-validation-for="comment"></span>
+        <p id="comment">Comment (Optional): <br><textarea rows=4 cols=20 asp-for="comment"></textarea></p>
+        <input type="submit" value="Submit Form" id="submit">
+    </form>
+</body>
+</html>

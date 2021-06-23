@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a movie for the list</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    {% endif %}
+    <form action="/updateMovie/{{this_movie.id}}" method="post">
+    {% csrf_token %}
+        <p>Title: <input type="text" name="title" id="title" value="{{ this_movie.title }}"></p>
+        <p>Duration (Minutes): <input type="number" name="dur" value="{{ this_movie.duration }}"></p>
+        <p>Release Date: <input type="date" name="rd" value="{{ this_movie.release_date|date:'Y-m-d' }}"></p>
+        <p>Description:</p>
+        <textarea id="desc", name="desc", cols="30", rows="7" >{{ this_movie.description }}</textarea>
+        <div>
+            <input type="submit" value="Update Movie">
+        </div>
+    </form>
+</body>
+</html>

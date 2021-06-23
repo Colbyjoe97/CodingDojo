@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'results.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Survey Information</h1>
+        <p>Name: {{ request.session.formInfo.name }}</p>
+        <p>Email: {{ request.session.formInfo.email }}</p>
+        <p>Dojo Location: {{ request.session.formInfo.location }}</p>
+        <p>Favorite Language: {{ request.session.formInfo.language }}</p>
+        <p>You heard about us from: {{ request.session.formInfo.checkbox }}</p>
+        <p>Would you like to receive emails from us: {{ request.session.formInfo.emails }}</p>
+        <p>Your comment: {{ request.session.formInfo.comment }}</p>
+    </div>
+</body>
+</html>

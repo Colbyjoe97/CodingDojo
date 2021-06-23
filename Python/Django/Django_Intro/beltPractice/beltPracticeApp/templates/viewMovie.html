@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{this_movie.title}}</title>
+</head>
+    <h1>Viewing {{this_movie.title}}</h1>
+    <p>Duration: {{ this_movie.duration }} min</p>
+    <p>Release Date: {{ this_movie.release_date }}</p>
+    <p>Description: {{ this_movie.description }}</p>
+    <p>Users who favorited:</p>
+    {% for movie in this_movie.favorited_by.all %}
+        <li>{{ movie.first_name }} {{ movie.last_name }}</li>
+    {% endfor %}
+    <a href="/success">Return Home</a>
+</body>
+</html>

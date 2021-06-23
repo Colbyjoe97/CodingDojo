@@ -1,0 +1,36 @@
+@model List<Chef>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @foreach(Chef c in Model)
+    {
+    <div class="card col-4">
+        <div class="card-body">
+            <h2 class="card-title text-center">@c.FirstName @c.LastName</h2>
+            <h4 class="card-subtitle text-muted text-center">Number of dishes: @c.CreatedDishes.Count</h4>
+            <table class="table table-hover">
+                <thead>
+                    <th>Name</th>
+                    <th>Calories</th><br>
+                </thead>
+                <tbody>
+                    @foreach(Dish d in c.CreatedDishes)
+                    {
+                        <tr>
+                            <td>@d.Name</td>
+                            <td>@d.Calories</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+</body>
+</html>

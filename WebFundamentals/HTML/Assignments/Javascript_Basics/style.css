@@ -1,0 +1,98 @@
+#wrapper {
+    width: 970px;
+    height: 970px;
+    background-color: #0f3c66;
+    padding: 15px;
+    display: inline-block;
+}
+
+#red {
+    background-color: red;
+    height: 75px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+#title h1{
+    font-size: xxx-large;
+    color: ghostwhite;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+#green {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(37, 161, 161);
+    border-radius: 25px;
+    display: inline-block;
+}
+
+#green p {
+    margin-left: 15px;
+    margin-top: 35px;
+    position: fixed;
+    color: cyan;
+}
+
+#green a {
+    color: cyan;
+}
+
+#top {
+    margin-top: 55px;
+}
+
+#info {
+    width: 680px;
+    height: 725px;
+    margin-left: 35px;
+    background-color: #192424;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#info h2 {
+    color: ghostwhite;
+    padding-left: 25px;
+    font-size: xx-large;
+}
+
+#info p {
+    padding-left: 20px;
+    color: ghostwhite;
+}
+
+#info li {
+    color: ghostwhite;
+}
+
+#info a{
+    color: cyan;
+    margin-right: 5px;
+}
+
+#info span {
+    color: rgb(155, 139, 228);
+}
+
+#end {
+    background-color: gray;
+    margin-top: 25px;
+    width: 950px;
+    height: 75px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+#end p {
+    margin-left: 25px;
+    vertical-align: bottom;
+    font-size: large;
+    color: ghostwhite;
+}
+
+#end a{
+    color: cyan;
+}

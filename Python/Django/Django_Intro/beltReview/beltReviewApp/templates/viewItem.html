@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewing {{this_item.name}}</title>
+</head>
+<body>
+    <h1>{{ this_item.name }} info:</h1>
+    <p>Users who added this product/item under their wish list:</p>
+    {% for item in this_item.favorited_by.all %}
+        <li>{{item.first_name}}</li>
+    {% endfor %}
+</body>
+</html>

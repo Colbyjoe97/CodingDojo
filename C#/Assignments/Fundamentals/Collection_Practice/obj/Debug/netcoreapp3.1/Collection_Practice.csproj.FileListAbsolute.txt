@@ -1,0 +1,13 @@
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.exe
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.deps.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.runtimeconfig.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.runtimeconfig.dev.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.dll
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\bin\Debug\netcoreapp3.1\Collection_Practice.pdb
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.csprojAssemblyReference.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.AssemblyInfoInputs.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.AssemblyInfo.cs
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.csproj.CoreCompileInputs.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.dll
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.pdb
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Collection_Practice\obj\Debug\netcoreapp3.1\Collection_Practice.genruntimeconfig.cache

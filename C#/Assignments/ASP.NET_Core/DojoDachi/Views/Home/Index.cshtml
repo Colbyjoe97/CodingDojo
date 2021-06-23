@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/index.css">
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+    <div class="text-center">
+        <h1 class="display-4">DojoDachi!</h1>
+    </div>
+    <p class="text-center" id="stats"></p>
+    <ul id="stats">
+        <li>Happiness: @ViewBag.Happy</li>
+        <li>Fullness: @ViewBag.Full</li>
+        <li>Energy: @ViewBag.Energy</li>
+        <li>Meals: @ViewBag.Meals</li>
+    </ul>
+    <div id="gameBody">
+        <img id="pic" src="@ViewBag.Img" alt="@ViewBag.Msg">
+        <p class="text-center">@ViewBag.Msg</p>
+    </div>
+    <div id="buttons">
+        @if(ViewBag.Msg != "Congratulations! You Won!" && ViewBag.Msg != "You Lost!")
+        {
+@* ----------------------------- *@
+            @if(ViewBag.Meals > 0)
+            {
+                <button id="actions"><a href="/Feed">Feed</a></button>
+            }
+            else
+            {
+                <button id="actions">Feed<br>(You're out of meals!)</button>
+            }
+@* ----------------------------- *@
+            @if(ViewBag.Energy > 0)
+            {
+                <button id="actions"><a href="/Play">Play</a></button>
+            }
+            else
+            {
+                <button id="actions">Play<br>You're out of energy!</button>
+            }
+@* ----------------------------- *@
+            @if(ViewBag.Energy > 0)
+            {
+                <button id="actions"><a href="/Work">Work</a></button>
+            }
+            else
+            {
+                <button id="actions">Work<br>You're out of energy!</button>
+            }
+@* ----------------------------- *@
+            <button id="actions"><a href="/Sleep">Sleep</a></button>
+        }
+@* ----------------------------- *@
+        else if(ViewBag.Msg == "You Lost!" || ViewBag.Msg == "Congratulations! You Won!")
+        {
+            <button id="restart"><a href="Restart">Play Again</a></button>
+        }
+    </div>
+</body>
+</html>

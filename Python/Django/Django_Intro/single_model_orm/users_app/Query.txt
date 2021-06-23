@@ -1,0 +1,24 @@
+user1 = User(first_name="john", last_name="snow", email_address="jsnow@gmail.com", age=32)
+user2 = User.objects.create(first_name="Tony", last_name="Kroos", email_address="tkroos@gmail.com", age=28)
+user3 = User.objects.create(first_name="Colby", last_name="Dumonchelle", email_address="dumonchelle123@gmail.com", age=23)
+
+print(User)
+
+
+User.objects.last()
+
+
+User.objects.first()
+
+
+user3 = User.objects.get(id=3)
+user3.last_name = "Pancakes"
+user3.save()
+
+
+user2 = User.objects.get(id=2)
+user2.delete()
+
+
+User.objects.all().order_by("first_name")
+User.objects.all().order_by("-first_name")

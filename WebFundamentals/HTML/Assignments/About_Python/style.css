@@ -1,0 +1,218 @@
+#wrapper {
+    width: 1000px;
+    background-color: rgb(36 80 118);
+}
+
+#header {
+    display: inline-block;
+    width: 1000px;
+}
+#header img {
+    padding: 25px;
+    width: 350px;
+    display: inline-block;
+}
+
+#header p {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 375px;
+    color: white;
+}
+
+#header span {
+     color: #bca509;
+     text-decoration: underline;
+}
+
+#searchbar {
+    margin-left: 675px;
+    margin-top: -100px;
+    width: 300px;
+    height: 95px;
+    background-color: rgb(68 68 68);
+    border-radius: 10px;
+    box-shadow: 4px 4px #1e2020;
+}
+#searchbar input {
+    margin-top: 20px;
+    margin-left: 25px;
+    padding: 15px;
+    background-color: white;
+}
+
+#go {
+    background-color: #245076;
+    width: 50px;
+    height: 35px;
+    margin-left: 231px;
+    margin-top: -45px;
+    border: 3px solid #c0c0c0;
+    box-shadow: 2px 2px #1e2020;
+    border-radius: 5px;
+}
+
+#go p {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+#go p a  {
+    text-decoration: none;
+    color: white;
+}
+
+.topbanner {
+    margin-top: 50px;
+    margin-left: 51px;
+    border-radius: 5px;
+    height: 75px;
+    background-color: #437cad;
+    display: inline-flex;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px #1f2326;
+}
+
+.topbanner ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.topbanner li {
+    margin-top: 10px;
+    margin-right: 50px;
+    color: white;
+    font-size: x-large;
+}
+
+.topbanner li a {
+    text-decoration: none;
+    color: white;
+}
+
+.guides ul {
+   list-style-type: "\00BB";
+   color: #e2c238;
+   width: 200px;
+   margin-top: 50px;
+   text-align: center;
+   list-style-position: inside;
+}
+
+.guides li {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.guides span {
+    color: white;
+    text-decoration: underline;
+    font-size: larger;
+    margin-left: 5px;
+}
+
+#aboutpython {
+    width: 700px;
+    margin-left: 250px;
+    margin-top: -275px;
+}
+#aboutpython p {
+    color: white;
+    font-size: large;
+    text-align: center;
+}
+
+.generaltips {
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.generaltips li {
+    list-style-type: none;
+    margin-top: 15px;
+    color: #e9c737;
+    text-align: center;
+    font-size: x-large;
+}
+
+.generaltips span {
+    color: white;
+    font-size: large;
+}
+
+.generalinfo {
+    display: inline-flex;
+    background-color: white;
+    width: 1000px;
+    height: 300px;
+    border-top: 5px solid #355068;
+}
+
+.box {
+    margin-top: 20px;
+    margin-left: 43px;
+    margin-right: 69px;
+    border-top: 5px solid #73a7d5;
+    width: 402px;
+    display: inline-flex;
+}
+
+.box h2 {
+    display: inline-flex;
+    text-align: center;
+    width: 750px;
+    margin-top: 3px;
+    margin-right: 110px;
+    margin-left: 110px;
+}
+
+.box p {
+    margin-top: 46px;
+    margin-left: -375px;
+    text-align: center;
+    font-size: medium;
+}
+
+.generalinfo ul {
+    margin-top: 125px;
+    margin-right: 0px;
+    list-style-type: square;
+}
+
+.generalinfo li {
+    margin-left: -330px;
+    margin-top: 10px;
+}
+
+.generalinfo li a {
+    color: #89b5dc;
+}
+
+#footer {
+    background: linear-gradient(180deg, rgba(37,82,121,1) 11%, rgba(51,116,172,1) 49%);
+    width: 1000px;
+    height: 141px;
+}
+
+#footer li {
+    color: #7baedb;
+    list-style-type: none;
+    display: inline-flex;
+    margin-right: 20px;
+    margin-left: 55px;
+    margin-top: 60px;
+    font-size: x-large;
+}
+
+#footer p {
+    color: #7baedb;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+#footer li a {
+    text-decoration: none;
+    color: #7baedb;
+}

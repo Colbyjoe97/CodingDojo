@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* Home Page */
+.homeWrapper {
+    padding: 10px;
+    text-align: center;
+}
+.left {
+    display: inline-flex;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 15px;
+    width: 250px;
+}
+.right {
+    display: inline-flex;
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+}
+
+/* Events Page */
+.eventWrapper {
+    padding: 15px;
+}
+.eventBanner {
+    display: inline-flex;
+    margin-left: 5vw;
+}
+.accountActions {
+    margin-left: 65vw;
+}
+.accountActions a {
+    margin-left: 20px;
+}
+.closeEvents, .otherEvents, .createEvent {
+    margin-left: 5vw;
+}
+.closeEvents table, .otherEvents table {
+    width: 45vw;
+}
+
+
+/* Show Page */
+.showWrapper {
+    padding: 20px;
+}
+.eventLeft {
+    display: inline-flex;
+    margin-top: 5vh;
+}
+.commentSection {
+    overflow:auto;
+}
+.eventRight {
+    margin-top: 5vh;
+    margin-left: 15vw;
+    display: inline-flex;
+    height: 40vh;
+    width: 30vw;
+    border: 1px solid black;
+}
+.lowerRight {
+    margin-left: 36.5vw;
+    width: 30vw;
+    height: 12vh;
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 50px;
+}
+.lowerRight button {
+    margin-left: 55px;
+}

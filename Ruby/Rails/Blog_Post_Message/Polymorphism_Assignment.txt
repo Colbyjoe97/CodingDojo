@@ -1,0 +1,24 @@
+1. Created comment model:
+rails g model Comment content:text commentable:references{polymorphic}
+
+2. Migrated:
+rake db:migrate
+
+3. Entered console:
+rails c
+
+4. Created some comments:
+Comment.create(commentable:Blog.first, content:"This is a comment!")
+Comment.create(commentable:User.first, content:"This is a comment!")
+Comment.create(commentable:Post.first, content:"This is a comment!")
+
+5. Found all comments:
+Comment.all
+
+6. Updated a comment:
+comment = Comment.first
+comment.content = "Here's a comment!"
+comment.save
+
+7. Deleted a comment:
+Comment.last.delete

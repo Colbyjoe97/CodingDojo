@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belt Practice</title>
+</head>
+<body>
+    <h1>Register an account</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    {% endif %}
+    <form action="/register" method="post" id="register">
+    {% csrf_token %}
+        <p>First Name: <input type="text" name="fname"></p>
+        <p>Last Name: <input type="text" name="lname"></p>
+        <p>Username: <input type="text" name="uname"></p>
+        <p>Birthday: <input type="date" name="bday"></p>
+        <p>Password: <input type="text" name="pass"></p>
+        <p>Confirm Password: <input type="text" name="confirmPass"></p>
+        <input type="submit" id="submit" value="Create Account">
+    </form>
+    <h1>-------------------------------------------------------------</h1>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+    {% csrf_token %}
+        <p>Username: <input type="text" name="username"></p>
+        <p>Password: <input type="text" name="password"></p>
+        <input type="submit" id="logsubmit" value="Login">
+    </form>
+</body>
+</html>

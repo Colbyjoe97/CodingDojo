@@ -1,0 +1,65 @@
+h1 {
+    margin-left: 35%;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+h2 {
+    margin-left: 35%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#second {
+    margin-left: 44%
+}
+
+form {
+    margin-left: 40%;
+    margin-top: 6vh;
+}
+
+#submit {
+    margin-left: 10%;
+    margin-top: 3vh;
+}
+
+.boxred {
+    background-color: red;
+    width: 310px;
+    height: 285px;
+    padding-top: 35px;
+    padding-right: 55px;
+    margin-left: 40%
+}
+.boxred h1 {
+    font-size: 30px;
+    padding-top: 40px;
+    margin-left: 90px;
+    color: white;
+}
+.boxgreen {
+    background-color: green;
+    width: 310px;
+    height: 285px;
+    padding-top: 35px;
+    padding-right: 55px;
+    margin-left: 40%;
+}
+
+.boxgreen h1 {
+    font-size: 80px;
+    padding-top: 0px;
+    margin-left: 40px;
+    color: white;
+}
+.boxgreen p {
+    margin-left: 90px;
+    font-size: 20px;
+    color: white;
+}
+
+#result {
+    font-size: 50px;
+    margin-top: -50px;
+}

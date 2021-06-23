@@ -1,0 +1,211 @@
+#wrapper{
+    width: 1200px;
+    height: 1200px;
+    background: linear-gradient(90deg, rgba(75,55,63,1) 14%, rgba(149,120,134,1) 50%, rgba(75,55,63,1) 80%);
+}
+
+#header {
+    background-color: #f8f8f8;
+    width: 1199px;
+    height: 75px;
+}
+
+#header h1 {
+    display: inline-block;
+    padding: 1px;
+    margin-left: 15px;
+    font-size: xx-large;
+}
+
+#header h2 {
+    display: inline-block;
+    margin-left: 600px;
+}
+
+#about img {
+    height: 350px;
+    margin: 15px;
+    border: 5px solid #c0c0c0;
+    display: inline-block;
+} 
+
+#topic {
+    height: 50px;
+    width: 603px;
+    background: linear-gradient(180deg, rgba(179,178,182,1) 14%, rgba(135,133,147,1) 50%, rgba(216,216,216,1) 80%);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+#topic h2 {
+    margin-top: 7px;
+    margin-left: 25px;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #f8f8f8;    
+}
+
+#topic p {
+    width: 593px;
+    height: 308px;
+    background: linear-gradient(90deg, rgba(254,253,254,1) 11%, rgba(219,204,218,1) 49%);
+    display: inline-block;
+    margin-top: 0px;
+    border: 5px solid #f3eff3;
+    font-size: larger;
+    font-family: sans-serif;
+}
+
+.experience {
+    height: 700px;
+    width: 366px;
+    margin-left: 15px;
+    background: linear-gradient(90deg, rgba(254,253,254,1) 11%, rgba(219,204,218,1) 49%);
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+.headers {
+    width: 361px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(179,178,182,1) 14%, rgba(135,133,147,1) 50%, rgba(216,216,216,1) 80%);    margin-top: 0px;
+    color: white;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.headers h2 {
+    margin-top: 5px;
+}
+
+.img img{
+    display: inline-flex;
+    width: 364px;
+    margin-left: -365px;
+    margin-top: 59px;
+}
+
+.description p {
+    display: inline-flex;
+    margin-top: 270px;
+    margin-left: -361px;
+    width: 350px;
+    font-size: large;
+}
+
+.technologies {
+    margin-top: 450px;
+    margin-left: -366px;
+    height: 40px;
+    width: 381px;
+    background: linear-gradient(180deg, rgba(179,178,182,1) 14%, rgba(135,133,147,1) 50%, rgba(216,216,216,1) 80%);
+}
+
+.technologies img{
+    width: 55px;
+    padding: 5px;
+}
+.technologies h2 {
+    margin-top: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+.bottomidentifier {
+    background-color: #407d61;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 125px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px grey;
+}
+
+.bottomidentifier p {
+    color: white;
+    padding: 5px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contactinfotop {
+    background-color: #f5f5f5;
+    width: 1198px;
+    height: 100px;
+    margin-left: 1px;
+    margin-top: -15px;
+}
+
+#direct {
+    margin-left: 500px;
+}
+
+.contactinfobottom {
+    display: inline-flex;
+    margin-left: 400px;
+    width: 200px;
+}
+
+.contactinfobottom img {
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+#lamodeidentifier {
+    margin-left: 125px;
+    color: white;
+    background-color: #407d61;
+    border: ipx solid #1e4533;
+    box-shadow: 5px 5px grey;
+    width: 125px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#lamodeidentifier p {
+    margin-left: 8px;
+    padding: 6px;
+    margin-top: 1px;
+}
+
+#fcidentifier {
+    margin-left: 125px;
+    color: white;
+    background-color: #407d61;
+    border: ipx solid #1e4533;
+    box-shadow: 5px 5px grey;
+    width: 125px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#fcidentifier p {
+    margin-left: 3px;
+    padding: 6px;
+    margin-top: 1px;
+}
+
+#feidentifier {
+    margin-left: 125px;
+    color: white;
+    background-color: #407d61;
+    border: ipx solid #1e4533;
+    box-shadow: 5px 5px grey;
+    width: 125px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#feidentifier p {
+    margin-left: 8px;
+    padding: 6px;
+    margin-top: 1px;
+}

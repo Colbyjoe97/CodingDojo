@@ -1,0 +1,32 @@
+<h1>Create a new user!</h1>
+<form action="submit" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div>
+        <p>Your Name:</p>
+        <input type="text" name="name" placeholder="Your Name">
+    </div>
+    <div>
+    <div>
+        <p>Favorite Location:</p>
+        <select name="location">
+            <option value="Mountain View">Mountain View</option>
+            <option value="Belleview">Belleview</option>
+            <option value="Sykesville">Sykesville</option>
+        </select>
+    </div>
+        <p>Favorite Language:</p>
+        <select name="language">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="C#">C#</option>
+            <option value="Ruby">Ruby</option>
+        </select>
+    </div>
+    <div>
+        <p>Comment (optional):</p>
+        <input type="text" name="comment" placeholder="Your Comment">
+    </div>
+    <div>
+        <button class="btn btn-success">Submit</button>
+    </div>
+</form>

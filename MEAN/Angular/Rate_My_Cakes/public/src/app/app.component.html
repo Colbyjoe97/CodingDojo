@@ -1,0 +1,50 @@
+<h1 class="text-center">Rate My Cakes</h1>
+
+<!-- Cake Submission Form -->
+<div class="outerDiv">
+  <div class="submitCake">
+    <p>Submit a cake to be rated..</p>
+    <form (submit)="submitCake()">
+      <div>
+        <label>Baker Name:</label>
+        <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker">
+      </div>
+      <div>
+        <label>Cake Image URL:</label>
+        <input type="text" name="newCake.image" [(ngModel)]="newCake.image">
+      </div>
+      <div>
+        <button class="btn btn-success">Submit Cake</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- List of all the cakes -->
+<div class="cakeContainer">
+  <div class="allCakes">
+    <div *ngFor="let cake of cakes; let idx = index" class="eachCake">
+      <p>{{ cake.baker }}</p>
+      <p>{{ cake.image }}</p>
+      <img src="{{ cake.image }}" alt="cake image" (click)="oneCake(idx)"><br>
+      <form (submit)="rate(cake)">
+        <div class="comment">
+          <select name="newRating.rating" [(ngModel)]="newRating.rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <textarea name="newRating.comment" cols="15" rows="3" [(ngModel)]="newRating.comment"></textarea>
+          <div>
+            <button class="btn btn-success rate">Submit Rating</button>
+          </div>
+        </div>
+      </form>
+      <button class="btn btn-danger" (click)="deleteCake(cake)">Delete Cake</button>
+    </div>
+  </div>
+</div>
+
+<app-info *ngIf="cakeToShow" [cakeToShow]="cakeToShow" [average]="avg"></app-info>

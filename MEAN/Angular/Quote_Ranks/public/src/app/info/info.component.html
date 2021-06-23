@@ -1,0 +1,22 @@
+<div class="info__wrapper">
+    <div class="author__info">
+        <h3>Quotes by {{ author.name }}</h3>
+        <a [routerLink]="['/new/quote', author._id]">Add New Quote</a>
+    </div>
+    <table class="table table-hover authorList">
+        <thead>
+          <tr>
+            <th>Quote</th>
+            <th>Votes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let q of author.quotes">
+            <th>{{ q.quote }}</th>
+            <th>{{ q.voteCount }}</th>
+            <th><a (click)="upvote(q, author._id)">Upvote</a> | <a (click)="downvote(q, author._id)">Downvote</a> | <a (click)="deleteQuote(q._id)">Delete</a></th>
+          </tr>
+        </tbody>
+      </table>
+</div>

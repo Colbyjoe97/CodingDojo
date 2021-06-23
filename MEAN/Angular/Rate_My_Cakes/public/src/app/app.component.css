@@ -1,0 +1,44 @@
+.submitCake {
+    border: 1px solid black;
+    width: 250px;
+    padding: 10px;
+    margin-left: 5vw;
+}
+.outerDiv {
+    display: flex;
+    width: 250px;
+}
+.submitCake button {
+    margin-top: 10px;
+    margin-left: 35px;
+}
+.allCakes img {
+    width: 100px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+.cakeContainer {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    overflow: auto;
+    margin-left: 35vw;
+    margin-top: -20vh;
+}
+.allCakes {
+    padding: 10px;
+    width: 500px;
+}
+.allCakes button {
+    margin-top: 20px;
+}
+.eachCake {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
+}
+.comment {
+    display: flex;
+    margin-left: 140px;
+    margin-top: -90px;
+}

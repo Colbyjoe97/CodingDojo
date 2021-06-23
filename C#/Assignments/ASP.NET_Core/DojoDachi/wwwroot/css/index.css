@@ -1,0 +1,28 @@
+#gameBody{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+#stats{
+    margin-top: 40px;
+    font-size: large;
+    display: inline-flex;
+    list-style-type: none;
+}
+li{
+    margin-left: 130px;
+}
+#buttons{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+#actions{
+    margin-left: 100px;
+}
+#restart{
+    margin-left: 320px;
+}
+#pic{
+    margin-left: 37%;
+    width: 300px;
+}

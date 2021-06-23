@@ -1,0 +1,16 @@
+#wrap {
+    border: 1px solid black;
+    background-color: lightgrey;
+    width: 40%;
+    padding: 10px;
+    padding-bottom: 0px;
+    font-size: large;
+}
+#wrap h1{
+    margin-left: 40%;
+    font-size: 40px;
+}
+#footer {
+    margin-top: 50px;
+    margin-left: 450px;
+}

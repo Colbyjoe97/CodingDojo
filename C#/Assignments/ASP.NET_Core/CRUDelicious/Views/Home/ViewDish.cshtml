@@ -1,0 +1,17 @@
+@model Dish
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center">@ViewBag.ThisDish.Name</h1>
+    <p class="text-center">Chef: @ViewBag.ThisDish.Chef</p>
+    <p class="text-center">Calories: @ViewBag.ThisDish.Calories</p>
+    <p class="text-center">Tastiness: @ViewBag.ThisDish.Tastiness</p>
+    <p class="text-center"><a href="/edit/@ViewBag.ThisDish.DishId">Edit Dish</a></p>
+</body>
+</html>

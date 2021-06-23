@@ -1,0 +1,23 @@
+@using viewModelFun.Models
+@model List<User>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "List of users";
+    }
+    <div class="text-center">
+        <h1 class="display-4">Here's a list of users!</h1>
+    </div>
+    @foreach(var user in Model)
+    {
+        <p class="text-center">@user.FirstName @user.LastName</p>
+    }
+</body>
+</html>

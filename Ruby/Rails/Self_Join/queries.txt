@@ -1,0 +1,4 @@
+User.first.friends works because of the model foreign keys and has_many statements
+
+To retrieve all users who are not a friend with the first user:
+Frienship.where.not(friend:User.first)

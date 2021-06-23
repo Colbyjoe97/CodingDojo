@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>@ViewBag.ThisWedding.WedderOne and @ViewBag.ThisWedding.WedderTwo's Wedding</h1>
+    <h2>@ViewBag.ThisWedding.Date</h2>
+    <p>Guests:</p>
+    @foreach(var a in Model.weddingLinks)
+    {
+        <p>@a.attendee.FirstName @a.attendee.LastName</p>
+        <p>@a.UserId</p>
+    }
+    <p>Total guests: @Model.weddingLinks.Count</p>
+</body>
+</html>

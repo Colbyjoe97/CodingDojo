@@ -1,0 +1,27 @@
+<div class="editWrapper text-center">
+    <h1>Editing <%=@dojo.branch%> Dojo</h1>
+    <form action="/dojos/<%=@dojo.id%>" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="row">
+            <p>Branch:</p>
+            <input type="text" name="dojo[branch]" placeholder="<%= @dojo.branch %>">
+        </div>
+        <div class="row">
+            <p>Street:</p>
+            <input type="text" name="dojo[street]" placeholder="<%= @dojo.street %>">
+        </div>
+        <div class="row">
+            <p>City:</p>
+            <input type="text" name="dojo[city]" placeholder="<%= @dojo.city %>">
+        </div>
+        <div class="row">
+            <p>State:</p>
+            <input type="text" name="dojo[state]" placeholder="<%= @dojo.state %>">
+        </div>
+        <button class="ben btn-success">Submit Dojo</button>
+    </form>
+</div>
+<div>
+<h1>trest</h1>
+</div>

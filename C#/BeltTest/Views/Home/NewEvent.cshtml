@@ -1,0 +1,45 @@
+@model Event
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form asp-action="CreateEvent" asp-controller="Home" method="post" class="col-6 mx-auto bg-light p-5 rounded">
+        <h2 class="text-center">Create A New Event</h2>
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="Name"></span>
+            <label asp-for="Name"></label>
+            <input asp-for="Name"></input>
+        </div>
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="Start"></span>
+            <label asp-for="Start"></label>
+            <input asp-for="Start"></input>
+        </div>
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="Duration"></span>
+            <label asp-for="Duration"></label>
+            <input asp-for="Duration"></input>
+        </div>
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="DurationType"></span>
+            <label asp-for="DurationType"></label>
+            <select asp-for="DurationType">
+                <option value="Minutes">Minutes</option>
+                <option value="Hours">Hours</option>
+                <option value="Days">Days</option>
+                <option value="Weeks">Weeks</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="Description"></span>
+            <label asp-for="Description"></label>
+            <input asp-for="Description"></input>
+        </div>
+        <input type="submit" value="Create Event" class="btn btn-success">
+    </form>
+</body>
+</html>

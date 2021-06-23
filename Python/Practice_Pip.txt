@@ -1,0 +1,18 @@
+pip list - shows a list of all packages and package versions installed in the environment
+
+deactivate - deactivates the current environment
+
+pip3 list - shows a list of packages installed for python3
+
+pip install Django==2.2.4 - installed Django and other packages relating to Django version 2.2.4
+
+pip freeze - shows all the modules I've installed with pip install and what versions I have
+
+pip uninstall Django - shows the version of Django currently installed, tells me what
+unstalling it will remove, and asks me to confirm the uninstallation
+
+pip show Django - shows any information I may need regarding Django including the website,
+author, version, summary, author's email, etc.
+
+pip search Flask - shows a ton of different Flask versions/extensions that I can download if needed
+with a short description on the right

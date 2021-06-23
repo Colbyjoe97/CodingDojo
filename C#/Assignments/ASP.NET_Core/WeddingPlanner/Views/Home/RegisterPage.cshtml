@@ -1,0 +1,45 @@
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/loginreg.css">
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Register";
+    }
+    <div class="card col-5">
+        <div class="card-body">
+            <h1 class="card-title text-center">Login</h1>
+            <form action="Register" method="post">
+                <span id="warning" asp-validation-for="FirstName"></span><br>
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control"><br>
+
+                <span id="warning" asp-validation-for="LastName"></span><br>
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control"><br>
+
+                <span id="warning" asp-validation-for="Email"></span><br>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control"><br>
+
+                <span id="warning" asp-validation-for="Password"></span><br>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control"><br>
+
+                <span id="warning" asp-validation-for="Compare"></span><br>
+                <label asp-for="Compare"></label>
+                <input asp-for="Compare" class="form-control"><br>
+                <div class="text-center">
+                    <input id="submit" type="submit" value="Register">
+                </div>
+            </form>
+            <a href="/">Login Here!</a>
+        </div>
+    </div>
+</body>
+</html>

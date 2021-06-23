@@ -1,0 +1,23 @@
+.info {
+    background-color: cyan;
+    margin-top: 10vh;
+    padding: 15px;
+    vertical-align: middle;
+}
+.info h3 {
+    text-align: center;
+}
+.info img{
+    display: flex;
+    width: 250px;
+}
+.ratings {
+    margin-left: 34vw;
+    margin-top: -10vh;
+}
+.eachRating {
+    background-color: lightgrey;
+    width: 450px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}

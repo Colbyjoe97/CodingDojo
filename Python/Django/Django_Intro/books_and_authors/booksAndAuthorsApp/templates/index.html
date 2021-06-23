@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Authors</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="addBook">
+    <h1>Add a Book</h1>
+        <form action="/addABook" method="post">
+            {% csrf_token %}
+            <div id="booktitle">
+                <label for="btitle">Title:</label>
+                <input type="text" name="btitle" required>
+            </div>
+            <div id="bdescription">
+                <label for="bdesc">Description:</label>
+            </div>
+            <textarea id="bookdesc" name="bdesc" required></textarea>
+            <div id="submitbook">
+                <input id="submitbook" type="submit" name="submitbook" value="Add a book">
+            </div>
+        </form>
+    </div>
+    <table id="booktable">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+        {% for book in everyBook %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <form action="viewBook/{{book.id}}" method="post">
+                <input type="hidden" name="book_id" value="{{ book.id }}">
+                {% csrf_token %}
+                <td><input type="submit" value='View'></td>
+            </form>
+        </tr>
+        {% endfor %}
+        <form action="/allAuthors" method="post">
+        {% csrf_token %}
+            <input id="authors" type="submit" value="View a list of authors">
+        </form>
+</html>
+</body>
+

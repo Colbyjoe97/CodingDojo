@@ -1,0 +1,49 @@
+<div class="ideaWrapper">
+    <div class="ideaBanner">
+        <div class="ideaLeft">
+            <p>Hi <%= current_user.alias %>!</p>
+        </div>
+        <div class="ideaRight">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="createIdea">
+        <% if flash[:ideaErrors] %>
+            <% flash[:ideaErrors].each do |error| %>
+                <p class="text-danger"><%= error %></p>
+            <% end %>
+        <% end %>
+        <form action="/idea/new" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="text" name="content" placeholder="Post something witty here...">
+            <button class="btn btn-success">Idea!</button>
+        </form>
+    </div>
+
+    <div class="ideas">
+        <% if flash[:likeError] %>
+            <p class="text-danger"><%= flash[:likeError] %></p>
+        <% end %>
+        <% if flash[:deleteError] %>
+            <p class="text-danger"><%= flash[:deleteError] %></p>
+        <% end %>
+        <% @ideas.each do |idea| %>
+            <div class="idea">
+                <p><a href="/user/<%=idea.user.id%>"><%= idea.user.alias %></a> says:</p>
+                <p class="ideaContent"><%= idea.content %></p>
+                <% if idea.user == current_user %>
+                    <a href="/delete/<%=idea.id%>" data-method="delete">Delete</a>
+                <% end %>
+            </div>
+            <div class="ideaLikes">
+                <% if not idea.users.include?(current_user) %>
+                    <a href="/like/<%=idea.id%>" data-method="post">Like</a>
+                <% else %>
+                    <a href="/unlike/<%=idea.id%>" data-method="delete">Unlike</a>
+                <% end %>
+                <a href="/ideas/<%=idea.id%>" class="likeCount"><%= idea.likes.count %> people like this</a>
+            </div>
+        <% end %>
+    </div>
+</div>

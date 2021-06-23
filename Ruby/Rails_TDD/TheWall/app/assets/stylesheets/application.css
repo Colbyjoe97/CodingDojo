@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .danger {
+     color: red;
+ }
+ .header {
+     display: flex;
+     border: 1px solid black;
+     padding-left: 15px;
+     height: 30px;
+ }
+.right {
+    margin-left: 67vw;
+    display: flex;
+}
+.right a {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.right h3, p {
+    margin-top: 5px;
+}
+.msgWrapper {
+    padding: 10px;
+}
+.messageBody button {
+    margin-left: 26vw;
+}
+.allMessages {
+    padding: 10px;
+}
+.message {
+    padding: 10px;
+    width: 500px;
+}
+.message p {
+    margin-left: 30px;
+}
+.message textarea {
+    margin-top: 10px;
+    margin-left: 15vw;
+}
+.message button {
+    margin-left: 29.6vw;
+}
+.reply {
+    margin-left: 50px;
+}

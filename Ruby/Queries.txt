@@ -1,0 +1,6 @@
+Find and sort by column:
+<Model>.where(<condition>).order(<column>: :desc) (or asc for ascending)
+
+
+checking tests:
+rspec spec/<folder the file is in>/<file to test>

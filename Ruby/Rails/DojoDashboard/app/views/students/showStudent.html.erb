@@ -1,0 +1,27 @@
+<div class="viewStudentWrapper">
+        <h1><%= @dojo.branch %>'s <%= @student.first_name %> <%= @student.last_name %></h1>
+        <p><b>Email: <%= @student.email %></b></p>
+        <h3>Cohorts</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @cohorts.each do |cohort| %>
+                    <% if cohort.id != @student.id %>
+                    <tr>
+                        <td><%= cohort.first_name %></td>
+                        <td><%= cohort.last_name %></td>
+                        <td><%= cohort.email %></td>
+                    </tr>
+                    <% end %>
+			    <% end %>
+            </tbody>
+        </table>
+        <a href="/">Home</a> |
+        <a href="/dojos/<%=@dojo.id%>/students/<%=@student.id%>/edit">Edit</a>
+</div>

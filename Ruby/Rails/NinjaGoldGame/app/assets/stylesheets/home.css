@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 10px;
+}
+.wrapper {
+    border: 1px solid black;
+}
+.modeWrapper {
+    margin-top: -25px;
+    display: flex;
+}
+.mode {
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 10px;
+    width: 300px;
+}
+.activities {
+    margin-top: -20px;
+    border: 1px solid black;
+    height: 200px;
+    overflow: auto;
+}
+.activities > p {
+    margin-top: -20px;
+    margin-bottom: 0;
+}
+.good {
+    color: green;
+}
+.bad {
+    color: red;
+}

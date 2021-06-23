@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Random Code Generator</h1>
+    </div>
+    <p class="text-center">Code Number @ViewBag.Count</p>
+    <partial name="CodePartial"></partial>
+
+    <p class="text-center"><a href="/newCode">Generate New Code</a></p>
+</body>
+</html>

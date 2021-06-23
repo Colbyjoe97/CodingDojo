@@ -1,0 +1,40 @@
+<div class="text-center">
+  <button (click)="getTasks()" class="btn btn-success mt-4 mb-4">Get all tasks</button>
+  <div *ngFor="let task of tasks; let idx = index">
+    <h4 class="mb-2 p-3 task" style="border: 1px solid black;">{{ task.title }}
+    <br><br><button class="btn btn-primary" (click)="oneTask(idx)">View Task</button>
+    <br><br><button class="btn btn-secondary" (click)="editForm(task)">Edit Task</button><br><br>
+    <button class="btn btn-danger" (click)="deleteTask(task)">Delete Task</button>
+    </h4>
+</div>
+  <div *ngIf="editFormBool">
+    <h2>Editing task: {{ taskToEdit.title }}</h2>
+    <form (submit)="onEdit()">
+      <label>Title:
+        <input type="text" name="newTask.title" [(ngModel)]="taskToEdit.title">
+      </label><br>
+      <label>Description:
+        <input type="text" name="newTask.description" [(ngModel)]="taskToEdit.description">
+      </label><br><br>
+      <input type="submit" value="Edit Task">
+    </form>
+  </div>
+
+  <app-task *ngIf="selectedTask" [taskToShow]="selectedTask"></app-task>
+  <div *ngIf="selectedTask">
+    <h2>{{ selectedTask.title }}</h2>
+    <h4>{{ selectedTask.description }}</h4>
+  </div>
+
+  <form (submit)="onSubmit()">
+    <p>{{ newTask | json }}</p>
+    <label>Title:
+      <input type="text" name="newTask.title" [(ngModel)]="newTask.title">
+    </label><br>
+    <label>Description:
+      <input type="text" name="newTask.description" [(ngModel)]="newTask.description">
+    </label><br><br>
+    <input type="submit" value="Create Task">
+  </form>
+
+</div>

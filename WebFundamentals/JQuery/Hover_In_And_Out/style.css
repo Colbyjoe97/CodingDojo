@@ -1,0 +1,12 @@
+#wrapper {
+    width: 375px;
+    height: 535px;
+    background-color: cyan;
+    padding: 15px;
+}
+
+#container img{
+    width: 350px;
+    display: block;
+    margin: 5px;
+}

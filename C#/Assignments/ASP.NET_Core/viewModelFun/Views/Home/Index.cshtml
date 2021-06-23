@@ -1,0 +1,20 @@
+﻿@using viewModelFun.Models
+@model StringPage
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "String Page";
+    }
+    <div class="text-center">
+        <h1 class="display-4">Here's a string!</h1>
+    </div>
+    <p class="text-center">@Model.Str</p>
+</body>
+</html>

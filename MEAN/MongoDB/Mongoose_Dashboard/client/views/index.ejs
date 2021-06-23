@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-center">
+        <a href="/mongooses/new"><button class="btn btn-primary">Create Mongoose</button></a>
+        <h1>All the Mongooses</h1>
+        <% for (var m of mongoose) { %>
+            <div class="text-center" style="padding: 25px; margin-top: 15px; margin-left: 40vw; border: 1px solid black; width: 200px;">
+                <p><%= m.name %></p>
+                <p><%= m.age %></p>
+                <a href=/view/<%=m._id%>><button class="btn btn-success">View Mongoose</button></a>
+                <a href=/delete/<%=m._id%>><button class="btn btn-danger mt-5">Delete Mongoose</button></a>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

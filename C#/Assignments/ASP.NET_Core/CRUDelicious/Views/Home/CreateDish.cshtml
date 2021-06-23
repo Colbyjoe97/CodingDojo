@@ -1,0 +1,49 @@
+@model Dish
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Add a new Dish!</h1>
+    </div>
+    <form action="AddDish" method="post">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"><br>
+
+        <label asp-for="ChefId"></label>
+        <select asp-for="ChefId" class="form-control">
+        @foreach(var chef in ViewBag.AllChefs)
+        {
+                <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+        }
+        </select><br>
+
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"></label>
+        <input asp-for="Calories" class="form-control"><br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label>
+        <select asp-for="Tastiness" class="form-control">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control"><br>
+        </select><br>
+        <input type="submit" value="Submit Form" id="Submit">
+    </form>
+</body>
+</html>

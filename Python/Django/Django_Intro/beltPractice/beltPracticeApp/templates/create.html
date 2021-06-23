@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a movie for the list</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    {% endif %}
+    <form action="/add" method="post">
+    {% csrf_token %}
+        <p>Title: <input type="text" name="title" id="title"></p>
+        <p>Duration (Minutes): <input type="number" name="dur"></p>
+        <p>Release Date: <input type="date" name="rd"></p>
+        <p>Description:</p>
+        <textarea id="desc", name="desc", cols="30", rows="7"></textarea>
+        <div>
+            <input type="submit" value="Submit Movie">
+        </div>
+    </form>
+</body>
+</html>

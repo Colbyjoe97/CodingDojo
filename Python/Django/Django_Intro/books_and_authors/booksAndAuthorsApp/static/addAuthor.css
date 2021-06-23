@@ -1,0 +1,55 @@
+#addAuthor{
+    background-color: lightgrey;
+    width: 400px;
+    height: 350px;
+    display: inline-block;
+}
+#addAuthor h1{
+    margin-left: 100px;
+}
+#first_name{
+    margin-left: 20px;
+    font-size: x-large;
+}
+#last_name{
+    margin-left: 20px;
+    font-size: x-large;
+}
+#first_name input{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#last_name input{
+    margin-left: 22px;
+    margin-bottom: 10px;
+}
+#adescription{
+    margin-left: 20px;
+    font-size: x-large;
+}
+#authornotes{
+    height: 50px;
+    margin-left: 159px;
+    margin-top: -15px;
+    width: 170px;
+}
+#submitauthor{
+    margin-top: 20px;
+    margin-left: 70px;
+    height: 50px;
+    width: 110px;
+    border-radius: 5px;
+}
+#authortable, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 230px;
+    height: 50px;
+    margin-left: 450px;
+    margin-top: -340px;
+    padding-left: 7px;
+}
+#home{
+    margin-left: 10px;
+    height: 50px;
+}

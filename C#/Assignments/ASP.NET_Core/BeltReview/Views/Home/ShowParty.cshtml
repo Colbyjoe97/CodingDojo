@@ -1,0 +1,15 @@
+@model Party
+
+<h1 class="text-center">@Model.ShowName</h1>
+<h5 class="text-center">Date: @Model.Start</h5>
+<h6>Watcher List:</h6>
+<ol>
+    @if(@Model.Attendees.Count == 0)
+    {
+        <li>No Watchers</li>
+    }
+    @foreach(RSVP r in @Model.Attendees)
+    {
+        <li>@r.Watcher.FirstName @r.Watcher.LastName</li>
+    }
+</ol>

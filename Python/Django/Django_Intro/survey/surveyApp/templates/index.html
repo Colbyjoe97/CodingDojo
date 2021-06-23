@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Dojo Survey</h1>
+        <h3>Please fill out your information below:</h3>
+
+        <form action='/results' method='post'>
+            {% csrf_token %}
+            Name: <input type="text" name='name'>
+            <div>
+                Email: <input type="text" name='email'>
+            </div>
+            <div>
+                <p>Dojo Location:
+                    <select name="location" name='location'>
+                        <option value="San Jose">San Jose</option>
+                        <option value="California">California</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Delaware">Delaware</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p>Favorite Language:
+                    <select name="language">
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <div id="emails">
+                    <h4>Would you like to receive emails from us? </h4>
+                    Yes <input type="radio" id="Yes" name="emails" value="Yes, send me emails">
+                    No <input type="radio" id="No" name="emails" value="No, don't send me emails">
+                </div>
+            </div>
+            <div id="checkbox">
+                <h4>How did you hear about us? </h4>
+                Google <input type="checkbox" id="Google" name="checkbox" value="Google">
+                Facebook <input type="checkbox" id="Facebook" name="checkbox" value="Facebook">
+                Word of mouth <input type="checkbox" id="Word_of_mouth" name="checkbox" value="Word of mouth">
+                Other <input type="checkbox" id="Other" name="checkbox" value="Other">
+            </div>
+            <p>Comment (optional):</p>
+            <div id="textbox">
+                <textarea name="comment"></textarea>
+            </div>
+            <div id="submit">
+                <input type='submit'>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

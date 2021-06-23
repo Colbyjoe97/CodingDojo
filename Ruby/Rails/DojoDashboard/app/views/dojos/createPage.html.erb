@@ -1,0 +1,23 @@
+<div class="createWrapper text-center">
+    <h1>List New Dojo</h1>
+    <form action="/dojos" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="row">
+            <p>Branch:</p>
+            <input type="text" name="dojo[branch]" placeholder="Branch">
+        </div>
+        <div class="row">
+            <p>Street:</p>
+            <input type="text" name="dojo[street]" placeholder="Street">
+        </div>
+        <div class="row">
+            <p>City:</p>
+            <input type="text" name="dojo[city]" placeholder="City">
+        </div>
+        <div class="row">
+            <p>State:</p>
+            <input type="text" name="dojo[state]" placeholder="State">
+        </div>
+        <button class="btn btn-success">Submit Dojo</button>
+    </form>
+</div>

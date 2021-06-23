@@ -1,0 +1,16 @@
+.wrapper {
+    padding: 10px;
+}
+.name, .type, .desc, .skills, .buttons, .likes {
+    display: flex;
+}
+.name p, .type p, .desc p, .skills p, .likes p {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.name a {
+    margin-left: 50px;
+}
+.buttons button {
+    margin-left: 20px;
+}

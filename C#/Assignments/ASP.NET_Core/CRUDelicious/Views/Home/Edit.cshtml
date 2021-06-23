@@ -1,0 +1,36 @@
+@model Dish
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center">Editing @ViewBag.ThisDish.Name</h1>
+    <form action="/EditDish/@ViewBag.ThisDish.DishId" method="post">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" value="@ViewBag.ThisDish.Name"><br>
+
+        <span asp-validation-for="Chef" class="Form-Control"></span>
+        <label asp-for="Chef" class="Form-Control"></label>
+        <input asp-for="Chef" value="@ViewBag.ThisDish.Chef" class="Form-Control"><br>
+
+        <span asp-validation-for="Calories" class="Form-Control"></span>
+        <label asp-for="Calories" class="Form-Control"></label>
+        <input asp-for="Calories" value="@ViewBag.ThisDish.Calories" class="Form-Control"><br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label>
+        <input asp-for="Tastiness" value="@ViewBag.ThisDish.Tastiness"><br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" value="@ViewBag.ThisDish.Description"><br>
+        </select><br>
+        <input type="submit" value="Submit Form" id="Submit">
+    </form>
+</body>
+</html>

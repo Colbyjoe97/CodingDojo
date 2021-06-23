@@ -1,0 +1,19 @@
+@using viewModelFun.Models
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single User</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = @Model.FirstName;
+    }
+    <div class="text-center">
+        <h1 class="display-4">Here's a single user!</h1>
+    </div>
+    <p class="text-center">@Model.FirstName @Model.LastName</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'addAuthor.css' %}">
+</head>
+<body>
+    <div id="addAuthor">
+    <h1>Add an Author</h1>
+        <form action="/addAuthor" method="post">
+        {% csrf_token %}
+            <div id="first_name">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="fname" required>
+            </div>
+            <div id="last_name">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="lname" required>
+            </div>
+            <div id="adescription">
+                <label for="adesc">Description:</label>
+            </div>
+            <textarea id="authornotes" name="authnotes" required></textarea>
+            <div id="submitauthor">
+                <input id="submitauthor" type="submit" name="submitauthor" value="Add an author">
+            </div>
+        </form>
+        <form action="/" method="post">
+            {% csrf_token %}
+                <input id="home" type="submit" value="Return to home">
+        </form>
+    </div>
+    <table id="authortable">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        {% for author in everyAuthor %}
+        <tr>
+            <td>{{ author.id }}</td>
+            <td>{{ author.first_name }} {{author.last_name }}</td>
+            <form action="viewAuthor/{{author.id}}" method="post">
+                <input type="hidden" name="author_id" value="{{ author.id }}">
+                {% csrf_token %}
+                <td><input type="submit" value='View'></td>
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+</html>
+</body>
+

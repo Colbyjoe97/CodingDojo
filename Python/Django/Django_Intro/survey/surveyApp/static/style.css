@@ -1,0 +1,32 @@
+#wrapper div{
+    text-align: left;
+    margin-top: 15px;
+}
+
+#wrapper {
+    border: 2px solid black;
+    width: 450px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#wrapper h1 {
+    margin-left: 120px;
+}
+
+#textbox textarea{
+    height: 100px;
+    width: 400px;
+}
+
+#submit {
+    margin-left: 180px;
+}
+
+#checkbox h4{
+    margin-bottom: 0px;
+}
+
+#emails h4{
+    margin-bottom: 0px;
+}

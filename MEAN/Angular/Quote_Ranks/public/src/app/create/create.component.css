@@ -1,0 +1,13 @@
+.submitWrapper {
+    border: 1px solid black;
+    text-align: center;
+    width: 350px;
+    padding: 5px;
+}
+.submit {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.submitWrapper label {
+    margin-right: 5px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos & Ninjas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1 id="dojoHeader">Add a Dojo!</h1>
+    <form action="/addDojo" method="post">
+        {% csrf_token %}
+        <div id="name">
+            <label>Name:</label>
+            <input type="text" name="dojoname" required>
+        </div>
+        <div id="city">
+            <label>City:</label>
+            <input type="text" name="dojocity" required>
+        </div>
+        <div id="state">
+            <label>State:</label>
+            <input type="text" name="dojostate" required>
+        </div>
+        <div id="desc">
+            <p>Description:</p>
+            <input type="textarea" name="dojodesc" required>
+        </div>
+        <input id="submitDojo" type="submit" name="submitDojo" value="Submit Dojo">
+    </form>
+    <h1 id="ninjaHeader">Add a Ninja!</h1>
+    <form action="/addNinja" method="post">
+        {% csrf_token %}
+        <div id="fname">
+            <label>First Name:</label>
+            <input type="text" name="fname" required> <!-- Add this to make field requred for input -->
+        </div>
+        <div id="lname">
+            <label>Last Name:</label>
+            <input type="text" name="lname" required>
+        </div>
+        <div id="dojo">
+            <label>Dojo:</label>
+            <select id="select" name="dojoid">
+                {% for dojo in allDojo %}
+                    <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input id="submitNinja" type="submit" name="submitNinja", value="submit Ninja">
+    </form>
+    <h1 id="allDojo">All the Dojos</h1>
+
+    {% for dojo in allDojo %}
+        <p id="dojoNames"><b>Ninjas in the {{ dojo.name }}</b></p>
+        <form id="deletebutton" action="/delDojo" method="post">
+        {% csrf_token %}
+            <input id="hide" type="hidden" name="dojo_id" value="{{dojo.id}}">
+            <input id="delbutton" type="submit" name="deleteDojo" value="Delete {{ dojo.name }}">
+        </form>
+
+        <ul id="dojoList">
+            {% for ninja in allNinja %}
+            {% if ninja.dojoId == dojo.id %}
+                <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

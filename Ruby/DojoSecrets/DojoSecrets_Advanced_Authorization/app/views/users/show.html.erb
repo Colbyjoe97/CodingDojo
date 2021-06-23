@@ -1,0 +1,19 @@
+<h1><%= @user.name %></h1>
+<a href="/users/<%=@user.id%>/edit">Edit Profile</a>
+
+<% @secrets.each do |secret| %>
+    <p><%= secret.content %></p>
+    <form action="/secrets/<%=secret.id%>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <button id="Delete Secret">Delete Secret</button>
+    </form>
+<% end %>
+
+<form action="<%= secrets_new_path %>">
+    <div>
+        <p>Secret: </p>
+        <textarea name="content" cols="30" rows="10"></textarea>
+    </div>
+    <button>Create Secret</button>
+</form>

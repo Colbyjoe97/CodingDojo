@@ -1,0 +1,41 @@
+@model Event
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center">@Model.Name</h1>
+    <h2 class="text-center">@Model.Creator.FirstName @Model.Creator.LastName</h2>
+    @if(@Model.Creator.UserId == ViewBag.User.UserId)
+    {
+        <a asp-action="cancel" asp-controller="Home" asp-route-eventId="@Model.EventId">Cancel</a>
+    }
+    else
+    {
+        @if(@Model.Participators.Any(r => r.UserId == ViewBag.User.UserId))
+        {
+            <a asp-action="unAttend" asp-controller="Home" asp-route-userId="@ViewBag.User.UserId" asp-route-eventId="@Model.EventId">Un-Attend</a>
+        }
+        else
+        {
+            <a asp-action="Attend" asp-controller="Home" asp-route-userId="@ViewBag.User.UserId" asp-route-eventId="@Model.EventId">Attend</a>
+        }
+    }
+    <p>@Model.Description</p>
+    <p>Duration: @Model.Duration @Model.DurationType</p>
+    <h6>List of Participants:</h6>
+    <ol>
+        @if(@Model.Participators.Count == 0)
+        {
+            <li>No Participants Yet</li>
+        }
+        @foreach(Participate p in @Model.Participators)
+        {
+            <l1>@p.Attendee.FirstName @p.Attendee.LastName</l1>
+        }
+    </ol>
+</body>
+</html>

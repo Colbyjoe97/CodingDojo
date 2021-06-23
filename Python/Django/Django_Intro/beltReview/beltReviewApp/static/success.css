@@ -1,0 +1,27 @@
+#wrap{
+    padding: 10px;
+}
+#header {
+    width: 450px;
+    margin-top: -20px;
+}
+p{
+    font-size: larger;
+}
+#logout{
+    margin-left: 700px;
+}
+#create{
+    margin-left: 250px;
+}
+table, tr, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+tr{
+    width: 100%;
+}
+#create{
+    margin-left: 633px;
+}

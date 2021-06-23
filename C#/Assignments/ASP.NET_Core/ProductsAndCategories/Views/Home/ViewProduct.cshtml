@@ -1,0 +1,40 @@
+@model Products
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Product Page";
+    }
+    <div class="text-center">
+        <h1 class="display-4"><a href="/">Products | </a><a href="/Categories">Categories</a></h1>
+    </div><br>
+    <div class="text-center">
+        <h2>@ViewBag.ThisProd.Name</h2>
+    </div><br>
+    <div class="card col-4">
+        <div class="card-body">
+            <div class="card-title text-center">Categories</div>
+                @foreach(var a in Model.allAssociations)
+                {
+                    <p>@a.category.Name</p>
+                }
+        </div>
+    </div>
+    <h2>Add Category:</h2>
+    <form action="/IncludeCategory" method="post">
+        <select name="CatId">
+        @foreach(var c in ViewBag.AllCategories)
+        {
+            <option value="@c.CategoryId">@c.Name</option>
+        }
+        </select><br>
+        <input type="hidden" name="ProdId" value=@ViewBag.ThisProd.ProductId><br>
+        <input type="submit" value="Add Selected Category">
+    </form>
+</body>
+</html>

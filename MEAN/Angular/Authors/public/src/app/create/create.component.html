@@ -1,0 +1,11 @@
+<div class="submitWrapper">
+    <p>Add a new author!</p>
+    <form (submit)="submitAuthor()">
+        <div>
+          <label>Author Name: </label>
+          <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name">
+        </div>
+        <input type="submit" value="Submit Author" class="submit">
+    </form>
+    <p class="text-danger">{{ error }}</p>
+</div>

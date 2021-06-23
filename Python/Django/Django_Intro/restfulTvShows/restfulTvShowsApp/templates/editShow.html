@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing {{ this_show.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'editShow.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        {% if messages %}
+        <ul id="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/updateShow/{{this_show.id}}" method="post">
+        {% csrf_token %}
+        <a href="/" name="home" id="home">Return Home</a>
+            <h1>Currently editing {{ this_show.title }}</h1>
+            <p id="title">Title: <input type="text" name="title" value="{{ this_show.title }}"></p>
+            <p id="network">Network: <input type="text" name="network" value="{{ this_show.network }}"></p>
+            <p id="rd">Release Date: <input type="date" name="releaseDate" value="{{ this_show.releaseDate|date:'Y-m-d' }}"></p>
+            <p id="desc">description (optional):</p>
+            <textarea name="desc" id="desc" cols="50" rows="7">{{ this_show.description }}</textarea>
+            <div id="update">
+                <input type="submit" value="Update Show">
+            </div>
+        </form>
+    </div>
+</html>
+</body>

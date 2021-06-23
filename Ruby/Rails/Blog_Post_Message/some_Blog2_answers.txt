@@ -1,0 +1,5 @@
+3rd to last:
+Message.where(post:Post.where(blog:Blog.find(7)))
+
+2nd to last:
+Owner.where(blog:Blog.first)

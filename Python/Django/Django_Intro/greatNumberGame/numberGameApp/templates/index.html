@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Welcome to the great number game!</h1>
+    <h2>I am thinking of a number between 1 and 100</h2>
+    <h2 id="second">Take a guess!</h2>
+
+
+    {% if request.session.status == "Correct!" %}
+    <div class="boxgreen">
+        <h1>{{ request.session.status }}</h1>
+        <p>it took you {{ request.session.guessCount }} attempts</p>
+    </div>
+    {% else %}
+    <div class="boxred">
+        <h1>{{ request.session.status }}</h1>
+    </div>
+    {% endif %}
+
+
+    <form action="/guess" method="post">
+        {% csrf_token %}
+        {% if request.session.status != "You lose! Please try again." %}
+        <label>Enter your number:</label>
+        <input type="number" name="guess" id="guess">
+        <div id="submit">
+            <input type="submit" value="Submit your number">
+        </div>
+        {% endif %}
+    </form>
+    <form action="/newNum" method="post">
+        {% csrf_token %}
+        <div id="submit">
+            <input type="submit" value="Click here for a new number">
+        </div>
+    </form>
+    {{ request.session.num }}
+</body>
+</html>

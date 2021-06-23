@@ -1,0 +1,81 @@
+#dojoHeader {
+    margin-left: 20%;
+}
+#name{
+    margin-left: 17%;
+    margin-bottom: 1%;
+}
+#name input{
+    margin-left: 2%;
+}
+#city{
+    margin-left: 17%;
+    margin-bottom: 1%;
+}
+#city input{
+    margin-left: 2.7%;
+}
+#state{
+    margin-left: 17%;
+}
+#state input{
+    margin-left: 2.5%;
+}
+#desc {
+    margin-left: 17%;
+}
+#desc input{
+    margin-left: 5%;
+    height: 100px;
+}
+#submitDojo{
+    margin-left: 23%;
+    margin-top: 1%;
+}
+#ninjaHeader{
+    margin-left: 40%;
+    margin-top: -24%
+}
+#fname{
+    margin-left: 35%
+}
+#fname input{
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+#lname{
+    margin-left: 35%
+}
+#lname input{
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+#dojo{
+    margin-left: 37%
+}
+#dojo select{
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+#submitNinja{
+    margin-left: 42%;
+}
+#allDojo{
+    margin-top: 10%;
+    margin-left: 35%;
+}
+#dojoList{
+    margin-left: 38%;
+    margin-top: -0.7%;
+}
+#dojoNames{
+    margin-left: 37%;
+}
+#deletebutton{
+    margin-left: 52%;
+    margin-top: -1.7%;
+}
+#delete{
+    margin-left: 30%;
+    margin-top: -5%;
+}

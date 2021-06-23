@@ -1,0 +1,125 @@
+<div class="eventWrapper">
+    <div class="eventBanner">
+        <div class="welcomeMessage">
+            <h2>Welcome, <%= current_user.first_name %></h2>
+            <p>From <%= current_user.location %></p>
+        </div>
+        <div class="accountActions text-right">
+            <a href="/user/<%=current_user.id%>/edit">Edit My Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+
+    <div class="closeEvents">
+        <p class="mt-4">List of events near you!</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Location</td>
+                    <td>Date</td>
+                    <td>Host</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @events.each do |event| %>
+                    <% if event.location == current_user.location %>
+                    <tr>
+                        <td><a href="/event/<%=event.id%>"><%= event.name %></a></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.user.first_name %></td>
+                        <td>
+                            <% if event.user.id == current_user.id %>
+                                <a href="/event/<%=event.id%>/edit">Edit</a> |
+                                <a href="/event/<%=event.id%>/delete" data-method="delete">Delete</a>
+                            <% else %>
+                                <% if not event.users.include?(current_user) %>
+                                    <a href="/event/<%=event.id%>/join" data-method="post">Join</a>
+                                <% else %>
+                                    <a href="/event/<%=event.id%>/leave" data-method="delete">Leave</a>
+                                <% end %>
+                            <% end %>
+                        </td>
+                    </tr>
+                    <% end %>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="otherEvents">
+        <p class="mt-4">List of events near you!</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Location</td>
+                    <td>Date</td>
+                    <td>Host</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @events.each do |event| %>
+                    <% if event.location != current_user.location %>
+                    <tr>
+                        <td><a href="/event/<%=event.id%>"><%= event.name %></a></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.user.first_name %></td>
+                        <td>
+                            <% if event.user.id == current_user.id %>
+                                <a href="/event/<%=event.id%>/edit">Edit</a> |
+                                <a href="/event/<%=event.id%>/delete" data-method="delete">Delete</a>
+                            <% else %>
+                                <% if not event.users.include?(current_user) %>
+                                    <a href="/event/<%=event.id%>/join" data-method="post">Join</a>
+                                <% else %>
+                                    <a href="/event/<%=event.id%>/leave" data-method="delete">Leave</a>
+                                <% end %>
+                            <% end %>
+                        </td>
+                    </tr>
+                    <% end %>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+
+    <div class="createEvent">
+        <% if flash[:eventErrors] %>
+            <% flash[:eventErrors].each do |error| %>
+                <p class="text-danger"><%= error %></p>
+            <% end %>
+        <% end %>
+        <% if flash[:dateError] %>
+            <p class="text-danger"><%= flash[:dateError] %></p>
+        <% end %>
+        <form action="/events/new" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <div>
+                <p>Event Name:</p>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <p>Date:</p>
+                <input type="date" name="date">
+            </div>
+            <div>
+                <p>Location:</p>
+                <select name="location">
+                    <option value="Belleview">Belleview</option>
+                    <option value="Las Angeles">Las Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Sykesville">Sykesville</option>
+                </select>
+            </div>
+
+            <button class="btn btn-success mt-2">Add Event</button>
+        </form>
+    </div>
+</div>

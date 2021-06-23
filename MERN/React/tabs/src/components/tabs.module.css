@@ -1,0 +1,16 @@
+.tabBox{
+    border: 1px solid black;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+}
+
+.tabContent{
+    margin-top: 50px;
+    margin-left: -156px;
+    border: 1px solid black;
+    height: 200px;
+    width: 375px;
+    padding: 5px;
+}
+

@@ -1,0 +1,42 @@
+npm init -y
+npm i mongoose, express, express-flash, express-session, body-parser 
+
+mkdir server
+cd server
+mkdir config, controllers, models
+
+cd .. (back to root proj directory)
+
+ng new public --routing
+cd public
+ng g s http
+
+
+to run build:
+ng build --watch
+
+To make a component: 
+ng genereate component <name>
+
+When uploading on github:
+THIS CAN ONLY BE DONE ON CMD PROMPT
+
+cd into projects public folder
+rmdir /s .git
+y
+
+in base proj directory: 
+touch .gitignore
+
+paste this into .gitignore:
+
+.DS_Store
+.idea
+.vagrant
+bootstrap.sh
+VagrantFile
+bower_components/
+node_modules
+package-lock.json
+
+then upload to github like normal

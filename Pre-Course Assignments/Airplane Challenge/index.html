@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Airplane Game</title>
+</head>
+<body>
+	<style type="text/css">
+		#ocean {
+			background-image: url("space.jpg");
+			width: 900px;
+			height: 700px;
+		}
+		.player {
+			position: absolute;
+			width: 70px;
+			height: 75px;
+			background-image: url("myPlayer.jpg");
+			background-color: ;
+		}
+		.enemy {
+			position: absolute;
+			width: 70px;
+			height: 75px;
+			background-image: url("myEnemy.jpg");
+		}
+	</style>
+
+	<div id = "ocean">
+		<div id="players"></div>
+		<div id="enemies"></div>
+	</div>
+
+	<script type="text/javascript">
+
+		var player = {
+			left: 450,
+			top: 600
+		}
+
+		var enemies = [
+			{left: 400, top: 50},
+			{left: 500, top: 100},
+			{left: 600, top: 50},
+			{left: 300, top: 100},
+			{left: 200, top: 50},
+			{left: 700, top: 100}
+		]
+
+		function drawPlayer() {
+			content = "<div class='player' style='left: "+player.left+"px; top:"+player.top+"px'></div>"
+			document.getElementById("players").innerHTML = content;
+		}
+
+		function drawEnemies() {
+			content = "";
+			console.log(enemies);
+			for (var idx = 0; idx < enemies.length; idx++){
+				content += "<div class='enemy' style='left: "+enemies[idx].left+"px; top:"+enemies[idx].top+"px'></div>"
+			}
+			document.getElementById("enemies").innerHTML = content;
+		}
+		drawEnemies();
+
+		drawPlayer();
+
+		document.onkeydown = function(e) {
+			if (e.keyCode == 37 && player.left > 15 || e.keyCode == 65 && player.left > 15) { //left
+				player.left -= 10
+			}
+			if (e.keyCode == 39 && player.left < 830 || e.keyCode == 68 && player.left < 830) { //right
+				player.left += 10
+			}
+			if (e.keyCode == 40 && player.top < 625 || e.keyCode == 83 && player.top < 625) { //down
+				player.top += 10
+			}
+			if (e.keyCode == 38 && player.top > 400 || e.keyCode == 87 && player.top > 400) { //up
+				player.top -= 10
+			}
+			drawPlayer();
+		}
+
+
+
+	</script>
+
+
+</body>
+</html>

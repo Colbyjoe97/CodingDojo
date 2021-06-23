@@ -1,0 +1,17 @@
+.tableStyle{
+    animation: slide-in 2s
+}
+
+.topStyle{
+    animation: slide-down 2s
+}
+@keyframes slide-in {
+    from{
+        transform: translateX(1600px)
+    }
+}
+@keyframes slide-down {
+    from{
+        transform: translateY(-250px)
+    }
+}

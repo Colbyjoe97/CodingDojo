@@ -1,0 +1,59 @@
+﻿@model Products
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Index.css">
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Product Page";
+    }
+    <div class="text-center">
+        <h1 class="display-4"><a href="/">Products | </a><a href="/Categories">Categories</a></h1>
+    </div><br>
+    <div class="card col-4">
+        <div class="card-body">
+            <div class="card-title text-center">Add New Product</div>
+            <form action="addProduct" method="post">
+                <span asp-validation-for="Name"></span><br>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control"><br>
+
+                <span asp-validation-for="Description"></span><br>
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control"><br>
+
+                <span asp-validation-for="Price"></span><br>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control"><br>
+                <div class="text-center">
+                    <input type="submit" value="Add Product">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card col-4" id="thisCard">
+        <div class="card-body">
+            <div class="card-title text-center">Existing Products</div>
+            <table class="table table-hover">
+                <thead>
+                    <th>Name</th>
+                    <th>Price</th>
+                </thead>
+                <tbody>
+                    @foreach(var p in ViewBag.allProducts)
+                    {
+                        <tr>
+                            <td><a href="product/@p.ProductId">@p.Name</a></td>
+                            <td>$@p.Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an item</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'createPage.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        <h1>Create a new item</h1>
+        {% if messages %}
+        {% for message in messages %}
+            <li id="message">{{message}}</li>
+        {% endfor %}
+        {% endif %}
+        <form action="/addItem" method="post">
+        {% csrf_token %}
+            <p>Product name: <input type="text" name="itemName"></p>
+            <input type="submit" name="addItem" value="Add Item" id="submit">
+        </form>
+    </div>
+</body>
+</html>

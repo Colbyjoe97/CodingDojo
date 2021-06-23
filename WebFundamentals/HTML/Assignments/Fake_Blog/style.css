@@ -1,0 +1,10 @@
+#stats {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#title {
+    height: 50px;
+    color: red;
+    text-size-adjust: 500px;
+}

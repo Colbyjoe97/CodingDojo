@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{loggedInUser.first_name}} {{loggedInUser.last_name}}'s Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'success.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        <a href="/logout" id="logout">Logout</a>
+        <h1 id="header">Hello {{loggedInUser.first_name}} {{loggedInUser.last_name}}!</h1>
+        <p id="WishList">Your wish list items:</p>
+        <div>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Added By</th>
+                    <th>Date Added</th>
+                    <th>Action</th>
+                </tr>
+                {% for item in favItems %}
+                <tr>
+                    <th><a href="/view/{{item.id}}" name="viewItem">{{ item.name }}</a></th>
+                    <th>{{ item.added_by.first_name}} {{ item.added_by.last_name }}</th>
+                    <th>{{ item.created_at }}</th>
+                    <th><a href="/removeFav/{{item.id}}" name="Remove">Remove from my Wishlist |</a><a href="/delete/{{item.id}}" name="delete"> Delete Item</a></th>
+                </tr>
+                {% endfor %}
+                <a href="/item/create" id="create">Create a new item</a>
+            </table>
+        </div>
+        <div>
+            <p>Other User's Wish List</p>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Added By</th>
+                    <th>Date Added</th>
+                    <th>Action</th>
+                </tr>
+                {% for item in nonFavItems %}
+                <tr>
+                    {% if loggedInUser.first_name != favorite.added_by %}
+                    <th><a href="/view/{{item.id}}" name="viewItem">{{ item.name }}</a></th>
+                    <th>{{ item.added_by.first_name }} {{ item.added_by.last_name }}</th>
+                    <th>{{ item.created_at }}</th>
+                    <th><a href="/addFav/{{item.id}}" name="Add">Add to my Wishlist |</a><a href="/delete/{{item.id}}" name="delete"> Delete Item</a></th>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@model List<Event>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="logout">Logout</a></p>
+    <h1 class="text-center">Hello @ViewBag.User.FirstName @ViewBag.User.LastName!</h1><br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start Date/Time</th>
+                <th>Duration</th>
+                <th>Event Coordinator</th>
+                <th>No. Of Participants</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Event e in @Model)
+            {
+                <tr>
+                    @if(e.Start > DateTime.Now)
+                    {
+                        <td><a asp-action="ShowEvent" asp-controller="Home" asp-route-eventId="@e.EventId">@e.Name</a></td>
+                        <td>@e.Start</td>
+                        <td>@e.Duration @e.DurationType</td>
+                        <td>@e.Creator.FirstName @e.Creator.LastName</td>
+                        <td>@e.Participators.Count</td>
+                        <td>
+                        @if(e.Creator.UserId == ViewBag.User.UserId)
+                        {
+                            <a asp-action="cancel" asp-controller="Home" asp-route-eventId="@e.EventId">Cancel</a>
+                        }
+                        else
+                        {
+                            if(e.Participators.Any(r => r.UserId == ViewBag.User.UserId))
+                            {
+                                <a asp-action="unAttend" asp-controller="Home" asp-route-userId="@ViewBag.User.UserId" asp-route-eventId="@e.EventId">Un-Attend</a>
+                            }
+                            else
+                            {
+                                <a asp-action="Attend" asp-controller="Home" asp-route-userId="@ViewBag.User.UserId" asp-route-eventId="@e.EventId">Attend</a>
+                            }
+                        }
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="NewEvent" asp-controller="Home" class="btn btn-info">Add New Event!</a>
+</body>
+</html>

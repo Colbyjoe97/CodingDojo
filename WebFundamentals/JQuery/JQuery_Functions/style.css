@@ -1,0 +1,12 @@
+body {
+    background-color: teal;
+}
+
+.header {
+    width: 350px;
+    color: yellow;
+}
+
+ul li{
+    font-size: xx-large;
+}

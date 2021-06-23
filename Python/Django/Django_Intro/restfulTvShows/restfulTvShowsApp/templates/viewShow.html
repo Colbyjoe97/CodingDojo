@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{this_show.title}} Information</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'viewShow.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        <h1>{{ this_show.title }}</h1>
+        <p>Network: {{ this_show.network }}</p>
+        <p>Release Date: {{ this_show.releaseDate }}</p>
+        <p>description: {{ this_show.description }}</p>
+        <a href="/" value="home">Return Home |</a><a href="/editShow/{{this_show.id}}" value="edit"> Edit |</a><a href="/deleteShow/{{this_show.id}}" value="delete"> Delete</a>
+        <div id="footer">
+            <p>Last updated: {{ this_show.updated_at }}</p>
+        </div>
+    </div>
+</body>
+</html>

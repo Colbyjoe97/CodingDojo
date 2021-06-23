@@ -1,0 +1,53 @@
+@model List<Party>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="logout">Logout</a></p>
+    <h1 class="text-center">Welcome @ViewBag.User.FirstName @ViewBag.User.LastName!</h1><br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Show Name</th>
+                <th>Show Date/Time</th>
+                <th>Guest Count</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Party p in @Model)
+            {
+                <tr>
+                    <td><a asp-action="ShowParty" asp-controller="Home" asp-route-partyId="@p.PartyId">@p.ShowName</a></td>
+                    <td>@p.Start</td>
+                    <td>@p.Attendees.Count</td>
+                    <td>
+                        @if(p.Creator.UserId == ViewBag.User.UserId)
+                        {
+                            <a asp-action="DestroyParty" asp-controller="Home" asp-route-partyId="@p.PartyId">Cancel</a>
+                        }
+                        else
+                        {
+                            if(p.Attendees.Any(r => r.UserId == ViewBag.User.UserId))
+                            {
+                                <a asp-action="unRSVP" asp-controller="Home" asp-route-UserId="@ViewBag.User.UserId" asp-route-partyId = "@p.PartyId">Un-RSVP</a>
+                            }
+                            else
+                            {
+                                <a asp-action="RSVP" asp-controller="Home" asp-route-userId="@ViewBag.User.UserId" asp-route-partyId="@p.PartyId">RSVP</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a asp-action="NewParty" asp-controller="Home" class="btn btn-info">Add A Party</a>
+    </div>
+</body>
+</html>

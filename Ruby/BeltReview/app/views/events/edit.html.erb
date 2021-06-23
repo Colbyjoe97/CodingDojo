@@ -1,0 +1,32 @@
+<div class="editWrapper p-5">
+    <h1>Editing <%= @event.name %></h1>
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+            <p class="text-danger"><%= error %></p>
+        <% end %>
+    <% end %>
+    <form action="/update/<%=@event.id%>/event" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div>
+            <p>Event Name:</p>
+            <input type="text" name="name" placeholder="<%=@event.name%>">
+        </div>
+        <div>
+            <p>Date:</p>
+            <input type="date" name="date">
+        </div>
+        <div>
+            <p>Location:</p>
+            <select name="location">
+                <option value="Belleview">Belleview</option>
+                <option value="Las Angeles">Las Angeles</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Sykesville">Sykesville</option>
+            </select>
+        </div>
+
+        <button class="btn btn-success mt-2">Update Event</button>
+    </form>
+    <a href="/events">Go Back</a>
+</div>

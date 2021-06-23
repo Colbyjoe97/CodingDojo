@@ -1,0 +1,29 @@
+#wrap {
+    background-color: lightgrey;
+    width: 450px;
+    padding: 10px;
+    font-size: large;
+}
+#wrap h1 {
+    margin-left: 6%;
+}
+#title input{
+    margin-left: 60px;
+}
+#network input{
+    margin-left: 30px;
+}
+#rd input{
+    width: 170px;
+}
+#update {
+    margin-top: 25px;
+    margin-left: 30%;
+}
+#home{
+    margin-left: 83%;
+    font-size: small;
+}
+#messages {
+    color: red;
+}

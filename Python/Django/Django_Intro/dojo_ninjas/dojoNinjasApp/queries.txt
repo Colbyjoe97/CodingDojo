@@ -1,0 +1,33 @@
+from dojoNinjasApp.models import *
+
+dojo1 = Dojo.objects.create(name="Coding Dojo", city="Las Angeles", state="California")
+dojo2 = Dojo.objects.create(name="VS Dojo", city="Sykesville", state="Maryland")
+dojo3 = Dojo.objects.create(name="Music Dojo", city="New York", state="New York")
+
+dojo1 = Dojo.objects.get(id=1)
+dojo1.delete()
+
+dojo2 = Dojo.objects.get(id=2)
+dojo2.delete()
+
+dojo3 = Dojo.objects.get(id=3)
+dojo3.delete()
+
+kevin = Ninja.objects.create(dojo_id=1, first_name="Kevin", last_name="Doe")
+stacy = Ninja.objects.create(dojo_id=1, first_name="Stacy", last_name="Stern")
+sean = Ninja.objects.create(dojo_id=1, first_name="Sean", last_name="Kelso")
+
+james = Ninja.objects.create(dojo_id=2, first_name="James", last_name="Willis")
+ben = Ninja.objects.create(dojo_id=2, first_name="Ben", last_name="England")
+eddie = Ninja.objects.create(dojo_id=2, first_name="Eddie", last_name="Condo")
+
+brennan = Ninja.objects.create(dojo_id=3, first_name="Brennan", last_name="Werner")
+liam = Ninja.objects.create(dojo_id=3, first_name="Liam", last_name="Werner")
+kaitlyn = Ninja.objects.create(dojo_id=3, first_name="Kaitlyn", last_name="Wills")
+
+Ninja.objects.filter(dojo_id=1)
+Ninja.objects.filter(dojo_id=3)
+
+Dojo.objects.last()
+
+dojo4 = Dojo.objects.create(name="Bootcamp Dojo", city="Chicago", state="Illinois", desc="A Bootcamp Dojo in Illinois")

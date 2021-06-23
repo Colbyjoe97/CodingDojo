@@ -1,0 +1,20 @@
+<h1>Quoting Ranks</h1>
+<a [routerLink]="['/']">Go Home</a><br>
+<a [routerLink]="['/new/author']">Add new author</a>
+<p><b>We have quotes by:</b></p>
+<table class="table table-hover authorList">
+  <thead>
+    <tr>
+      <th>Author Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of authors; let idx = index">
+      <th>{{author.name}}</th>
+      <th><a href=""[routerLink]="['/author', author._id]">Quotes</a> | <a href=""[routerLink]="['/edit/author', author._id]">Edit</a> | <a href="" (click)="deleteAuthor(author)">Delete</a></th>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>

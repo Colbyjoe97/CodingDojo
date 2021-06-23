@@ -1,0 +1,13 @@
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.exe
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.deps.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.runtimeconfig.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.runtimeconfig.dev.json
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.dll
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\bin\Debug\netcoreapp3.1\FirstProj.pdb
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.csprojAssemblyReference.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.AssemblyInfoInputs.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.AssemblyInfo.cs
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.csproj.CoreCompileInputs.cache
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.dll
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.pdb
+C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\FirstProj\obj\Debug\netcoreapp3.1\FirstProj.genruntimeconfig.cache

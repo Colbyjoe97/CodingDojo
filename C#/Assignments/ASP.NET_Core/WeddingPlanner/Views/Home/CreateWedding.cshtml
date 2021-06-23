@@ -1,0 +1,41 @@
+@model Wedding
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/loginreg.css">
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Product Page";
+    }
+    <div class="text-center">
+        <h1>Create A Wedding</h1>
+    </div><br>
+    <form action="AddWedding" method="post">
+        <span asp-validation-for="WedderOne" id="warning"></span><br>
+        <label asp-for="WedderOne"></label>
+        <input asp-for="WedderOne" class="form-control"><br>
+
+        <span asp-validation-for="WedderTwo" id="warning"></span><br>
+        <label asp-for="WedderTwo"></label>
+        <input asp-for="WedderTwo" class="form-control"><br>
+
+        <span asp-validation-for="Date" id="warning"></span><br>
+        <label asp-for="Date"></label>
+        <input asp-for="Date" class="form-control"><br>
+
+        <span asp-validation-for="Address" id="warning"></span><br>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control"><br>
+
+        <input type="hidden" name="UserId" value="@ViewBag.LoggedId">
+        <div class="text-center">
+            <input type="submit" value="Submit Wedding">
+        </div>
+    </form>
+</body>
+</html>

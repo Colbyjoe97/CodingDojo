@@ -1,0 +1,29 @@
+<p>Editing <%= @student.first_name %></p>
+<form action="/dojos/<%=@dojo.id%>/students/<%=@student.id%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div>
+        <p>First Name:</p>
+        <input type="text" name="first_name" placeholder="<%=@student.first_name%>">
+    </div>
+    <div>
+        <p>Last Name:</p>
+        <input type="text" name="last_name" placeholder="<%=@student.last_name%>">
+    </div>
+    <div>
+        <p>Email:</p>
+        <input type="text" name="email" placeholder="<%=@student.email%>">
+    </div>
+    <div>
+        <p>Dojo:</p>
+        <select name="dojo">
+            <option value="<%= @student.dojo.id %>"><%= @student.dojo.branch %></option>
+            <% @dojos.each do |dojo| %>
+                <% if dojo.id != @student.dojo.id %>
+                    <option value="<%= dojo.id %>"><%= dojo.branch %></option>
+                <% end %>
+            <% end %>
+        </select>
+    </div>
+    <button class="ben btn-success">Edit Student</button>
+</form>

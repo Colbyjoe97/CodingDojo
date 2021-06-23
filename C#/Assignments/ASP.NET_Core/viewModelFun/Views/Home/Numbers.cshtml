@@ -1,0 +1,23 @@
+@using viewModelFun.Models
+@model int[]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Numbers";
+    }
+    <div class="text-center">
+        <h1 class="display-4">Here's an array of numbers!</h1>
+    </div>
+    @foreach(var num in Model)
+    {
+        <p class="text-center">@num</p>
+    }
+</body>
+</html>

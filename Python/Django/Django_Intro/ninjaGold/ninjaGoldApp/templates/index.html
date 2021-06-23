@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="header">
+        <p>Your Gold:</p>
+        <p id="currentGold">{{ request.session.gold }}</p>
+        <form action="/reset" method="post">
+            {% csrf_token %}
+            <input type="submit" id="reset" value="Click me to reset your gold!">
+        </form>
+    </div>
+    <div class="goldBox">
+        <div id="farm">
+            <form action="/farm" method="post">
+            {% csrf_token %}
+                <h1>Farm</h1>
+                <h4>(Earns 10-20 gold pieces)</h4>
+                <input type="submit" id="farm" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <div class="goldBox">
+        <div id="cave">
+            <form action="/cave" method="post">
+            {% csrf_token %}
+                <h1>Cave</h1>
+                <h4>(Earns 5-10 gold pieces)</h4>
+                <input type="submit" id="cave" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <div class="goldBox">
+        <div id="house">
+            <form action="/house" method="post">
+            {% csrf_token %}
+                <h1>House</h1>
+                <h4>(Earns 2-5 gold pieces)</h4>
+                <input type="submit" id="house" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <div class="goldBox">
+        <div id="casino">
+            <form action="/casino" method="post">
+            {% csrf_token %}
+                <h1>Casino</h1>
+                <h4>(Earns/takes 0-50 gold pieces)</h4>
+                <input type="submit" id="casino" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <p id="activities">Activities:</p>
+    <div id="history">
+        {% if request.session.difference >= 0 %}
+        <div id="green">
+            <p>You gained {{ request.session.difference }} gold pieces!</p>
+        </div>
+        {% else %}
+        <div id="red">
+            <p>You lost {{ request.session.difference }} gold pieces!</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

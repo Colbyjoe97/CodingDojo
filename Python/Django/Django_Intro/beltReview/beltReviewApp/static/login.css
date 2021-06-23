@@ -1,0 +1,76 @@
+#errors {
+    color: red;
+}
+#wrap {
+    border: 2px solid black;
+    width: 400px;
+    padding: 15px;
+    height: 100%;
+    font-size: large;
+    display: inline-block;
+}
+h1 {
+    margin-top: -5px;
+    margin-left: 23%;
+}
+#fname {
+    margin-left: 20px;
+}
+#fname input {
+    margin-left: 55px;
+}
+#lname {
+    margin-left: 20px;
+}
+#lname input {
+    margin-left: 55px;
+}
+#email {
+    margin-left: 20px;
+}
+#email input {
+    margin-left: 90px;
+}
+#birthday {
+    margin-left: 20px;
+}
+#birthday input {
+    margin-left: 70px;
+    width: 173px;
+}
+#password {
+    margin-left: 20px;
+}
+#password input {
+    margin-left: 65px;
+}
+#confirm {
+    margin-left: 20px;
+}
+#confirm input {
+    margin-left: 0px;
+}
+#register{
+    margin-left: 150px;
+    margin-top: 8px;
+    display: inline-block;
+}
+#log {
+    display: inline-block;
+    border: 2px solid black;
+    margin-left: 100px;
+    padding: 20px;
+    height: 100%;
+    width: 290px;
+    font-size: large;
+}
+#login{
+    margin-left: 112px;
+    margin-top: 43px;
+}
+#userEmail{
+    margin-top: 40px;
+}
+#userEmail input{
+    margin-left: 26px;
+}

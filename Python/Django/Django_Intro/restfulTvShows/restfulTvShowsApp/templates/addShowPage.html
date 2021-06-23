@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'addShowPage.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        {% if messages %}
+        <ul id="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    <form action="/addShow" method="post">
+    {% csrf_token %}
+        <div id="header">
+            <h1>Add a New Show</h1>
+        </div>
+        <div id="body">
+            <div id="title">
+                <h3>Title: <input type="text" name="title" ></h3>
+            </div>
+            <H3>Network: <input type="text" name="network" ></H3>
+            <h3>Release Date: <input type="date" name="releaseDate" id="release" ></h3>
+            <h3>Description (optional):</h3>
+            <textarea id="desc" name="desc" cols="30" rows="10" ></textarea>
+        </div>
+        <input type="submit">
+        <a href="/" id="home">Return to home</a>
+    </form>
+    </div>
+</body>
+</html>

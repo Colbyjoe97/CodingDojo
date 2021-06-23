@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center">Mongoose Dashboard</h1>
+    <div class="text-center">
+        <% for (var e of errors) { %>
+            <p class="text-danger"><%= e %></p>
+        <% } %>
+        <form action="createPost" method="post">
+            <div>
+                <p>Name: </p>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <p>Post: </p>
+                <textarea name="post"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit Post">
+            </div>
+        </form><br>
+        <% for(let p of posts) { %>
+            <div class="card" style="width: 500px; margin-left: 30vw;">
+                <div class="card-body" style="background-color: salmon;">
+                    <p><%= p.name %></p>
+                    <p><%= p.post %></p>
+                </div>
+                <% for(let c of p.comments) { %>
+                    <div style="background-color: cyan; margin-bottom: 5px;">
+                        <p><%= c.name %></p>
+                        <p><%= c.comment %></p>
+                    </div>
+                <% } %>
+                <form action="addComment/<%= p.id %>" method="post">
+                    <div>
+                        <p>Name: <input type="text" name="name"></p>
+                    </div>
+                    <div>
+                        <p>Comment: <textarea name="comment"></textarea></p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Comment">
+                    </div><br>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

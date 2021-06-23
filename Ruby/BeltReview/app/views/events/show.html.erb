@@ -1,0 +1,63 @@
+<div class="showWrapper">
+    <div class="accountActions text-right">
+        <a href="">Edit My Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="title">
+        <h1><%= @event.name %></h1>
+        <a href="/events">Go Back</a>
+    </div>
+
+    <div class="eventLeft">
+        <div class="eventInfo">
+            <p>Host: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
+            <p>Date: <%= @event.date %></p>
+            <p>Location: <%= @event.location %></p>
+            <p>Number of people attending: <b><%= @event.attends.count %></b></p>
+
+            <table class="table table-hover">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Location</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @attendees.each do |attendee| %>
+                            <tr>
+                                <td><%= attendee.user.first_name %> <%= attendee.user.last_name %></td>
+                                <td><%= attendee.user.location %></td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+    <div class="eventRight">
+        <div class="commentSection">
+            <h3>Comments about this event!</h3><br>
+            <% @comments.each do |comment| %>
+                <p><%= comment.user.first_name %></p>
+                <p><%= comment.content %></p>
+                <a href="/comment/<%=comment.id%>/delete" data-method="delete">Delete Comment</a>
+            <% end %>
+        </div>
+
+    </div>
+    <div class="lowerRight">
+        <div class="addComment">
+            <% if flash[:errors] %>
+                <% flash[:errors].each do |error| %>
+                    <p class="text-danger"><%= error %></p>
+                <% end %>
+            <% end %>
+            <form action="/comment/<%=@event.id%>" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <textarea name="content"cols="30" rows="3"></textarea><br>
+                <button class="btn btn-success">Add Comment</button>
+            </form>
+        </div>
+    </div>
+</div>

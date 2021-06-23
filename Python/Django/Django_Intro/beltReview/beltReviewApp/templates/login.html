@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belt Reviewer</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        <h1>Register Here</h1>
+        {% if messages %}
+        <ul id="errors">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/register" method="post">
+        {% csrf_token %}
+            <p id="fname">First Name: <input type="text" name="fname"></p>
+            <p id="lname">Last Name: <input type="text" name="lname"></p>
+            <p id="email">Email: <input type="text" name="email"></p>
+            <p id="birthday">Birthday: <input type="date" name="birthday"></p>
+            <p id="password">Password: <input type="password" name="password"></p>
+            <p id="confirm">Confirm Password: <input type="password" name="confirmPass"></p>
+            <input type="submit" value="Register" id="register">
+        </form>
+    </div>
+    <div id="log">
+        <h1>Log in here</h1>
+        {% if messages %}
+        <ul id="errors">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/login" method="post">
+        {% csrf_token %}
+            <p id="userEmail">Email: <input type="text" name="userEmail"></p>
+            <p id="userPass">Password: <input type="password" name="userPass"></p>
+            <input type="submit" id="login" value="Log in">
+        </form>
+    </div>
+</body>
+</html>

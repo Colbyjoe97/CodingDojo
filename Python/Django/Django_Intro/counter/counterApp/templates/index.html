@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Counter</title>
+</head>
+<body>
+    <h1>You have visited this site {{ request.session.counter }} times!</h1>
+    <h2>You have actually visited this site {{ request.session.realCount }} times!</h2>
+    <form action='/session_destroy' method='post'> <!-- Increment the counter -->
+        {% csrf_token %}
+        <button>Click to reset the counter!</button>
+    </form>
+    <form action='/twos' method='post'> <!-- Increment Counter by 2 -->
+        {% csrf_token %}
+        <button>Click to increase the counter by 2!</button>
+    </form>
+</body>
+</html>

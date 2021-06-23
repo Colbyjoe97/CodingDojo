@@ -1,0 +1,52 @@
+@model Transactions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        ViewData["Title"] = "User Page";
+    }
+    @foreach(var u in ViewBag.AllUsers)
+    {
+        @if(u.UserId == ViewBag.LoggedId)
+        {
+            <h1 class="text-center">Welcome @u.FirstName @u.LastName!</h1>
+        }
+    }
+    <p class="text-center"><a href="logout">Logout Here</a></p>
+    @foreach(var u in ViewBag.AllUsers)
+    {
+        @if(u.UserId == ViewBag.LoggedId)
+        {
+            <p>@u.FirstName's Bank Account</p>
+            <p>@ViewBag.Balance</p>
+        }
+    }
+    <form action="MakeTransaction" method="post">
+        <span asp-validation-for="Amount"></span>
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount"><br>
+        @foreach(var u in ViewBag.AllUsers)
+        {
+            @if(u.UserId == ViewBag.LoggedId)
+            {
+                <input type="hidden" name="userId" value=@u.UserId>
+            }
+        }
+        <input type="hidden" name="userId"> @*Probably don't need this line*@
+        <br><input type="submit" value="Make Transaction">
+    </form><br>
+    <p>Recent Transactions: </p>
+    @foreach(var t in ViewBag.AllTransactions)
+    {
+        if(t.UserId == ViewBag.LoggedId)
+        {
+            <p>$@t.Amount - @t.CreatedAt</p><br>
+        }
+    }
+</body>
+</html>

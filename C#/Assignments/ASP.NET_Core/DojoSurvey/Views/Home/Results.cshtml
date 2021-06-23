@@ -1,0 +1,23 @@
+@using DojoSurvey.Models
+@model Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    @{
+        <div id="info">
+            <h2>Your entered info:</h2>
+            <p>Name: @Model.name</p>
+            <p>Dojo Location: @Model.locations</p>
+            <p>Favorite Language: @Model.languages</p>
+            <p>Comment: @Model.comment</p>
+        </div>
+    }
+</body>
+</html>

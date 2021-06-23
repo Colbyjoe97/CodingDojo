@@ -1,0 +1,33 @@
+﻿@model Login
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/loginreg.css">
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Login";
+    }
+    <div class="card col-5">
+        <div class="card-body">
+            <h1 class="card-title text-center">Login</h1>
+            <form action="Login" method="post">
+                <span asp-validation-for="Email" class="text-danger"></span><br>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control"><br>
+
+                <span asp-validation-for="Password" class="text-danger"></span><br>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control"><br>
+                <div class="text-center">
+                    <input id="submit" type="submit" value="Login">
+                </div>
+            </form>
+            <a href="RegisterPage">Register Here!</a>
+        </div>
+    </div>
+</body>
+</html>

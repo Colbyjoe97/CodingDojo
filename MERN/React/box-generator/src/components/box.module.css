@@ -1,0 +1,18 @@
+.boxStyle{
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    animation: slide-in 2s
+}
+
+.outerDiv{
+    display: inline-flex;
+}
+@keyframes slide-in {
+    from{
+        transform: translateX(1600px)
+    }
+}

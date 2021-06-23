@@ -1,0 +1,11 @@
+<div class="info">
+    <h3>Baker: {{ cakeToShow.baker }}</h3>
+    <h1 class="text-center">Average Rating: {{ average }}</h1>
+    <img src="{{ cakeToShow.image }}" alt="">
+    <div class="ratings">
+        <div *ngFor="let r of cakeToShow.reactions" class="eachRating">
+            <p>Rating: {{ r.rating }}</p>
+            <p>Comment: {{ r.comment }}</p>
+        </div>
+    </div>
+</div>

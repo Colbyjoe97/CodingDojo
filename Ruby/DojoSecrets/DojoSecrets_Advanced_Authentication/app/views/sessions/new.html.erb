@@ -1,0 +1,12 @@
+<form action="/login" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div>
+        <p>Email: </p>
+        <input type="text" name="email" placeholder="email">
+    </div>
+    <div>
+        <p>Password: </p>
+        <input type="text" name="password" placeholder="password">
+    </div>
+    <button>Log In</button>
+</form>

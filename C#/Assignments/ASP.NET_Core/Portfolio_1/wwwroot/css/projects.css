@@ -1,0 +1,14 @@
+#links{
+    margin-left: 250px;
+}
+#allProjects{
+    border: 1px solid black;
+    width: 400px;
+    padding: 5px;
+}
+#proj h4{
+    margin-left: 5px;
+}
+#proj p{
+    margin-left: 25px;
+}
