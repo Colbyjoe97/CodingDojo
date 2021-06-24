@@ -19,9 +19,4 @@ class AppleTree
     def pick_apples
         @apple_count = 0
     end
-
-    def test
-        puts "this is a test for github"
-        p "This is another test!"
-    end
 end
