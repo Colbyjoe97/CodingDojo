@@ -22,5 +22,6 @@ class AppleTree
 
     def test
         puts "this is a test for github"
+        p "This is another test!"
     end
 end
