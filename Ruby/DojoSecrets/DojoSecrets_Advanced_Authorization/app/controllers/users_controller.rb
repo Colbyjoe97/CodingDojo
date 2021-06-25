@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   def wrongUser
     @user = User.find(params[:id])
     if @user.id != session[:user_id]
-      redirect_to '/sessions/new'
+      redirect_to "/users/#{current_user.id}"
     end
   end
 

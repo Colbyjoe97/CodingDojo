@@ -45,6 +45,9 @@ rails generate migration RemoveFieldNameFromTableName field_name:datatype
 
 rake db:migrate
 
+Catch-All Route:
+match "*path", to: "application#custom_action", via: :all
+
 To enter rails console:
 rails c OR rails console
 Hirb.enable
