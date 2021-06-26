@@ -37,8 +37,7 @@ Migrate:
 rake db:migrate
 
 ADDING COLUMN TO EXISTING MODEL:
-rails generate migration add_<what to add>_to_<model to add to> 
-<what_to_add>:<type> (<-- goes on the same line)
+rails generate migration add_<what to add>_to_<model to add to> <what_to_add>:<type>
 
 REMOVING COLUMN FROM EXISTING MODEL:
 rails generate migration RemoveFieldNameFromTableName field_name:datatype
