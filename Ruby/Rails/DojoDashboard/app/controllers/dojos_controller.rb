@@ -1,7 +1,4 @@
 class DojosController < ApplicationController
-  def redirect
-    redirect_to '/dojos'
-  end
 
   def index
     session[:count] = 0
