@@ -4,7 +4,6 @@
         <div class="mode">
             <h3>Farm</h3>
             <p>(earns 10-20 gold)</p>
-            <!-- <a href="farm"><button class="btn btn-success">Find Gold!</button></a> -->
             <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="farm">
@@ -14,7 +13,6 @@
         <div class="mode">
             <h3>Cave</h3>
             <p>(earns 5-10 gold)</p>
-            <!-- <a href="cave"><button class="btn btn-success">Find Gold!</button></a> -->
             <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="cave">
@@ -24,7 +22,6 @@
         <div class="mode">
             <h3>House</h3>
             <p>(earns 2-5 gold)</p>
-            <!-- <a href="house"><button class="btn btn-success">Find Gold!</button></a> -->
             <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="house">
@@ -34,7 +31,6 @@
         <div class="mode">
             <h3>Casino</h3>
             <p>(earns/takes 0-50 gold)</p>
-            <!-- <a href="casino"><button class="btn btn-success">Find Gold!</button></a> -->
             <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="casino">
