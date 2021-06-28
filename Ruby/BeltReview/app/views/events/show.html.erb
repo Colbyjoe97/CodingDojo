@@ -9,29 +9,28 @@
     </div>
 
     <div class="eventLeft">
-        <div class="eventInfo">
+        <div class="eventInfo"> 
             <p>Host: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
             <p>Date: <%= @event.date %></p>
             <p>Location: <%= @event.location %></p>
             <p>Number of people attending: <b><%= @event.attends.count %></b></p>
 
             <table class="table table-hover">
-                <table class="table table-hover">
-                    <thead>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Location</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @attendees.each do |attendee| %>
                         <tr>
-                            <td>Name</td>
-                            <td>Location</td>
+                            <td><%= attendee.user.first_name %> <%= attendee.user.last_name %></td>
+                            <td><%= attendee.user.location %></td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <% @attendees.each do |attendee| %>
-                            <tr>
-                                <td><%= attendee.user.first_name %> <%= attendee.user.last_name %></td>
-                                <td><%= attendee.user.location %></td>
-                            </tr>
-                        <% end %>
-                    </tbody>
-                </table>
+                    <% end %>
+                </tbody>
+            </table>
         </div>
     </div>
 
