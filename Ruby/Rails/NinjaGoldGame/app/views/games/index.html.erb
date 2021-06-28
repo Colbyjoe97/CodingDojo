@@ -5,7 +5,7 @@
             <h3>Farm</h3>
             <p>(earns 10-20 gold)</p>
             <!-- <a href="farm"><button class="btn btn-success">Find Gold!</button></a> -->
-            <form action="/create" method="post">
+            <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="farm">
                 <input type="submit" value="Find Gold!" class="btn btn-success">
@@ -15,7 +15,7 @@
             <h3>Cave</h3>
             <p>(earns 5-10 gold)</p>
             <!-- <a href="cave"><button class="btn btn-success">Find Gold!</button></a> -->
-            <form action="/create" method="post">
+            <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="cave">
                 <input type="submit" value="Find Gold!" class="btn btn-success">
@@ -25,7 +25,7 @@
             <h3>House</h3>
             <p>(earns 2-5 gold)</p>
             <!-- <a href="house"><button class="btn btn-success">Find Gold!</button></a> -->
-            <form action="/create" method="post">
+            <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="house">
                 <input type="submit" value="Find Gold!" class="btn btn-success">
@@ -35,7 +35,7 @@
             <h3>Casino</h3>
             <p>(earns/takes 0-50 gold)</p>
             <!-- <a href="casino"><button class="btn btn-success">Find Gold!</button></a> -->
-            <form action="/create" method="post">
+            <form action="/play" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="location" value="casino">
                 <input type="submit" value="Find Gold!" class="btn btn-success">
@@ -46,11 +46,13 @@
         <p>Activities:</p>
         <div class="activities">
             <% session[:activities].each do |activity| %>
-                <p class="good"><%= activity %></p>
-            <% end %>
-            <% session[:badActivities].each do |activity| %>
-                <p class="bad"><%= activity %></p>
+                <% if activity > 0 %>
+                    <p class="good">You gain <%= activity %> gold!</p>
+                <% else %>
+                    <p class="bad">You lost <%= activity %> gold!</p>
+                <% end %>
             <% end %>
         </div>
     </div>
+    <a href="/reset">Reset Game!</a>
 </div>

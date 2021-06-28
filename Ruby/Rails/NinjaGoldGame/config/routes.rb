@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   get '' => 'games#index'
-  post '/create' => 'games#create'
+  post '/play' => 'games#create'
+  get '/reset' => 'games#destroy'
 end
