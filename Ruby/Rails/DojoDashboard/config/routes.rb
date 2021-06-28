@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   post 'dojos/students' => 'students#create'
   patch 'students/:id/edit' => 'students#update'
 
-  # # Dojos
+  # Dojos
   resources :dojos
 end
