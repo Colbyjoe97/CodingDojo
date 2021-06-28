@@ -1,5 +1,5 @@
 class DojosController < ApplicationController
-  def move
+  def redirect
     redirect_to '/dojos'
   end
 
@@ -20,21 +20,25 @@ class DojosController < ApplicationController
     redirect_to '/dojos'
   end
 
-  def view
+  def show
     @students = Student.where(dojo: params[:id])
-    @dojo = Dojo.where(id: params[:id])
-    render 'view'
+    @dojo = Dojo.find(params[:id])
   end
 
-  def editPage
+  def edit
     @dojo = Dojo.find(params[:id])
-    render 'edit'
   end
 
   def update
     @dojo = Dojo.find(params[:id])
     @dojo.update(dojo_params)
-    redirect_to '/dojos'
+    if @dojo.valid?
+      @dojo.save
+      redirect_to dojos_path
+    else
+      flash[:errors] = @dojo.errors.full_messages
+      redirect_to :back
+    end
   end
 
   def destroy

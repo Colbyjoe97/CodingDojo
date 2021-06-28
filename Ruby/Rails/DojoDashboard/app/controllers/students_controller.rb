@@ -1,44 +1,55 @@
 class StudentsController < ApplicationController
-  def createPage
+  def new
     @dojo = Dojo.find(params[:id])
-    @allDojos = Dojo.all
-    render 'createStudent'
+    @dojos = Dojo.all
   end
 
-  def createStudent
-    @student = Student.new(first_name:params[:first_name], last_name:params[:last_name], email:params[:email], dojo:Dojo.find(params[:dojo]))
-    @student.save
-    @dojo = Dojo.find(params[:dojo])
-    redirect_to "/dojos/#{@dojo.id}"
+  def create
+    @dojo = Dojo.find(student_params[:dojo_id])
+    @student = Student.new(student_params)
+    if @student.valid?
+      @student.save
+      redirect_to "/dojos/#{@student.dojo.id}"
+    else
+      flash[:errors] = @student.errors.full_messages
+      redirect_to :back
+    end
   end
 
-  def showStudent
-    @student = Student.find(params[:studentId])
-    @dojo = Dojo.find(params[:dojoId])
+  def show
+    @student = Student.find(params[:id])
+    @dojo = @student.dojo
     @start_date = @student.created_at.beginning_of_day
   	@end_date   = @student.created_at.end_of_day
-    @cohorts = Student.where(dojo: Dojo.find(params[:dojoId]), :created_at => @start_date..@end_date)
-    render 'showStudent'
+    @cohorts = Student.where(dojo: @dojo, :created_at => @start_date..@end_date)
   end
 
-  def editStudentPage
+  def edit
     @dojos = Dojo.all
-    @student = Student.find(params[:studentId])
-    @dojo = Dojo.find(params[:dojoId])
-    render 'editStudent'
+    @student = Student.find(params[:id])
+    @dojo = @student.dojo
   end
 
-  def submitEdit
-    @student = Student.find(params[:studentId])
-    @student.update(first_name:params[:first_name], last_name:params[:last_name], email:params[:email], dojo:Dojo.find(params[:dojo]))
-    @student.save
-    redirect_to "/dojos/#{@student.dojo.id}"
+  def update
+    @student = Student.find(params[:id])
+    @student.update(student_params)
+    if @student.valid?
+      @student.save
+      redirect_to "/dojos/#{@student.dojo.id}"
+    else
+      flash[:errors] = @student.errors.full_messages
+      redirect_to :back
+    end
   end
 
-  def delete
-    @dojo = Dojo.find(params[:dojoId])
-    @student = Student.find(params[:studentId])
+  def destroy
+    @student = Student.find(params[:id])
     @student.delete
-    redirect_to "/dojos/#{@dojo.id}"
+    redirect_to :back
+  end
+
+  private
+  def student_params
+    params.require(:student).permit(:first_name, :last_name, :email, :dojo_id)
   end
 end

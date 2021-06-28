@@ -1,26 +1,31 @@
 <div class="addStudentWrapper">
     <h1>New Student</h1>
-    <form action="/dojos/<%=@dojo.id%>/students" method="post">
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+            <p class="text-danger"><%= error %></p>
+        <% end %>
+    <% end %>
+    <form action="/dojos/students" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <div>
             <p>First Name:</p>
-            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="student[first_name]" placeholder="First Name">
         </div>
         <div>
             <p>Last Name:</p>
-            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="student[last_name]" placeholder="Last Name">
         </div>
         <div>
             <p>Email:</p>
-            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="student[email]" placeholder="Email">
         </div>
         <div>
             <p>Dojo:</p>
-            <select name="dojo">
+            <select name="student[dojo_id]" required="True">
                     <option value="<%=@dojo.id%>"><%=@dojo.branch%></option>
-                    <% @allDojos.each do |dojos| %>
-                        <% if dojos.id != @dojo.id %>
-                            <option value="<%=dojos.id%>"><%=dojos.branch%></option>
+                    <% @dojos.each do |dojo| %>
+                        <% if dojo.id != @dojo.id %>
+                            <option value="<%=dojo.id%>"><%=dojo.branch%></option>
                         <% end %>
                     <% end %>
                 </select>
@@ -30,5 +35,5 @@
             </div>
         </form>
         <a href="/dojos/<%=@dojo.id%>"><%=@dojo.branch%></a> |
-        <a href="/dojos">Home</a>
+        <a href="<%= dojos_path %>">Home</a>
     </div>

@@ -1,9 +1,8 @@
 <div class="viewWrapper text-center">
-    <% @dojo.each do |dojo| %>
-        <h1>Viewing <%= dojo.branch %> Dojo</h1>
-        <b><p>Address: <%= dojo.street %></p></b>
-        <b><p>City: <%= dojo.city %></p></b>
-        <b><p>State: <%= dojo.state %></p></b>
+        <h1>Viewing <%= @dojo.branch %> Dojo</h1>
+        <b><p>Address: <%= @dojo.street %></p></b>
+        <b><p>City: <%= @dojo.city %></p></b>
+        <b><p>State: <%= @dojo.state %></p></b>
         <h3>Student Roster</h3>
         <table class="table table-hover viewTable">
             <thead>
@@ -21,16 +20,15 @@
                     <td><%= student.last_name %></td>
                     <td><%= student.email %></td>
                     <td>
-                        <a href="/dojos/<%=dojo.id%>/students/<%=student.id%>">Show</a> |
-                        <a href="/dojos/<%=dojo.id%>/students/<%=student.id%>/edit">Edit</a> |
-                        <a href="/dojos/<%=dojo.id%>/students/<%=student.id%>" data-method="delete">Delete</a>
+                        <a href="<%= student_path student.id %>">Show</a> |
+                        <a href="<%= edit_student_path student.id %>">Edit</a> |
+                        <a href="/students/<%=student.id%>" data-method="delete">Delete</a>
                     </td>
                 </tr>
                 <% end %>
             </tbody>
         </table>
-        <a href="/dojos">Home</a> |
-        <a href="/dojos/<%=dojo.id%>/edit">Edit</a> |
-        <a href="/dojos/<%=dojo.id%>/students/new">Add Student</a>
-    <% end %>
+        <a href="<%= dojos_path %>">Home</a> |
+        <a href="<%= edit_dojo_path @dojo.id %>">Edit</a> |
+        <a href="/dojos/<%=@dojo.id%>/students/new">Add Student</a>
 </div>

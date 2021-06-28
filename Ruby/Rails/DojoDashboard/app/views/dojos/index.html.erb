@@ -14,19 +14,19 @@
             <tbody>
                 <% @dojos.each do |dojo| %>
                 <tr>
-                        <td><%= dojo.branch %></td>
-                        <td><%= dojo.street %></td>
-                        <td><%= dojo.city %></td>
-                        <td><%= dojo.state %></td>
-                        <td>
-                            <a href="/dojos/<%=dojo.id%>">View</a> |
-                            <a href="/dojos/<%=dojo.id%>/edit">Edit</a> |
-                            <a href="/dojos/<%=dojo.id%>" data-method="delete">Delete</a>
-                        </td>
-                    </tr>
+                    <td><%= dojo.branch %></td>
+                    <td><%= dojo.street %></td>
+                    <td><%= dojo.city %></td>
+                    <td><%= dojo.state %></td>
+                    <td>
+                        <a href="<%= dojo_path dojo.id %>">View</a> |
+                        <a href="<%= edit_dojo_path dojo.id %>">Edit</a> |
+                        <a href="/dojos/<%=dojo.id%>" data-method="delete">Delete</a>
+                    </td>
+                </tr>
                 <% end %>
             </tbody>
         </table>
     </div>
-    <a href="/dojos/new"><p class="text-center">List New Dojo</p></a>
+    <a href="<%= new_dojo_path %>"><p class="text-center">List New Dojo</p></a>
 </div>
