@@ -1,7 +1,0 @@
-.wrapper {
-    width: 500px;
-    padding: 10px;
-}
-.wrapper table, th, tr, thead, tbody {
-    border: 1px solid black;
-}
