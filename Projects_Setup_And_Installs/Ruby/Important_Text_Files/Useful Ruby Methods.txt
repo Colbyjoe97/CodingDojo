@@ -1,0 +1,8 @@
+flatten -  puts all values into a single array 
+example: [1,2[3,4[5]]] -> [1,2,3,4,5]
+
+reduce - Get's a single value in an array
+example with for loop that will print sum of a given array: 
+def sum(arr)
+	arr.reduce(:+)
+end
