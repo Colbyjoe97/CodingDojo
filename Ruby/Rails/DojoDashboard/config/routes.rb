@@ -8,3 +8,6 @@ Rails.application.routes.draw do
   # Dojos
   resources :dojos
 end
+
+
+# test
