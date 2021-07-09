@@ -1,13 +1,9 @@
-var suit = ['Hearts','Diamonds','Spades','Clubs']
-var stringValue = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-
-
 class Card {
     constructor(suit, stringValue, numberValue) {
         this.suit = suit
         this.stringValue = stringValue
         this.numberValue = numberValue,
-
+        
         this.show = function() {
             console.log(`The card being shown is the ${stringValue} of ${suit} with a value of ${this.numberValue}.`)
         }
@@ -16,6 +12,8 @@ class Card {
 
 class Deck {
     constructor() {
+        var suit = ['Hearts','Diamonds','Spades','Clubs']
+        var stringValue = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
         this.deck = []
         this.orderedDeck = []
         for(let i = 0; i < suit.length; i++) {
@@ -69,17 +67,16 @@ class Player {
 
 var deck = new Deck()
 var player = new Player("Jeff")
-// deck.shuffle()
-// deck.show()
-// deck.reset()
-// deck.show()
+deck.shuffle()
+deck.show()
+deck.reset()
+deck.show()
 deck.deal(player)
 deck.deal(player)
 deck.deal(player)
 console.log(player.hand)
-// console.log("--------------------")
-// player.discard(1)
-// player.discard(1)
-// console.log(player.hand)
-// console.log("--------------------")
-// console.log(`This deck has ${deck2.deck.length} deck`)
+console.log("--------------------")
+player.discard(1)
+player.discard(1)
+console.log(player.hand)
+console.log("--------------------")

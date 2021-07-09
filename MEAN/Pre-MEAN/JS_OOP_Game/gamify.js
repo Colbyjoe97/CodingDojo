@@ -25,7 +25,7 @@ var bees = {
 var owl = {
     character: "Owl",
     greet: function() {
-        console.log("Hoooo's there?")
+        console.log("Whoooo's there?")
     }
 }
 var chris = {
