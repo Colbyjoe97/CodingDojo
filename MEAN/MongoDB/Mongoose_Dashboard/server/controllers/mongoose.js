@@ -15,7 +15,6 @@ module.exports = {
         mongoose.save()
             .then(response => console.log("Mongoose Created", response))
             .catch(err => console.log("There's an error!", err))
-
         res.redirect("/")
     },
 

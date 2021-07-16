@@ -35,6 +35,12 @@ export class AppComponent {
       this.tasks = data["tasks"]
       console.log(this.tasks)
     })
+    // Alternate way of doing it 
+    // this._httpService.getTasks.subscribe(data => {
+    //   console.log("Got all tasks!", data)
+    //   this.tasks = data["tasks"]
+    //   console.log(this.task)
+    // })
   }
 
   // View a task

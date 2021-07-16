@@ -5,10 +5,10 @@ class Bike {
         public miles: number
     ){}
 }
-function displayInfo(info: Bike) {
-    console.log(`Price: ${info.price}`)
-    console.log(`Max Speed: ${info.max_speed}`)
-    console.log(`Total Miles: ${info.miles}`)
+function displayInfo(bike: Bike) {
+    console.log(`Price: ${bike.price}`)
+    console.log(`Max Speed: ${bike.max_speed}`)
+    console.log(`Total Miles: ${bike.miles}`)
 }
 function ride(bike: Bike) {
     console.log("Riding Bike..")
