@@ -35,7 +35,11 @@ export class AppComponent {
 
   // View a task
   oneTask(task) {
-    this.selectedTask = task
+    // this.selectedTask = task
+    this._httpService.oneTask(task).subscribe(data => {
+      console.log("Data for one task: ", data)
+      this.selectedTask = data[0]
+    })
   }
 
   // Create New task

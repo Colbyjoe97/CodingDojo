@@ -13,7 +13,7 @@ export class HttpService {
   }
 
   oneTask(task) {
-    return this._http.get('/task/:id', task)
+    return this._http.get(`/task/${task._id}`)
   }
 
   createTask(newTask) {
