@@ -12,8 +12,8 @@ export class HttpService {
     return this._http.get('/tasks')
   }
 
-  oneTask() {
-    return this._http.get('/task/:id')
+  oneTask(task) {
+    return this._http.get('/task/:id', task)
   }
 
   createTask(newTask) {

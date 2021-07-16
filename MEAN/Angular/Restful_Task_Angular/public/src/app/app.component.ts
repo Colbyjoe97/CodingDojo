@@ -9,12 +9,10 @@ import { HttpService } from './http.service';
 export class AppComponent {
   title = 'Restful Task';
   newTask: any;
-  id = ""
   task = ""
   tasks: any
   editFormBool: boolean = false
   taskToEdit: any
-  taskToView: any
   selectedTask;
 
 
@@ -36,8 +34,8 @@ export class AppComponent {
   }
 
   // View a task
-  oneTask(idx) {
-    this.selectedTask = this.tasks[idx]
+  oneTask(task) {
+    this.selectedTask = task
   }
 
   // Create New task

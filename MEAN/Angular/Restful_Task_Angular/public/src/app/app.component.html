@@ -1,8 +1,8 @@
 <div class="text-center">
   <button (click)="getTasks()" class="btn btn-success mt-4 mb-4">Get all tasks</button>
-  <div *ngFor="let task of tasks; let idx = index">
+  <div *ngFor="let task of tasks">
     <h4 class="mb-2 p-3 task" style="border: 1px solid black;">{{ task.title }}
-    <br><br><button class="btn btn-primary" (click)="oneTask(idx)">View Task</button>
+    <br><br><button class="btn btn-primary" (click)="oneTask(task)">View Task</button>
     <br><br><button class="btn btn-secondary" (click)="editForm(task)">Edit Task</button><br><br>
     <button class="btn btn-danger" (click)="deleteTask(task)">Delete Task</button>
     </h4>
