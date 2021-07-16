@@ -42,10 +42,9 @@ export class AppComponent {
 
   // Create New task
   onSubmit() {
-    const observable = this._httpService.createTask(this.newTask)
-    observable.subscribe(data => {
-      console.log("Task has been created! ", data)
-      this.newTask = { title: "", description: "" }
+    this._httpService.createTask(this.newTask).subscribe(data => {
+      console.log("Task created!", data)
+      this.newTask = {title: "", description: ""}
       this.getTasks()
     })
   }
@@ -58,8 +57,7 @@ export class AppComponent {
 
   // Edit a task
   onEdit() {
-    const observable = this._httpService.updateTask(this.taskToEdit)
-    observable.subscribe(data => {
+    this._httpService.updateTask(this.taskToEdit).subscribe( data => {
       console.log("Data on edit: ", data)
       this.editFormBool = false
       this.getTasks()
@@ -68,9 +66,8 @@ export class AppComponent {
 
   // Delete a task
   deleteTask(task) {
-    const observable = this._httpService.deleteTask(task)
-    observable.subscribe(data => {
-      console.log("Data on task deletion: ", data)
+    this._httpService.deleteTask(task).subscribe(data => {
+      console.log("Data on delete: ", data)
       this.getTasks()
     })
   }
