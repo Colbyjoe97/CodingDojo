@@ -11,7 +11,7 @@ export class AppComponent {
   newTask: any;
   id = ""
   task = ""
-  tasks = []
+  tasks: any
   editFormBool: boolean = false
   taskToEdit: any
   taskToView: any
@@ -24,23 +24,15 @@ export class AppComponent {
       title: "",
       description: ""
     }
-    this.getTasks()
   }
 
   // Get all tasks
-  getTasks() { // Loads on button click (assigned in app.component.html)
-    const observable = this._httpService.getTasks()
-    observable.subscribe(data => {
+  getTasks() {
+    this._httpService.getTasks().subscribe(data => {
       console.log("Got all tasks!", data)
-      this.tasks = data["tasks"]
-      console.log(this.tasks)
+      this.tasks = data
+      console.log(this.task)
     })
-    // Alternate way of doing it 
-    // this._httpService.getTasks.subscribe(data => {
-    //   console.log("Got all tasks!", data)
-    //   this.tasks = data["tasks"]
-    //   console.log(this.task)
-    // })
   }
 
   // View a task
