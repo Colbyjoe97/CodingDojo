@@ -10,7 +10,7 @@ module.exports = {
     },
 
     getOne: function(req, res) {
-        Task.find({_id: req.params.id})
+        Task.findOne({_id: req.params.id})
             .then(data => res.json(data))
             .catch(err => res.json(err))
     },
