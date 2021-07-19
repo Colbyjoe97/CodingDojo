@@ -11,6 +11,10 @@ export class HttpService {
     return this._http.get('/cakes')
   }
 
+  findCake(cake) {
+    return this._http.get(`/cake/${cake._id}`)
+  }
+
   createCake(newCake) {
     return this._http.post('/new/cake', newCake)
   }

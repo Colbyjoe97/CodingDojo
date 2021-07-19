@@ -1,4 +1,4 @@
-<div class="info">
+<div *ngIf="cakeToShow" class="info">
     <h3>Baker: {{ cakeToShow.baker }}</h3>
     <h1 class="text-center">Average Rating: {{ average }}</h1>
     <img src="{{ cakeToShow.image }}" alt="">

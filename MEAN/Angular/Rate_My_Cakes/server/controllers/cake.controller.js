@@ -8,18 +8,10 @@ module.exports = {
         Cake.find()
             .then(data => res.json(data))
             .catch(err => res.json(err))
-        // Cake.find({}, function(err, cake) {
-        //     if(err) {
-        //         res.json({message: "Error on find: ", err})
-        //     }
-        //     else {
-        //         res.json({message: "Successfully found cakes!", cakes: cake})
-        //     }
-        // })
     },
 
     getOne: function(req, res) {
-        Cake.find({_id: req.params.id})
+        Cake.findOne({_id: req.params.id})
             .then(data => res.json(data))
             .catch(err => res.json(err))
     },
@@ -67,5 +59,6 @@ module.exports = {
                     })
                     .catch(err => res.json(err))
             })
+            .catch(err => res.json(err))
     }
 }

@@ -25,29 +25,27 @@ export class AppComponent {
   }
 
   getCakes() {
-    const observable = this._httpService.getCakes()
-    observable.subscribe((data: any) => {
+    this._httpService.getCakes().subscribe((data: any) => {
       console.log("Retrieving all the cakes..", data)
       this.cakes = data
       console.log("CAKES: ", this.cakes)
     })
   }
 
-  oneCake(idx) {
+  oneCake(cake) {
+    this._httpService.findCake(cake).subscribe(data => {
+      this.cakeToShow = data
+      console.log(data)
+    })
     var sum = 0;
-    this.cakeToShow = this.cakes[idx]
-    console.log(this.cakeToShow)
     for(let i = 0; i < this.cakeToShow.reactions.length; i++) {
       sum += this.cakeToShow.reactions[i].rating
     }
     this.avg = sum / this.cakeToShow.reactions.length
-    // console.log(this.cakeToShow.reactions)
-    // console.log("RATING", this.cakeToShow.reactions[1].rating)
   }
 
   submitCake() {
-    const observable = this._httpService.createCake(this.newCake)
-    observable.subscribe(data => {
+    this._httpService.createCake(this.newCake).subscribe( data => {
       console.log("A new cake has been submitted!", data)
       this.newCake = {baker: "", image: ""}
       this.getCakes()
@@ -55,19 +53,18 @@ export class AppComponent {
   }
 
   deleteCake(cake) {
-    const observable = this._httpService.deleteCake(cake)
-    observable.subscribe(data => {
+    this._httpService.deleteCake(cake).subscribe(data => {
       console.log("Data on deletion: ", data)
       this.getCakes()
     })
   }
-  // newRating = { rating: "", comment: ""};
+
+  
   rate(cake) {
     console.log(cake)
     console.log(this.newRating)
-    const observable = this._httpService.rate(this.newRating, cake)
-    observable.subscribe(data => {
-      console.log("Made a comment!", data)
+    this._httpService.rate(this.newRating, cake).subscribe(data => {
+      console.log("Made a rating!")
     })
     this.newRating = { rating: "", comment: ""}
     this.getCakes()
