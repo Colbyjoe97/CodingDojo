@@ -65,8 +65,9 @@ export class AppComponent {
     console.log(this.newRating)
     this._httpService.rate(this.newRating, cake).subscribe(data => {
       console.log("Made a rating!")
+      this.newRating = { rating: "", comment: ""}
+      this.getCakes()
+      this.oneCake(cake)
     })
-    this.newRating = { rating: "", comment: ""}
-    this.getCakes()
   }
 }
