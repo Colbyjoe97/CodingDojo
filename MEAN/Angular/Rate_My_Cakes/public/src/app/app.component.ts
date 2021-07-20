@@ -36,12 +36,12 @@ export class AppComponent {
     this._httpService.findCake(cake).subscribe(data => {
       this.cakeToShow = data
       console.log(data)
+      var sum = 0;
+      for(let i = 0; i < this.cakeToShow.reactions.length; i++) {
+        sum += this.cakeToShow.reactions[i].rating
+      }
+      this.avg = Math.round(sum / this.cakeToShow.reactions.length)
     })
-    var sum = 0;
-    for(let i = 0; i < this.cakeToShow.reactions.length; i++) {
-      sum += this.cakeToShow.reactions[i].rating
-    }
-    this.avg = sum / this.cakeToShow.reactions.length
   }
 
   submitCake() {
@@ -66,7 +66,6 @@ export class AppComponent {
     this._httpService.rate(this.newRating, cake).subscribe(data => {
       console.log("Made a rating!")
       this.newRating = { rating: "", comment: ""}
-      this.getCakes()
       this.oneCake(cake)
     })
   }
