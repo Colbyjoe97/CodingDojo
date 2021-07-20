@@ -12,6 +12,8 @@ require('./server/config/mongoose')
 
 require('./server/models/task.model')(app)
 require('./server/config/routes')(app)
+
+
 app.all("*", (req,res,next) => {
     res.sendFile(path.resolve("./public/dist/public/index.html"))
 });
