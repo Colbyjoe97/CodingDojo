@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'dallas', component: DallasComponent},
   { path: 'dc', component: DcComponent },
   { path: 'chicago', component: ChicagoComponent },
-  // { path: "", pathMatch: 'full', redirectTo: "/seattle"}
+  { path: "", pathMatch: 'full', redirectTo: "/seattle"}
   // redirects to seattle if nothing comes after localhost:8000
   // { path: "**", component: PageNotFoundComponent }
   // redirects to page not found on any route other than what's listed above
