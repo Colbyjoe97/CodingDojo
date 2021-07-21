@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EditComponent implements OnInit {
   error: string;
-  authorToEdit: any
   author: object
   errors: string
 
@@ -19,10 +18,6 @@ export class EditComponent implements OnInit {
   ngOnInit() {
     this.getAuthor()
     this.author = {
-      author: {
-        name: ""
-      }}
-    this.authorToEdit = {
       name: ""
     }
   }
@@ -31,19 +26,16 @@ export class EditComponent implements OnInit {
   getAuthor() {
     this._route.params.subscribe((params) => {
       console.log("Author ID is... ", params["id"])
-      const observable = this._httpService.oneAuthor(params["id"])
-      observable.subscribe(data => {
+      this._httpService.oneAuthor(params["id"]).subscribe(data => {
         console.log("DATA: ", data)
         this.author = data
-        this.authorToEdit = this.author
       })
     })
   }
 
   editName() {
     this._route.params.subscribe((params) => {
-      const observable = this._httpService.editAuthor(params["id"], this.authorToEdit)
-      observable.subscribe((data: any) => {
+      this._httpService.editAuthor(params["id"], this.author).subscribe((data: any) => {
         if(data.errors) {
           console.log("Errors on edit: ", data.errors)
           this.errors = data.errors.name.message

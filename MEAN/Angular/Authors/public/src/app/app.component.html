@@ -12,7 +12,7 @@
   <tbody>
     <tr *ngFor="let author of authors; let idx = index">
       <th>{{author.name}}</th>
-      <th><a href="" (click)="deleteAuthor(author)">Delete</a> | <a [routerLink]="['/edit/author', author._id]">Edit</a></th>
+      <th style="display: inline-flex"><a [routerLink]="['/edit/author', author._id]">Edit</a> | <p style="color: rgb(6, 106, 139)" (click)="deleteAuthor(author)">Delete</p></th>
     </tr>
   </tbody>
 </table>

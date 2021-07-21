@@ -31,6 +31,7 @@ module.exports = {
     delete: function(req, res) {
         Author.deleteOne({_id: req.params.id})
             .then(data => res.json(data))
+            .catch(err => res.json(err))
     },
 
     update: function(req, res) {
