@@ -17,9 +17,9 @@ export class AppComponent {
   }
 
   getAuthors() {
-    this._httpService.getAuthors().subscribe(data => {
+    this._httpService.getAuthors().subscribe((data:any) => {
       console.log("Retrieving all the authors.. ", data)
-      this.authors = data["authors"]
+      this.authors = data
     })
   }
 
