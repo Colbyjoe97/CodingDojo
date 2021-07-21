@@ -9,6 +9,7 @@ module.exports = function(app) {
         },
         voteCount: {
             type: Number,
+            default: 0
         }
     }, {timestamps: true})
     mongoose.model("Quote", QuoteSchema)

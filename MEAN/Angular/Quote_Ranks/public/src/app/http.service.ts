@@ -40,9 +40,10 @@ export class HttpService {
     return this._http.put(`/api/downvote/${authId}/${id}`, {id: id , authId: authId })
   }
 
-  // deleteQuote(authId, id: string) {
-  //   return this._http.delete(`/api/delete/quote/${authId}/${id}`)
-  // }
+  vote(authorId, quoteId, num) {
+    return this._http.get(`/api/authors/${authorId}/quotes/${quoteId}/${num}`)
+  }
+  
   deleteQuote(id){
     return this._http.delete('/quotes/'+id);
   }

@@ -58,40 +58,12 @@ module.exports = {
                     .catch(err => res.json(err))
             })
     },
-    upVote: function(req, res) {
-        Author.findOne({_id: req.params.authId})
-            .then(author => {
-                console.log("AUTHOR: ", author)
-                console.log("Quote ID: ", req.params.quoteId)
-                for(let a in author.quotes) {
-                    if(author.quotes[a]._id == req.params.quoteId) {
-                        console.log(author.quotes[a])
-                        author.quotes[a].voteCount++
-                    }
-                }
-                author.save()
-                    .then(data => res.json(data))
-                    .catch(err => res.json(err))
-            })
-            .catch(err => res.json(err))
-    },
 
-    downVote: function(req, res) {
-        Author.findOne({_id: req.params.authId})
-            .then(author => {
-                console.log("AUTHOR: ", author)
-                console.log("Quote ID: ", req.params.quoteId)
-                for(let a in author.quotes) {
-                    if(author.quotes[a]._id == req.params.quoteId) {
-                        console.log(author.quotes[a])
-                        author.quotes[a].voteCount--
-                    }
-                }
-                author.save()
-                    .then(data => res.json(data))
-                    .catch(err => res.json(err))
-            })
-            .catch(err => res.json(err))
+    addVote: function(req, res){
+        var num= req.params.num;
+         Author.findOneAndUpdate({"_id": req.params.authorId, "quotes._id": req.params.quoteId}, {$set: {"quotes.$.voteCount":num}})
+        .then(data => res.json(data))
+        .catch(err => res.json(err))
     },
 
     deleteQuote:  function(req,res){

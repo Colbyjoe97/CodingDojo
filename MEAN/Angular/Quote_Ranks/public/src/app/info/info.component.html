@@ -12,10 +12,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let q of author.quotes">
-            <th>{{ q.quote }}</th>
-            <th>{{ q.voteCount }}</th>
-            <th><a (click)="upvote(q, author._id)">Upvote</a> | <a (click)="downvote(q, author._id)">Downvote</a> | <a (click)="deleteQuote(q._id)">Delete</a></th>
+          <tr *ngFor="let quote of author.quotes">
+            <th>{{ quote.quote }}</th>
+            <th>{{ quote.voteCount }}</th>
+            <th><a (click)="vote(author._id, quote, 1)">Upvote</a> | <a (click)="vote(author._id, quote, -1)">Downvote</a> | <a (click)="deleteQuote(quote._id)">Delete</a></th>
           </tr>
         </tbody>
       </table>

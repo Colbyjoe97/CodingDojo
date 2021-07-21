@@ -30,21 +30,14 @@ export class InfoComponent implements OnInit {
     })
   }
 
-  upvote(id, authId) {
-    console.log("Quote ID: ", id)
-    console.log("Author ID: ", authId)
-    this._httpService.upvote(authId, id._id).subscribe(data => {
-      console.log("Data on upvote: ", data)
+  vote(authorId, quote, num) {
+    console.log("Author: ", authorId)
+    console.log("Quote: ", quote)
+    console.log("Num: ", num)
+    this._httpService.vote(authorId, quote._id, num+quote.voteCount).subscribe(data => {
+      console.log("Voted!", data)
       this.getAuthor()
-    })
-  }
-
-  downvote(id, authId) {
-    console.log("Quote ID: ", id)
-    console.log("Author ID: ", authId)
-    this._httpService.downvote(authId, id._id).subscribe(data => {
-      console.log("Data on upvote: ", data)
-      this.getAuthor()
+      console.log("QUOTE: ", quote)
     })
   }
 

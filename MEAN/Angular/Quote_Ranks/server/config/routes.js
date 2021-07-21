@@ -25,15 +25,10 @@ module.exports = function(app) {
     app.post('/api/new/quote/:id', (req, res) => {
         controller.addQuote(req, res)
     }),
-
-    // Upvote
-    app.put('/api/upvote/:authId/:quoteId', (req, res) => {
-        controller.upVote(req, res)
-    }),
-
-    // Downvote
-    app.put('/api/downvote/:authId/:quoteId', (req, res) => {
-        controller.downVote(req, res)
+    
+    // Vote
+    app.get('/api/authors/:authorId/quotes/:quoteId/:num', (req,res) => {
+        controller.addVote(req, res)
     }),
 
     // Delete Quote
