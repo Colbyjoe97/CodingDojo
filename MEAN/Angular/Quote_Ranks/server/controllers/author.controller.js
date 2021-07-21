@@ -5,14 +5,9 @@ const Quote = mongoose.model("Quote")
 module.exports = {
 
     index: function(req, res) {
-        Author.find({}, function(err, author) {
-            if(err) {
-                res.json({message: "Error on find: ", err})
-            }
-            else {
-                res.json({message: "Successfully found authors!", authors: author})
-            }
-        })
+        Author.find()
+            .then(data => res.json(data))
+            .catch(err => res.json(err))
     },
 
     getOne: function(req, res) {

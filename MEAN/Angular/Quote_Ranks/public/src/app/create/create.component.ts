@@ -21,9 +21,7 @@ export class CreateComponent implements OnInit {
   }
 
   submitAuthor() {
-    const observable = this._httpService.createAuthor(this.newAuthor)
-    observable.subscribe((data: any) => {
-      // console.log(data)
+    this._httpService.createAuthor(this.newAuthor).subscribe((data: any) => {
       if(data.errors) {
         console.log(data.errors)
         this.error = data.errors.name.message

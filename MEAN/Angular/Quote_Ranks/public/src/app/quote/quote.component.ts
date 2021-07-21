@@ -11,7 +11,6 @@ export class QuoteComponent implements OnInit {
   author: object
   newQuote = {
     quote: "",
-    // voteCount: 0
   }
 
   constructor(private _httpService: HttpService, private router:Router, private _route: ActivatedRoute) { }
@@ -19,16 +18,14 @@ export class QuoteComponent implements OnInit {
   ngOnInit() {
     this.getAuthor()
     this.author = {
-      author: {
-        name: ""
-      }}
+      name: ""
+    }
   }
 
   getAuthor() {
     this._route.params.subscribe((params) => {
       console.log("Author ID is... ", params["id"])
-      const observable = this._httpService.oneAuthor(params["id"])
-      observable.subscribe(data => {
+      this._httpService.oneAuthor(params["id"]).subscribe(data => {
         console.log("DATA: ", data)
         this.author = data
       })
@@ -38,12 +35,11 @@ export class QuoteComponent implements OnInit {
   addQuote(author) {
     console.log(author)
     console.log(this.newQuote)
-    const observable = this._httpService.addQuote(this.newQuote, author)
-    observable.subscribe(data => {
+    this._httpService.addQuote(this.newQuote, author).subscribe(data => {
       console.log("Added a new quote!", data)
+      this.newQuote = { quote: "" }
+      this.router.navigate([`/author/${author._id}`])
     })
-    this.newQuote = { quote: "" }
-    this.router.navigate([`/author/${author._id}`])
   }
 
 }

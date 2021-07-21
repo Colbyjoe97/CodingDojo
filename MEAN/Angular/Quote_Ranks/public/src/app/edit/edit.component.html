@@ -2,7 +2,7 @@
     <h1>Editing<br>{{ author.name }}</h1>
     <form (submit)="editName()">
         <label>Name: </label>
-        <input type="text" value="{{ author.name }}" name="authorToEdit.name" [(ngModel)]="authorToEdit.name"><br>
+        <input type="text" value="{{ author.name }}" name="author.name" [(ngModel)]="author.name"><br>
         <button class="btn btn-outline-success">Submit Changes</button>
     </form>
     <p class="text-danger">{{ errors }}</p>

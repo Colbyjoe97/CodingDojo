@@ -17,16 +17,14 @@ export class AppComponent {
   }
 
   getAuthors() {
-    const observable = this._httpService.getAuthors()
-    observable.subscribe(data => {
+    this._httpService.getAuthors().subscribe((data:any) => {
       console.log("Retrieving all the authors.. ", data)
-      this.authors = data["authors"]
+      this.authors = data
     })
   }
 
   deleteAuthor(author) {
-    const observable = this._httpService.deleteAuthor(author)
-    observable.subscribe(data => {
+    this._httpService.deleteAuthor(author).subscribe(data => {
       console.log("Deleting an author.. ", data)
       this.getAuthors()
     })
