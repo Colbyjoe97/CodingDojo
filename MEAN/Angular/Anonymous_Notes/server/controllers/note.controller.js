@@ -3,15 +3,9 @@ const Note = mongoose.model("Note")
 
 module.exports = {
     index: function(req, res) {
-        Note.find({}, function(err, note) {
-            if(err) {
-                res.json({message: "Error on find: ", err})
-            }
-            else {
-                res.json({message: "Successfully found notes!", notes: note})
-            }
-        })
-        .sort({createdAt: 'descending'})
+        Note.find().sort({createdAt: 'descending'})
+            .then(data => res.json(data))
+            .then(err => res.json(err))
     },
 
     create: function(req, res) {

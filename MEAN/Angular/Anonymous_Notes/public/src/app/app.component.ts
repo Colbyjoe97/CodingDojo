@@ -23,16 +23,14 @@ export class AppComponent {
   }
 
   getNotes() {
-    const observable = this._httpService.getNotes()
-    observable.subscribe(data => {
+    this._httpService.getNotes().subscribe((data:any) => {
       console.log("Retrieving all the authors.. ", data)
-      this.notes = data["notes"]
+      this.notes = data
     })
   }
 
   submitNote() {
-    const observable = this._httpService.createNote(this.newNote)
-    observable.subscribe((data: any) => {
+    this._httpService.createNote(this.newNote).subscribe((data: any) => {
       if(data.errors) {
         console.log("Errors on creation: ", data.errors)
         this.error = data.errors.note.message
@@ -47,8 +45,7 @@ export class AppComponent {
 
   deleteNote(note) {
     console.log("Deleting..", note)
-    const observable = this._httpService.deleteNote(note)
-    observable.subscribe(data => {
+    this._httpService.deleteNote(note).subscribe(data => {
       console.log("Data on delete: ", data)
     })
     this.getNotes()
