@@ -12,7 +12,7 @@
   <tbody>
     <tr *ngFor="let author of authors; let idx = index">
       <th>{{author.name}}</th>
-      <th><a href=""[routerLink]="['/author', author._id]">Quotes</a> | <a href=""[routerLink]="['/edit/author', author._id]">Edit</a> | <a href="" (click)="deleteAuthor(author)">Delete</a></th>
+      <th><a [routerLink]="['/author', author._id]">Quotes</a> | <a [routerLink]="['/edit/author', author._id]">Edit</a> | <a (click)="deleteAuthor(author)">Delete</a></th>
     </tr>
   </tbody>
 </table>

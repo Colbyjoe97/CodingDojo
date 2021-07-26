@@ -32,7 +32,7 @@ module.exports = function(app) {
     }),
 
     // Delete Quote
-    app.delete('/quotes/:quote_id', (req, res) => {
+    app.delete('/api/quotes/:quote_id', (req, res) => {
         controller.deleteQuote(req, res)
     })
 

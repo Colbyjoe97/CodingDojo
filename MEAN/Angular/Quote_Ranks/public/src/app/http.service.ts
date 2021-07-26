@@ -32,19 +32,19 @@ export class HttpService {
     return this._http.post(`/api/new/quote/${author._id}`, newQuote)
   }
 
-  upvote(authId, id: string) {
-    return this._http.put(`/api/upvote/${authId}/${id}`, {id: id , authId: authId })
-  }
+  // upvote(authId, id: string) {
+  //   return this._http.put(`/api/upvote/${authId}/${id}`, {id: id , authId: authId })
+  // }
 
-  downvote(authId, id: string) {
-    return this._http.put(`/api/downvote/${authId}/${id}`, {id: id , authId: authId })
-  }
+  // downvote(authId, id: string) {
+  //   return this._http.put(`/api/downvote/${authId}/${id}`, {id: id , authId: authId })
+  // }
 
   vote(authorId, quoteId, num) {
     return this._http.get(`/api/authors/${authorId}/quotes/${quoteId}/${num}`)
   }
-  
+
   deleteQuote(id){
-    return this._http.delete('/quotes/'+id);
+    return this._http.delete('/api/quotes/'+id);
   }
 }

@@ -31,13 +31,9 @@ export class InfoComponent implements OnInit {
   }
 
   vote(authorId, quote, num) {
-    console.log("Author: ", authorId)
-    console.log("Quote: ", quote)
-    console.log("Num: ", num)
     this._httpService.vote(authorId, quote._id, num+quote.voteCount).subscribe(data => {
       console.log("Voted!", data)
       this.getAuthor()
-      console.log("QUOTE: ", quote)
     })
   }
 
