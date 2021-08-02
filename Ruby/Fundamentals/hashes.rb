@@ -8,7 +8,6 @@ end
 if hash.has_key?(:last_name)
     puts "Hash has key last_name!"
 end
-
 if hash.has_value?("Coding")
     puts "Coding found in hash!"
 end
