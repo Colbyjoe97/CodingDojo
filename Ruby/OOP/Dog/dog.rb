@@ -20,10 +20,12 @@ class Dog < Mammal
 end
 
 buddy = Dog.new("Buddy")
-# buddy.walk
-# buddy.walk
-# buddy.walk
-# buddy.run
-# buddy.run
-# buddy.pet
+lion = Lion.new("lion")
+lion.display_health
+buddy.walk
+buddy.walk
+buddy.walk
+buddy.run
+buddy.run
+buddy.pet
 buddy.display_health

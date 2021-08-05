@@ -26,9 +26,9 @@ sakurai = Ninja.new("Sakurai")
 jin = Samurai.new("Jin")
 sakai = Samurai.new("Sakai")
 jack = Human.new("Jack")
-# gandolf.fireball(sakurai)
-# sakurai.steal(jack)
-# sakurai.get_away
+gandolf.fireball(sakurai)
+sakurai.steal(jack)
+sakurai.get_away
 jin.death_blow(jack)
 sakai.meditate
 jin.how_many

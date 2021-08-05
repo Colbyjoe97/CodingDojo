@@ -1,6 +1,6 @@
 class Lion < Mammal
-    attr_accessor :health, :name
     def initialize(name)
+        super
         @name = name
         @health = 170
     end
