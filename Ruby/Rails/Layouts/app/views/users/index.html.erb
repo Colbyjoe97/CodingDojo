@@ -1,0 +1,41 @@
+<% content_for :left_column do %>
+    <h1>All Users</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Favorite Language</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+            <tr>
+                <td><%= user.first_name %></td>
+                <td><%= user.last_name %></td>
+                <td><%= user.favorite_language %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>
+<% content_for :right_column do %>
+    <h1>New User</h1>
+    <form action="/user/new" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div>
+            <p>First Name:</p>
+            <input type="text" name="user[first_name]" placeholder="First Name">
+        </div>
+        <div>
+            <p>Last Name:</p>
+            <input type="text" name="user[last_name]" placeholder="First Name">
+        </div>
+        <div>
+            <p>Favorite Language:</p>
+            <input type="text" name="user[favorite_language]" placeholder="First Name">
+        </div>
+        <button class="btn btn-primary mt-2">Sumbit</button>
+    </form>
+    <a href="/posts"><button class="btn btn-secondary">All Posts</button></a>
+<% end %>
