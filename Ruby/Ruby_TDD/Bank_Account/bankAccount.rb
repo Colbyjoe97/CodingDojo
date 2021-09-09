@@ -32,7 +32,7 @@ class BankAccount
     end
 
     def withdraw(type, amount)
-        if @savings > amount|| @checking > amount
+        if @savings > amount || @checking > amount
             if type == "checking"
                 @checking -= amount
                 p @checking
