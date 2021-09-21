@@ -9,6 +9,8 @@ var spans = [
 ];
 
 function like(id) {
+    console.log(likes[id])
+    console.log(spans[id])
     likes[id]++;
     spans[id].innerHTML = likes[id] + "like(s)";
 }
