@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+}
+.wrapper {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+.header {
+    margin: auto;
+    border: 3px solid black;
+    padding: 5px 25px 10px 25px;
+    width: 25%;
+    text-align: center;
+}
+.time {
+    margin: auto;
+    border: 3px solid black;
+    width: 50%;
+    margin-top: 25px;
+    padding: 10px 50px 20px 50px;
+    text-align: center;
+}
+.time h1 {
+    margin: auto;
+    width: 45%;
+    font-size: 50px;
+}
