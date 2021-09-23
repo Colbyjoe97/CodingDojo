@@ -5,7 +5,7 @@ def index(request):
     return render(request, "index.html")
 
 
-def results(request):
+def submit(request):
     if 'count' in request.session:
         request.session['count'] += 1
     else:
@@ -14,4 +14,7 @@ def results(request):
     request.session['dojo'] = request.POST['dojo']
     request.session['language'] = request.POST['language']
     request.session['desc'] = request.POST['desc']
+    return redirect("/results")
+
+def results(request):
     return render(request, "results.html")
