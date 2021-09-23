@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'results.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="message">
+            <p>Thank you for submitting this form! You have submitted this form {{request.session.count}} times!</p>
+        </div>
+        <div class="results">
+            <h3>Submitted Information</h3>
+            <div class="info">
+                <div class="results-left">
+                    <p>Name: </p>
+                    <p>Dojo Location: </p>
+                    <p>Favorite Language: </p>
+                    <p>Comment: </p>
+                </div>
+                <div class="results-right">
+                    <p>{{request.session.name}}</p>
+                    <p>{{request.session.dojo}}</p>
+                    <p>{{request.session.language}}</p>
+                    <p>{{request.session.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
