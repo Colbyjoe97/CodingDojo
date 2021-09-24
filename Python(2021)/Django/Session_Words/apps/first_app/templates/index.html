@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-left">
+            <h1>Add a new word</h1>
+            
+            <form action="add_word" method="POST">
+                {% csrf_token %}
+                <input type="text" name="word">
+
+                <p id="color_p">Choose color:</p>
+                <div class="colors">
+                    <input type="radio" name="color" value="Red">Red <br>
+                    <input type="radio" name="color" value="Blue">Blue <br>
+                    <input type="radio" name="color" value="Green">Green
+                </div>
+
+                <div class="big">
+                    <input type="checkbox" name="big_font" value="xx-large"> 
+                    <p>Show in BIG fonts!</p>
+                </div>
+
+                <button>Add to Session</button>
+            </form>
+        </div>
+        <div class="wrapper-right">
+            <a href="/clear"><button>Clear Session</button></a>
+            <p style="color: {{request.session.color}}; font-size: {{request.session.font}}">{{request.session.word}} - added on {{request.session.time}}</p>
+        </div>
+    </div>
+</body>
+</html>
