@@ -37,3 +37,15 @@
     margin: 15px;
     padding: 5px;
 }
+.word {
+    display: flex;
+    margin-top: 15px;
+}
+#time {
+    margin-left: 20px;
+    /* margin-top: 10px; */
+    /* font-size: large; */
+}
+.word p {
+    vertical-align: middle;
+}
