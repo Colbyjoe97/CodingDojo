@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Thank you for your business!</h1>
-    <p>We charged your credit card for ${{request.session.current_purchase}}</p>
-    <p>You have ordered {{request.session.amount}} items so far and spent ${{request.session.total}} with Amadon.com!</p>
+    <p>We charged your credit card for ${{request.session.current_order}}</p>
+    <p>You have ordered {{request.session.count}} items so far and spent ${{request.session.total}} with Amadon.com!</p>
 
     <a href="/">Go back</a>
 </body>

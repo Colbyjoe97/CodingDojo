@@ -5,18 +5,20 @@ def index(request):
     return render(request, "index.html")
 
 def buy(request):
-    qty = int(request.POST['qty'])
-    request.session['qty'] = int(request.POST['qty'])
-    if 'amount' in request.session:
-        request.session['amount'] += qty
-    else:
-        request.session['amount'] = qty
+    quantity = int(request.POST['qty'])
 
-    request.session['current_purchase'] = request.POST['price']
-    if 'total' in request.session:
-        request.session['total'] += request.POST['price']
+
+    if 'count' in request.session:
+        request.session['count'] += int(request.POST['qty'])
     else:
-        request.session['total'] = request.POST['price']
+        request.session['count'] = quantity
+
+    request.session['current_order'] = float(request.POST['price']) * quantity
+
+    if 'total' in request.session:
+        request.session['total'] += float(request.session['current_order'])
+    else:
+        request.session['total'] = float(request.session['current_order'])
     return redirect("/receipt")
 
 def receipt(request):
