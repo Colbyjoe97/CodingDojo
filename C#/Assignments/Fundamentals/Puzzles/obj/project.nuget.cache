@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Y25idR9g7nrgwZTVQooYuJRhod5BrzQi1GpiZr/72D/gYhId2SdlXw/VVoDaPZuRQt5mN8ao9Thj+M7g7ymYQA==",
+  "dgSpecHash": "0BWPLxKv7Su4FKrOAAve7Jb3BEt5zbbizKDqxNusHmzfszjke1nQE01beqp4IuoLeqXGRw6jurqwgAji0gOSjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\Puzzles\\Puzzles.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\Fundamentals\\Puzzles\\Puzzles.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
+  ],
   "logs": []
 }

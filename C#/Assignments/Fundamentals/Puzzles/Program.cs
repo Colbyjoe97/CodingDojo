@@ -12,17 +12,17 @@ namespace Puzzles
 
             // Coin Toss
             // CoinFlip();
-            // MultiFlip();
+            // MultiFlip(5);
 
             // Names
-            // Names();
+            Names();
 
         }
         public static void RandomArray(){
             int minRange = 5;
             int maxRange = 25;
 
-            int[] array = new int[7];
+            int[] array = new int[10];
             Random randNum = new Random();
             int min = 25;
             int max = array[0];
@@ -53,42 +53,60 @@ namespace Puzzles
             }
         }
 
-        public static void MultiFlip(){
-            int times = 5;
+        public static void MultiFlip(int times){
+            double headsCount = 0.00;
+            double tailsCount = 0.00;
             Console.WriteLine($"Tossing {times} Coins!");
             for (var i = 0; i <= times; i++){
             Random randNum = new Random();
             int num = randNum.Next(0, 2);
                 if (num == 0){
                     Console.WriteLine("Tails!");
+                    tailsCount++;
                 }
                 else if (num == 1){
                     Console.WriteLine("Heads!");
+                    headsCount++;
                 }
-
             }
+            double ratio = headsCount / tailsCount;
+            Console.WriteLine($"Heads to Tails ratio: {ratio}");
         }
 
-        public static void Names(){
-            List<string> names = new List<string>();
-            names.Add("Todd");
-            names.Add("Tiffany");
-            names.Add("Charlie");
-            names.Add("Geneva");
-            names.Add("Sydney");
+        public static List<string> Names()
+        {
+            // Create an list with the values: Todd, Tiffany, Charlie, Geneva, Sydney
+            List<string> names = new List<string>()
+            {
+                "Todd", "Tiffany", "Charlie", "Geneva", "Sydney"
+            };
 
-            string temp = names[0];
-            for (var i = 0; i < names.Count; i++){
-                if (names[i] != names[names.Count - 1]){
-                    names[i] = names[i + 1];
-                }
-                else if (names[i] == names[names.Count - 1]){
-                    names[names.Count - 1] = temp;
-                }
-                if (names[i].Length > 5){
-                    Console.WriteLine(names[i]);
-                }
+            Random rand = new Random();
+
+            // shuffle names
+            for(var i=0; i<names.Count/2; i++)
+            {
+                // swap names[i] with names[randomIndex]
+                int randomIndex = rand.Next(names.Count);
+                string temp = names[randomIndex];
+                names[randomIndex] = names[i];
+                names[i] = temp;
             }
+
+            // remove names not larger than 5 characters
+            for(var i = 0; i < names.Count; i++)
+            {
+                if(names[i].Length <= 5)
+                    names.RemoveAt(i);
+            }
+            
+            // print new order of names
+            foreach(var name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+            return names;
         }
     }
 }
