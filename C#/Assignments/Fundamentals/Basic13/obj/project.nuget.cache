@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "P8r0UY9VEw546FQPLwLwYgcFcI9wbK7nBv7wdVQKSzTM4/XjgMApdIJ00GE0plH1QcXhPvv+kEufJvkmSyON1g==",
+  "dgSpecHash": "mDgHmz682zCXt1Klln96WrXc7uWiMX+GcfZ8If3Hb+VMwOWiVMiDcY0yTJW+trMhsMklLSXroviR+ocvtGbosA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\Basic13\\Basic13.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\Fundamentals\\Basic13\\Basic13.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -6,15 +6,15 @@ namespace Basic13
     {
         static void Main(string[] args)
         {
-            int[] arr = { };
-            // int[] arr = { 1, 2, -3, 40, -5 };
+            // int[] arr = { };
+            int[] arr = { 1, 2, -3, 40, -5 };
             // PrintNumbers();
             // PrintOdd();
             // PrintSum();
             // LoopArray(arr);
             // FindMax(arr);
             // GetAvg(arr);
-            OddArray(arr);
+            Console.WriteLine("Odd Array: "+ string.Join(", ", OddArray()));
             // GreaterThanY(arr, 3);
             // SquareArray(arr);
             // EliminateNegatives(arr);
@@ -87,18 +87,24 @@ namespace Basic13
 
         // 7 - Array with Odd Numbers
         // Write a function that creates, and then returns, an array that contains all the odd numbers between 1 to 255.
-        public static void OddArray(int[] arr){ // DOES NOT WORK
-            for (var i = 0; i <= arr.Length; i++)
+        public static int[] OddArray()
+        {
+
+            int size = (255/2) + 1;
+
+            int[] odds = new int[size];
+
+            int i = 0;
+            for(int num = 1; num <= 255; num++)
             {
-                if (arr.Length == 0){
-                    arr[0] = 1;
-                }
-                else{
-                    arr[i] = i;
+                if(num % 2 != 0)
+                {
+                    odds[i] = num;
+                    i++;
                 }
             }
+            return odds;
         }
-
         // 8 - Greater Than Y
         // Return all values of a given array that are greater than the given int
 

@@ -11,3 +11,16 @@ C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Basic13\obj\Debug\net
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Basic13\obj\Debug\netcoreapp3.1\Basic13.dll
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Basic13\obj\Debug\netcoreapp3.1\Basic13.pdb
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Basic13\obj\Debug\netcoreapp3.1\Basic13.genruntimeconfig.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.csproj.AssemblyReference.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.AssemblyInfoInputs.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.AssemblyInfo.cs
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.csproj.CoreCompileInputs.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.dll
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.pdb
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.exe
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.deps.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.runtimeconfig.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.runtimeconfig.dev.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.dll
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\bin\Debug\netcoreapp3.1\Basic13.pdb
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Basic13\obj\Debug\netcoreapp3.1\Basic13.genruntimeconfig.cache
