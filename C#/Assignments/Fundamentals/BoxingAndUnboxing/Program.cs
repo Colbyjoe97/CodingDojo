@@ -13,7 +13,6 @@ namespace BoxingAndUnboxing
             randomStuff.Add(-1);
             randomStuff.Add(true);
             randomStuff.Add("Chair");
-
             int sum = 0;
             for (var i = 0; i < randomStuff.Count; i++){
                 Console.WriteLine(randomStuff[i]);
@@ -23,7 +22,7 @@ namespace BoxingAndUnboxing
                     sum += (int)num;
                 }
             }
-                Console.WriteLine($"Sum is {sum}");
+            Console.WriteLine($"Sum is {sum}");
         }
     }
 }

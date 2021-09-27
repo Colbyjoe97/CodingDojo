@@ -11,3 +11,16 @@ C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Fundamentals_1\obj\De
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.dll
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.pdb
 C:\Users\dumon\OneDrive\Desktop\Coding_Dojo\C#\Assignments\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.genruntimeconfig.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.exe
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.deps.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.runtimeconfig.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.runtimeconfig.dev.json
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.dll
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\bin\Debug\netcoreapp3.1\Fundamentals_1.pdb
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.csproj.AssemblyReference.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.AssemblyInfoInputs.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.AssemblyInfo.cs
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.csproj.CoreCompileInputs.cache
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.dll
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.pdb
+C:\Coding_Dojo\C#\Assignments\Fundamentals\Fundamentals_1\obj\Debug\netcoreapp3.1\Fundamentals_1.genruntimeconfig.cache
