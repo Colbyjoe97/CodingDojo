@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="gold">
+            <p>Your Gold: </p>
+            <p id="gold">gold</p>
+        </div>
+        <div class="locations">
+            <div class="area">
+                <p><b>Farm</b></p>
+                <p>(earns 10-20 gold)</p>
+
+                <form action="process_money" method="POST">
+                    <input type="submit" value="Find Gold!">
+                    <input type="hidden" name="location" value="farm">
+                </form>
+            </div>
+            <div class="area">
+                <p><b>Cave</b></p>
+                <p>(earns 10-20 gold)</p>
+
+                <form action="process_money" method="POST">
+                    <input type="submit" value="Find Gold!">
+                    <input type="hidden" name="location" value="cave">
+                </form>
+            </div>
+            <div class="area">
+                <p><b>House</b></p>
+                <p>(earns 10-20 gold)</p>
+
+                <form action="process_money" method="POST">
+                    <input type="submit" value="Find Gold!">
+                    <input type="hidden" name="location" value="house">
+                </form>
+            </div>
+            <div class="area">
+                <p><b>Casino</b></p>
+                <p>(earns 10-20 gold)</p>
+
+                <form action="process_money" method="POST">
+                    <input type="submit" value="Find Gold!">
+                    <input type="hidden" name="location" value="casino">
+                </form>
+            </div>
+        </div>
+        <div class="activities">
+            <p>placeholder</p>
+        </div>
+    </div>
+</body>
+</html>

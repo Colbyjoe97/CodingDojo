@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    padding: 10px;
+}
+.gold {
+    display: flex;
+    padding: 20px;
+}
+#gold {
+    border: 1px solid black;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: -3px;
+    padding: 2px;
+}
+.locations {
+    display: flex;
+    justify-content: space-evenly;
+}
+.area {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+    height: 100px;
+}
+.area p {
+    margin-bottom: 10px;
+}
+.area form {
+    margin-top: 20px;
+}
+.area form input {
+    padding: 10px;
+}
+.activities {
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+    height: 200px;
+    overflow: auto;
+}
