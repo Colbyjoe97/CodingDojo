@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="gold">
             <p>Your Gold: </p>
-            <p id="gold">gold</p>
+            <p id="gold">{{request.session.gold}}</p>
         </div>
         <div class="locations">
             <div class="area">
@@ -20,40 +20,50 @@
                 <p>(earns 10-20 gold)</p>
 
                 <form action="process_money" method="POST">
+                    {% csrf_token %}
                     <input type="submit" value="Find Gold!">
                     <input type="hidden" name="location" value="farm">
                 </form>
             </div>
             <div class="area">
                 <p><b>Cave</b></p>
-                <p>(earns 10-20 gold)</p>
+                <p>(earns 5-10 gold)</p>
 
                 <form action="process_money" method="POST">
+                    {% csrf_token %}
                     <input type="submit" value="Find Gold!">
                     <input type="hidden" name="location" value="cave">
                 </form>
             </div>
             <div class="area">
                 <p><b>House</b></p>
-                <p>(earns 10-20 gold)</p>
+                <p>(earns 2-5 gold)</p>
 
                 <form action="process_money" method="POST">
+                    {% csrf_token %}
                     <input type="submit" value="Find Gold!">
                     <input type="hidden" name="location" value="house">
                 </form>
             </div>
             <div class="area">
                 <p><b>Casino</b></p>
-                <p>(earns 10-20 gold)</p>
+                <p>(earns/takes 0-50 gold)</p>
 
                 <form action="process_money" method="POST">
+                    {% csrf_token %}
                     <input type="submit" value="Find Gold!">
                     <input type="hidden" name="location" value="casino">
                 </form>
             </div>
         </div>
         <div class="activities">
-            <p>placeholder</p>
+            {% for a in request.session.activities %}
+                {% if a.gold >= 0 %}
+                    <p class="good">Earned {{a.gold}} gold from the {{a.location}}!</p>
+                {% else %}
+                    <p class="bad">Lost {{a.gold}} gold from the {{a.location}}!</p>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </body>

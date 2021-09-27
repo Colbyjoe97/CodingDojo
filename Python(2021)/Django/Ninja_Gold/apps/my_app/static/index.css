@@ -3,11 +3,11 @@
     padding: 0;
 }
 .wrapper {
-    padding: 10px;
+    padding: 20px;
 }
 .gold {
     display: flex;
-    padding: 20px;
+    padding: 10px 2px 10px 0px;
 }
 #gold {
     border: 1px solid black;
@@ -18,7 +18,7 @@
 }
 .locations {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .area {
     border: 1px solid black;
@@ -42,4 +42,10 @@
     margin-top: 10px;
     height: 200px;
     overflow: auto;
+}
+.good {
+    color: green;
+}
+.bad {
+    color: red;
 }
