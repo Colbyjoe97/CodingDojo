@@ -80,7 +80,6 @@ namespace Puzzles
             {
                 "Todd", "Tiffany", "Charlie", "Geneva", "Sydney"
             };
-
             Random rand = new Random();
 
             // shuffle names
@@ -96,10 +95,10 @@ namespace Puzzles
             // remove names not larger than 5 characters
             for(var i = 0; i < names.Count; i++)
             {
-                if(names[i].Length <= 5)
+                if(names[i].Length < 5)
                     names.RemoveAt(i);
             }
-            
+
             // print new order of names
             foreach(var name in names)
             {
