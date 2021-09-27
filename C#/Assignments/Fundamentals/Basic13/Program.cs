@@ -14,9 +14,9 @@ namespace Basic13
             // LoopArray(arr);
             // FindMax(arr);
             // GetAvg(arr);
-            Console.WriteLine("Odd Array: "+ string.Join(", ", OddArray()));
-            // GreaterThanY(arr, 3);
-            // SquareArray(arr);
+            // Console.WriteLine("Odd Array: "+ string.Join(", ", OddArray()));
+            // GreaterThanY(arr, 3);3
+            SquareArray(arr);
             // EliminateNegatives(arr);
             // MinMaxAvg(arr);
             // ShiftFront(arr);

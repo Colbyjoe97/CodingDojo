@@ -7,25 +7,9 @@ namespace HungryNinja.Models
         {
             private int calorieIntake;
             public int calorieintake { get { return calorieIntake; } set { } }
-            // public int calorieintake
-            // {
-            //     get
-            //     {
-            //         return calorieIntake;
-            //     }
-            //     set
-            //     {
-            //         // placeholder
-            //     }
-            // }
+
             public List<Food> FoodHistory = new List<Food>();
-            public Ninja()
-            {
-                // FoodHistory = new List<Food>()
-                // {
-                    
-                // };
-            }
+
             public bool IsFull()
             {
                 if (calorieIntake > 1200)
