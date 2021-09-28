@@ -29,25 +29,6 @@ namespace Human
                     gandolf.Attack(ninj);
                 }
             }
-            // while (ninj.Health > 0 && jin.Health > 0)
-            // {
-            //     if (ninj.Health <= 50 && ninj.Health > 0)
-            //     {
-            //         ninj.Steal(jin);
-            //     }
-            //     else if (ninj.Health > 50)
-            //     {
-            //     ninj.Attack(jin);
-            //     }
-            //     if (jin.Health <= 50 && jin.Health > 0)
-            //     {
-            //         jin.Meditate();
-            //     }
-            //     else if (jin.Health > 50 && ninj.Health > 0)
-            //     {
-            //         jin.Attack(ninj);
-            //     }
-            // }
         }
     }
 }
