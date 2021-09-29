@@ -1,0 +1,29 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    padding: 10px;
+}
+.gold {
+    display: flex;
+}
+.gold p {
+    margin-left: 10px;
+}
+#current_gold {
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 10px;
+}
+.locations {
+    display: flex;
+    justify-content: space-evenly;
+}
+.area {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    padding-bottom: 30px;
+}
