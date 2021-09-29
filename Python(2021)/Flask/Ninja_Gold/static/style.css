@@ -18,7 +18,7 @@
 }
 .locations {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .area {
     border: 1px solid black;
@@ -26,4 +26,21 @@
     text-align: center;
     width: 20%;
     padding-bottom: 30px;
+}
+.activities {
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    height: 200px;
+    overflow: auto;
+}
+.good {
+    color: green;
+}
+.bad {
+    color: red;
+}
+.reset {
+    margin-left: 20px;
+    margin-top: 15px;
 }

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, session, request
-import random
+from random import randint
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
@@ -7,20 +7,57 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 def hello_world():
     if 'gold' not in session:
         session['gold'] = 0
+    if 'activities' not in session:
+        session['activities'] = []
+    else:
+        session['activities'].reverse()
     return render_template('index.html')
 
 @app.route('/process_gold', methods=['post'])
 def process():
     if request.form['location'] == "farm":
-        session['gold'] += random.randrange(10, 21)
-    elif request.form['location'] == "cave":
-        session['gold'] += random.randrange(5, 11)
-    elif request.form['location'] == "house":
-        session['gold'] += random.randrange(2, 6)
-    elif request.form['location'] == "casino":
-        session['gold'] += random.randrange(-50, 50)
-    
+        int = randint(10, 21)
+        session['gold'] += int
+        session['activities'].append({
+            'gold': int,
+            'location': 'Farm',
+        })
 
+    elif request.form['location'] == "cave":
+        int = randint(5,10)
+        session['gold'] += int
+        session['activities'].append({
+            'gold': int,
+            'location': 'Cave',
+            'status': 'good'
+        })
+    elif request.form['location'] == "house":
+        int = randint(2,5)
+        session['gold'] += int
+        session['activities'].append({
+            'gold': int,
+            'location': 'House',
+            'status': 'good'
+        })
+
+    elif request.form['location'] == "casino":
+        int = randint(-50, 50)
+        if int >= 0:
+            status = "good"
+        else:
+            status = "bad"
+        session['gold'] += int
+        session['activities'].append({
+            'gold': int,
+            'location': 'Casino',
+            'status': status
+        })
+
+    return redirect('/')
+
+@app.route('/reset')
+def reset():
+    session.clear()
     return redirect('/')
 
 app.run(debug = True)
