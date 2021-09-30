@@ -27,6 +27,7 @@ namespace BeltReview.Controllers
         {
             return dbContext.Users.FirstOrDefault(u => u.UserId == HttpContext.Session.GetInt32("UserId"));
         }
+
         [HttpGet("")]
         public IActionResult LoginPage()
         {
@@ -34,6 +35,7 @@ namespace BeltReview.Controllers
                 .ToList();
             return View("Index");
         }
+
         [HttpPost("Login")]
         public IActionResult Login(Login user, int UserId)
         {
@@ -61,6 +63,7 @@ namespace BeltReview.Controllers
                 return View("Index");
             }
         }
+
         [HttpGet("RegisterPage")]
         public IActionResult RegisterPage()
         {
@@ -88,6 +91,7 @@ namespace BeltReview.Controllers
                 return View("RegisterPage");
             }
         }
+
         [HttpGet("/homepage")]
         public IActionResult HomePage(int UserId, User user)
         {
@@ -104,12 +108,14 @@ namespace BeltReview.Controllers
                 .ToList();
             return View("HomePage", AllParties);
         }
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("LoginPage");
         }
+
         [HttpGet("rsvp/{userId}/{partyId}")]
         public IActionResult RSVP(int userId, int partyId)
         {
@@ -120,6 +126,7 @@ namespace BeltReview.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("HomePage");
         }
+
         [HttpGet("unrsvp/{userId}/{partyId}")]
         public IActionResult unRSVP(int userId, int partyId)
         {
@@ -129,6 +136,7 @@ namespace BeltReview.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("HomePage");
         }
+
         [HttpGet("new/party")]
         public IActionResult NewParty()
         {
@@ -139,6 +147,7 @@ namespace BeltReview.Controllers
             }
             return View();
         }
+
         [HttpPost("create/party")]
         public IActionResult CreateParty(Party show)
         {
@@ -156,6 +165,7 @@ namespace BeltReview.Controllers
             }
             return RedirectToAction("Logout");
         }
+
         [HttpGet("destroy/{partyId}")]
         public IActionResult DestroyParty(int partyId)
         {
@@ -164,6 +174,7 @@ namespace BeltReview.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("HomePage");
         }
+
         [HttpGet("party/{partyId}")]
         public IActionResult ShowParty(int partyId)
         {
@@ -179,6 +190,7 @@ namespace BeltReview.Controllers
                 .FirstOrDefault(p => p.PartyId == partyId);
             return View(show);
         }
+        
         public IActionResult Privacy()
         {
             return View();
