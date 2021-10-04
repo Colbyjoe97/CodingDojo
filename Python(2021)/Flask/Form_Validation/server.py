@@ -8,20 +8,17 @@ def index():
 
 @app.route('/result', methods=["POST"])
 def result():
+    if len(request.form['comment']) > 120:
+        flash("Comment cannot be more than 120 characters.")
     if not request.form['name']:
         flash("Name is required!")
         return redirect("/")
-    if not request.form['location']:
-        flash("Dojo location is required!")
-    if not request.form['language']:
-        flash("Favorite language is required!")
     else:
-        flash("Success! You submitted the form!")
+        name = request.form['name']
+        location = request.form['location']
+        language = request.form['language']
+        comment = request.form['comment']
+        return render_template('result.html', name=name, location=location, language=language, comment=comment)
 
-        
-    if len(flash) > 1:
-        return redirect("/")
-    else:
-        return render_template("/result.html")
 
 app.run(debug = True)

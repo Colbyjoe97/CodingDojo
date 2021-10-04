@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.results {
+    border: 1px solid black;
+    padding: 15px;
+}
+p {
+    margin-top: 15px;
+}
