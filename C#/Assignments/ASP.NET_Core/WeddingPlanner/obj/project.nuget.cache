@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NTnx/hiMWl+QCuG8BPOvv3GEeVyU/TxgH9rFGoXFRJfyCipxNacC4meqvqJwlDlvfIIOGXo2+i07yp/+lvj0uA==",
+  "dgSpecHash": "VFb+Se/nVtmLfwRts+4jbbxIrRrBTdiwNHsFCPGZdG8UVd+MClRaIEL/jpRs4iEiSJ3FVvbZMA3gwieTWTUZAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\WeddingPlanner\\BeltTest.csproj",
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\WeddingPlanner\\BeltTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dumon\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -24,12 +24,14 @@
     "C:\\Users\\dumon\\.nuget\\packages\\microsoft.extensions.options\\3.1.5\\microsoft.extensions.options.3.1.5.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.5\\microsoft.extensions.primitives.3.1.5.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\mysqlconnector\\0.61.0\\mysqlconnector.0.61.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\3.1.1\\pomelo.entityframeworkcore.mysql.3.1.1.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\pomelo.jsonobject\\2.2.1\\pomelo.jsonobject.2.2.1.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\dumon\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "C:\\Users\\dumon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\dumon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
   ],
   "logs": []
 }

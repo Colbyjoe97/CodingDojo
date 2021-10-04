@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UVzULYxGjYG179cOiKDsJd/pLHjk9skntqOQuJe9SdrLrUyludh0+G1zaV4CsKuQRA6ISFfM+cPKicRXOEq4BA==",
+  "dgSpecHash": "4ePCb/EW8tHc2tFqM//xSo0Zjnwez2aHFwZxsFzutKWd4uV6kYCbh79RUEz3EYOHaLp9bU92928/uiWuMyqeqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\viewModelFun\\viewModelFun.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\viewModelFun\\viewModelFun.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
+  ],
   "logs": []
 }
