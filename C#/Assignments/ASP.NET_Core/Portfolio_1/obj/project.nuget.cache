@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YgAFtuVmo4d39s8iNVtKpnkK8VnY5DI92d7SZK6uQshsB0/VMZuRAVKkshnEy6+EeFspUXFQsSwzjWxdJk7q5w==",
+  "dgSpecHash": "BCwbCIHxbqoW6hjTG0XHm5i+bwg6ES5lwKl59RUbXFGHA9wf8vahuHzeMW5WNRnvbfSLFSNNTEdloJo/Px/iIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Portfolio_1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Portfolio_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
+  ],
   "logs": []
 }
