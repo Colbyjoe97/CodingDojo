@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qh9jfa7Tb8ngMUS6QsUUsHNP9Ibyxy5JteUnPMixLfWXf6coC6f4qbj5nuqFspEnfD3/s+fW7xRgx2Y9ssfwWw==",
+  "dgSpecHash": "pzmCk8qZ08QpkWvwlUY1Zg2NX0RrfU3LUQZVwrAELTdp3fTdYeIZ1XJIwt3wk3xRJaDC1DIpGOhT/IbHCHnKcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dumon\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\RazorFun.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\RazorFun.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\dumon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
+  ],
   "logs": []
 }
