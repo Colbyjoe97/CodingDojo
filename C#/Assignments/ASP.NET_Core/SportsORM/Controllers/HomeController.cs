@@ -135,8 +135,6 @@ namespace SportsORM.Controllers
             var SamEvans = _context.Players
                 .FirstOrDefault(s => s.FirstName == "Samuel" && s.LastName == "Evans");
             ViewBag.SamTeams = _context.Teams
-                // .Include(t => t.AllPlayers)
-                //     .ThenInclude(a => a.PlayerId)
                 .Where(s => s.AllPlayers.Any(p => p.PlayerId == SamEvans.PlayerId))
                 .OrderBy(p => p.TeamName)
                 .ToList();
@@ -161,8 +159,6 @@ namespace SportsORM.Controllers
             // Question 4: (probably wrong)
             var JacobGray = _context.Players
                 .FirstOrDefault(p => p.FirstName == "Jacob" && p.LastName == "Gray");
-            // ViewBag.Jacobteams = _context.Players
-            //     .Where(t => t.AllTeams.Any(i => i.TeamId == JacobGray.TeamId))
             ViewBag.Jacobteams = _context.Teams
                 .Where(t => t.AllPlayers.Any(i => i.TeamId == JacobGray.TeamId))
                 .ToList();
