@@ -1,5 +1,6 @@
 from flask import Flask, flash, redirect, render_template, request
 import re
+import datetime
 app = Flask(__name__)
 app.secret_key = 'keep it secret, keep it safe'
 @app.route('/')
@@ -37,6 +38,15 @@ def register():
     else:
         email = request.form['email']
 
+    if not request.form['birthday']:
+        flash("Birthday is required")
+        errCount += 1
+    elif request.form['birthday'] > str(datetime.date.today()):
+        flash("Birthday cannot be in the future")
+        errCount += 1
+    else:
+        birthday = request.form['birthday']
+
     if not request.form['password']:
         flash("Password is required")
         errCount += 1
@@ -55,7 +65,7 @@ def register():
     if errCount > 0:
         return redirect('/')
     else:
-        return render_template('results.html', fname=fname, lname=lname, email=email)
+        return render_template('results.html', fname=fname, lname=lname, email=email, birthday=birthday, password=password)
 
 
 app.run(debug = True)
