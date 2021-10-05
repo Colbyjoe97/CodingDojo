@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+.text-danger {
+    color: red;
+}
+form {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+}
+input {
+    margin-bottom: 15px;
+}
