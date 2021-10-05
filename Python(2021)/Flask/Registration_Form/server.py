@@ -19,6 +19,8 @@ def register():
         errCount += 1
     else:
         fname = request.form['fname']
+
+
     
     if not request.form['lname']:
         flash("Last name is required")
@@ -28,6 +30,8 @@ def register():
         errCount += 1
     else:
         lname = request.form['lname']
+
+
     
     if not request.form['email']:
         flash("Email is required")
@@ -38,6 +42,8 @@ def register():
     else:
         email = request.form['email']
 
+
+
     if not request.form['birthday']:
         flash("Birthday is required")
         errCount += 1
@@ -46,6 +52,8 @@ def register():
         errCount += 1
     else:
         birthday = request.form['birthday']
+
+
 
     if not request.form['password']:
         flash("Password is required")
@@ -59,8 +67,12 @@ def register():
     else:
         password = request.form['password']
 
+
     if request.form['confirm_password'] != request.form['password']:
         flash("Passwords don't match")
+
+
+
 
     if errCount > 0:
         return redirect('/')
