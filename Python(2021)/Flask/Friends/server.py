@@ -1,20 +1,18 @@
-from flask import Flask
-# import the Connector function
+from flask import Flask, request, redirect, render_template, session, flash
 from mysqlconnection import MySQLConnector
 app = Flask(__name__)
-# connect and store the connection in "mysql"; note that you pass the database name to the function
 mysql = MySQLConnector(app,'friendsdb')
-# an example of running a query
+
 
 @app.route('/')
 def index():
     query = "SELECT * FROM friends"
     friends = mysql.query_db(query)
-    print "#####################################"
-    print friends
-    print "#####################################"
-    return render_template('index.html', all_friends=friends)
+    return render_template('index.html', friends=friends)
 
 
-# print mysql.query_db("SELECT * FROM users")
+@app.route('/friends', methods=['POST'])
+def create():
+    # add a friend to the database!
+    return redirect('/')
 app.run(debug=True)
