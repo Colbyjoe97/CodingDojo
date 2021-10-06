@@ -21,7 +21,6 @@ def submit():
         if email['email'] == request.form['email']:
             flash("Email already taken!")
             return redirect('/')
-        print email['email']
 
     query = "INSERT INTO email (email, created_at, updated_at) VALUES (:email, NOW(), NOW())"
 
