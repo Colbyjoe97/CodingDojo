@@ -16,7 +16,13 @@
         </div>
         <h3>Email Addresses Entered:</h3>
         {% for email in emails %}
-            <p>{{email.email}}</p>
+            <div class="email">
+                <p>{{email.email}}</p>
+                <p>{{email.created_at}}</p>
+                <form action="delete/{{email.id}}" method="POST">
+                    <input type="submit" value="delete">
+                </form>
+            </div>
         {% endfor %}
     </div>
 </body>

@@ -8,7 +8,6 @@ mysql = MySQLConnector(app,'emaildb')
 
 @app.route('/')
 def index():
-    
     return render_template('index.html')
 
 @app.route("/submit", methods=['post'])
@@ -35,6 +34,15 @@ def submit():
     emails = mysql.query_db(query)
     recentEmail = request.form['email']
     return render_template("success.html", emails=emails, recent=recentEmail)
+
+@app.route("/delete/<id>", methods=['POST'])
+def delete(id):
+    query = "DELETE FROM email WHERE id = :id"
+    data = {'id': id}
+    mysql.query_db(query, data)
+    return redirect('/')
+
+
 
 
 app.run(debug=True)
