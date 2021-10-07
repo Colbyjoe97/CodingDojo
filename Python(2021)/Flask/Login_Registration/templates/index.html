@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="errors">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="wrapper">
+        <div class="register">
+            <h2>Register Account</h2>
+            <form action="register" method="POST">
+
+                <p for="fname">First Name: </p>
+                <input type="text" name="first_name">
+
+                <p for="lname">last Name: </p>
+                <input type="text" name="last_name">
+
+                <p for="email">Email: </p>
+                <input type="text" name="email">
+
+                <p for="password">Password: </p>
+                <input type="text" name="password">
+
+                <p for="confirm_password">Confirm Password: </p>
+                <input type="text" name="confirm_password"><br>
+
+                <input id="reg_button" type="submit" value="Register">
+            </form>
+        </div>
+        <div class="login">
+            <h2>Login</h2>
+            <form action="login" method="POST">
+                <p>Email:</p>
+                <input type="text" name="email">
+
+                <p>Password:</p>
+                <input type="text" name="password"><br>
+
+                <input id="login_button" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

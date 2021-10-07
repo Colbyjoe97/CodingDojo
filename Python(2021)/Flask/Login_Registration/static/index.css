@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.errors {
+    padding-top: 20px;
+    text-align: center;
+    color: red;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    padding-top: 20px;
+}
+.register {
+    border: 1px solid black;
+    padding: 20px;
+}
+.register h2 {
+    margin-bottom: 10px;
+}
+#reg_button {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 32%;
+}
+.login {
+    border: 1px solid black;
+    padding: 10px;
+    height: 100%;
+}
+.login h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#login_button {
+    margin-top: 10px;
+    margin-left: 35%;
+}
+input {
+    margin-bottom: 10px;
+}
