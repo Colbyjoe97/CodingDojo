@@ -70,6 +70,7 @@ def register():
 
     if request.form['confirm_password'] != request.form['password']:
         flash("Passwords don't match")
+        errCount += 1
 
 
 
