@@ -77,19 +77,21 @@ def login():
     query = "SELECT * FROM user"
     users = mysql.query_db(query)
     password = md5.new(request.form['password']).hexdigest()
-    current_user = ""
+    session['current_user'] = ""
     for user in users:
         if user['email'] == request.form['email']:
             if password == user['password']:
-                current_user = user
+                session['current_user'] = user
                 break
-    if current_user == "":
+    if session['current_user'] == "":
         flash("Email or password incorrect")
         return redirect('/')
 
-    return render_template("success.html", current_user = current_user)
+    return redirect("/success")
 
-
+@app.route('/success')
+def success():
+    return render_template("success.html")
 
 
 
