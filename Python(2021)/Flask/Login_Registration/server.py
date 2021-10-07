@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, render_template, session, flash
 from mysqlconnection import MySQLConnector
+import md5
 import re
 app = Flask(__name__)
 app.secret_key = 'keep it secret, keep it safe'
@@ -55,12 +56,14 @@ def register():
     if errCount == 0:
         query = "INSERT INTO user (first_name, last_name, email, password, password_confirmation, created_at, updated_at) VALUES (:first_name, :last_name, :email, :password, :password_confirmation, NOW(), NOW())"
 
+        password = md5.new(request.form['password']).hexdigest()
+
         data = {
             'first_name': request.form['first_name'],
             'last_name': request.form['last_name'],
             'email': request.form['email'],
-            'password': request.form['password'],
-            'password_confirmation': request.form['confirm_password']
+            'password': password,
+            'password_confirmation': password
         }
         mysql.query_db(query, data)
         print data
@@ -73,10 +76,11 @@ def register():
 def login():
     query = "SELECT * FROM user"
     users = mysql.query_db(query)
+    password = md5.new(request.form['password']).hexdigest()
     current_user = ""
     for user in users:
         if user['email'] == request.form['email']:
-            if request.form['password'] == user['password']:
+            if password == user['password']:
                 current_user = user
                 break
     if current_user == "":
