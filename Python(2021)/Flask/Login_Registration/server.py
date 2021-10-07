@@ -72,9 +72,18 @@ def register():
 @app.route("/login", methods=['post'])
 def login():
     query = "SELECT * FROM user"
-    user = mysql.query_db(query)
+    users = mysql.query_db(query)
+    current_user = ""
+    for user in users:
+        if user['email'] == request.form['email']:
+            if request.form['password'] == user['password']:
+                current_user = user
+                break
+    if current_user == "":
+        flash("Email or password incorrect")
+        return redirect('/')
 
-    return render_template("success.html")
+    return render_template("success.html", current_user = current_user)
 
 
 
