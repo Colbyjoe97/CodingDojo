@@ -85,7 +85,6 @@ namespace BeltReview.Controllers
                 dbContext.SaveChanges();
                 return RedirectToAction("LoginPage");
             }
-
             else
             {
                 return View("RegisterPage");
