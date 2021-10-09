@@ -1,9 +1,9 @@
 def odd_even():
     for i in range(1, 2000):
         if i % 2 == 0:
-            print(f"Number is {i}. This is an even number")
+            print "Number is {}. This is an even number".format(i)
         else:
-            print(f'Number is {i}. This is an odd number')
+            print 'Number is {}. This is an odd number'.format(i)
 # odd_even()
 
 
