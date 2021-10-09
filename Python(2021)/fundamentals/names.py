@@ -5,9 +5,6 @@ students = [
      {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-for i in students:
-    print "{} {}".format(i['first_name'], i['last_name'])
-
 users = {
  'Students': [
      {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -20,12 +17,21 @@ users = {
      {'first_name' : 'Martin', 'last_name' : 'Puryear'}
   ]
  }
-def printNames():
-    print("Students")
-    for i in range(0, len(users['Students'])):
-        print "{} - {} {} - {}".format(i + 1, users['Students'][i]['first_name'], users['Students'][i]['last_name'], len(users['Students'][i]['first_name'] +  users['Students'][i]['last_name']))
-    print("Instructors")
-    for i in range(0, len(users['Instructors'])):
-        print "{} - {} {} - {}".format(i + 1, users['Instructors'][i]['first_name'], users['Instructors'][i]['last_name'], len(users['Instructors'][i]['first_name'] +  users['Instructors'][i]['last_name']))
 
-printNames()
+def show_students(arr):
+    for student in students:
+        print student['first_name'], student['last_name']
+
+def show_all(users):
+    for role in users:
+        counter = 0
+        print role
+        for person in users[role]:
+            counter += 1
+            first_name = person['first_name'].upper()
+            last_name = person['last_name'].upper()
+            length = len(first_name) + len(last_name)
+            print "{} - {} {} - {}".format(counter, first_name, last_name, length)
+
+show_students(students)
+show_all(users)
