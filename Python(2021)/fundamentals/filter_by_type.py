@@ -13,21 +13,22 @@ lL = [4,34,22,68,9,13,3,5,7,9,2,12,45,923]
 eL = []
 spL = ['name','address','phone number','social security number']
 
-tester = lL
-type = type(tester)
-print(type)
-if type is int:
-    if tester >= 100:
-        print("That's a big number!")
+# set one of the above variables as the current one I'm testing
+current_tester = lL
+
+curr_type = type(current_tester)
+if curr_type is int:
+    if current_tester >= 100:
+        print "That's a big number!"
     else:
-        print("That's a small number!")
-elif type is str:
-    if len(tester) >= 50:
-        print("Long sentence")
+        print "That's a small number!"
+elif curr_type is str:
+    if len(current_tester) >= 50:
+        print "Long sentence."
     else:
-        print("Short sentence")
-elif type is list:
-    if len(tester) >= 10:
-        print("Big list!")
-    else:
-        print("Short list")
+        print "Short sentence."
+elif isinstance(current_tester, list):
+    if len(current_tester) >= 10:
+        print "Big list!"
+    else: 
+        print "Short list."
