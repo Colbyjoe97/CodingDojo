@@ -1,28 +1,19 @@
 # 1.)
-for i in range(1, 1000):
-    if i % 2 != 0:
-        print(i)
+for count in range(0, 1001, 2):
+    print count
 
 
 # 2.)
-for i in range(5, 1000000):
-    if i % 5 == 0:
-        print(i)
-
+for count in range(5,1000001,5):
+    print count
 
 # 3.)
-a = [1, 2, 5, 10, 255, 3]
+my_numbers = [1, 2, 5, 10, 255, 3]
 sum = 0
-for i in a:
+for i in my_numbers:
     sum += i
-print(sum)
+print sum
 
 
 # 4.)
-a = [1, 2, 5, 10, 255, 3]
-sum = 0
-avg = 0
-for i in a:
-    sum += i
-avg = sum / len(a)
-print(avg)
+print sum/len(my_numbers)
