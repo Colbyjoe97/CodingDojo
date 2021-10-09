@@ -5,8 +5,8 @@ students = [
      {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-# for i in students:
-    print(f"{i['first_name']} {i['last_name']}")
+for i in students:
+    print "{} {}".format(i['first_name'], i['last_name'])
 
 users = {
  'Students': [
@@ -23,9 +23,9 @@ users = {
 def printNames():
     print("Students")
     for i in range(0, len(users['Students'])):
-        print(f"{i + 1} - {users['Students'][i]['first_name']} {users['Students'][i]['last_name']} - {len(users['Students'][i]['first_name'] +  users['Students'][i]['last_name'])}")
+        print "{} - {} {} - {}".format(i + 1, users['Students'][i]['first_name'], users['Students'][i]['last_name'], len(users['Students'][i]['first_name'] +  users['Students'][i]['last_name']))
     print("Instructors")
     for i in range(0, len(users['Instructors'])):
-        print(f"{i + 1} - {users['Instructors'][i]['first_name']} {users['Instructors'][i]['last_name']} - {len(users['Instructors'][i]['first_name'] +  users['Instructors'][i]['last_name'])}")
-    
+        print "{} - {} {} - {}".format(i + 1, users['Instructors'][i]['first_name'], users['Instructors'][i]['last_name'], len(users['Instructors'][i]['first_name'] +  users['Instructors'][i]['last_name']))
+
 printNames()
