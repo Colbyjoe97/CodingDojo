@@ -23,29 +23,28 @@ CREATE TABLE IF NOT EXISTS `dashboardssdb`.`users` (
   `last_name` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
+  `description` TEXT(255) NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`));
-CREATE TABLE IF NOT EXISTS `dashboardssdb`.`blogs` (
+CREATE TABLE IF NOT EXISTS `dashboardsdb`.`admins` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NULL,
-  `title` VARCHAR(45) NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`));
-CREATE TABLE IF NOT EXISTS `dashboardsdb`.`posts` (
+CREATE TABLE IF NOT EXISTS `dashboardsdb`.`messages` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `post` TEXT(255) NULL,
+  `message` TEXT(255) NULL,
   `user_id` INT NULL,
-  `blog_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`));
 CREATE TABLE IF NOT EXISTS `dashboardsdb`.`comments` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `post` TEXT(255) NULL,
+  `comment` TEXT(255) NULL,
   `user_id` INT NULL,
-  `post_id` INT NULL,
+  `message_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`));
