@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `booksdb`.`favorites` (
   `user_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`));
 ENGINE = InnoDB;
 
 
