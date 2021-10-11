@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='wall.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h3>CodingDojo Wall</h3>
+        <div class="info">
+            <p>Welcome {{current_user.first_name}} {{current_user.last_name}}</p>
+            <a href="logout">Log Out</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="create_message">
+            <p>Post a message</p>
+            <form action="create_message" method="POST">
+                <textarea name="message" cols="100" rows="7"></textarea><br>
+                <button>Create Message</button>
+            </form>
+        </div>
+
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message">
+                    <h3>{{message.first_name}} {{message.last_name}} - {{message.created_at.strftime('%A %B %d %Y')}}</h3>
+                    <p>{{message.message}}</p>
+
+                    <p>Post a comment</p>
+                    <form action="comment" method="POST">
+                        <textarea name="comment" cols="70" rows="5"></textarea><br>
+
+                        <input type="hidden" name="message" value="{{message.id}}">
+
+                        <button>Create Comment</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.info {
+    display: flex;
+}
+.info p {
+    margin-right: 50px;
+}
+.wrapper {
+    padding: 10px 20% 10px 20%;
+}
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.message p, textarea, button {
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.message form {
+    border-top: 2px solid black;
+}
