@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.register {
+    padding: 10px;
+    border: 1px solid black;
+}
+.register button {
+    margin-top: 10px;
+    margin-left: 30%;
+}
+.login {
+    padding: 10px;
+    border: 1px solid black;
+    height: 100%;
+}
+.login h2 {
+    text-align: center;
+}
+.login button {
+    margin-top: 10px;
+    margin-left: 37%;
+}
+input {
+    margin-bottom: 10px;
+}
