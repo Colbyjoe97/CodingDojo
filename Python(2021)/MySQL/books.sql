@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS `booksdb`.`books` (
   PRIMARY KEY (`id`));
 CREATE TABLE IF NOT EXISTS `booksdb`.`favorites` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `book_id` INT NOT NULL,
-  `user_id` INT NOT NULL,
+  `book_id` INT NULL,
+  `user_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id`))
