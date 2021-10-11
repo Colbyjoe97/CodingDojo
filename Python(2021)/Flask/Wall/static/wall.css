@@ -26,6 +26,9 @@
     margin-left: 35px;
     margin-top: 10px;
 }
-.message form {
-    border-top: 2px solid black;
+.comment h4 {
+    margin: 10px 0px -5px 35px;
+}
+.comment p {
+    margin-left: 60px;
 }

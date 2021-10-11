@@ -36,12 +36,20 @@
                 <div class="message">
                     <h3>{{message.first_name}} {{message.last_name}} - {{message.created_at.strftime('%A %B %d %Y')}}</h3>
                     <p>{{message.message}}</p>
-
+                    
+                    {% for comment in comments %}
+                        {% if message.id == comment.message_id %}
+                            <div class="comment">
+                                <h4>{{ comment.first_name }}</h4>
+                                <p>{{ comment.comment }}</p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                     <p>Post a comment</p>
                     <form action="comment" method="POST">
                         <textarea name="comment" cols="70" rows="5"></textarea><br>
 
-                        <input type="hidden" name="message" value="{{message.id}}">
+                        <input type="hidden" name="message_id" value="{{message.id}}">
 
                         <button>Create Comment</button>
                     </form>

@@ -99,20 +99,23 @@ def create_message():
 def wall():
     current_user = session['current_user']
     messages = mysql.query_db('SELECT users.first_name, users.last_name, messages.id, messages.message, messages.created_at, messages.updated_at FROM messages JOIN users ON messages.user_id = users.id ORDER BY messages.created_at ASC;')
-    return render_template("wall.html", current_user=current_user, messages=messages)
+    comments = mysql.query_db('SELECT comments.comment, comments.created_at, comments.updated_at, comments.message_id, users.first_name FROM comments JOIN users ON users.id = comments.user_id ORDER BY comments.created_at ASC;')
+    return render_template("wall.html", current_user=current_user, messages=messages, comments=comments)
 
 @app.route('/comment', methods=['POST'])
 def make_comment():
     # comment = request.form['comment']
     # messages_id = request.form['messages_id']
-    if len(comment) > 0:
-        query = "INSERT INTO comments (users_id, messages_id, comment, created_at, updated_at) VALUES (:user_id, :messages_id, :comment, NOW(), NOW())"
+    if request.form['comment']:
+        query = "INSERT INTO comments (user_id, message_id, comment, created_at, updated_at) VALUES (:user_id, :message_id, :comment, NOW(), NOW())"
         data = {
-            'user_id': session['id'],
-            'comment': comment,
-            'messages_id': messages_id,
+            'user_id': session['current_user']['id'],
+            'comment': request.form['comment'],
+            'message_id': request.form['message_id'],
         }
         mysql.query_db(query, data)
+    else:
+        flash("Comment is required")
     return redirect('/wall')
 
 @app.route("/logout")
