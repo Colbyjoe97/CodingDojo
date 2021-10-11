@@ -3,7 +3,7 @@ from time import gmtime, strftime
 # Create your views here.
 def index(request):
     if 'all_words' in request.session:
-        if 'list'in request.session:
+        if 'list' in request.session:
             request.session['list'] = request.session['all_words']
             # request.session['list'].append(request.session['word'])
         else:
@@ -11,7 +11,7 @@ def index(request):
     else:
         request.session['all_words'] = []
     context = {
-        "list": request.session['list']
+        "list": request.session['list'],
     }
     return render(request, "index.html", context)
 
