@@ -59,8 +59,6 @@ def create():
             'password': password
         }
         mysql.query_db(query, data)
-        return render_template("wall.html")
-
     return redirect('/')
 
 @app.route("/login", methods=["POST"])
