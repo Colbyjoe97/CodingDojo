@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `blogsdb`.`admins` (
   `blog_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`));
 CREATE TABLE IF NOT EXISTS `blogsdb`.`posts` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `post` TEXT(255) NULL,
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `blogsdb`.`posts` (
   `blog_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`));
 CREATE TABLE IF NOT EXISTS `blogsdb`.`comments` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `post` TEXT(255) NULL,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `blogsdb`.`comments` (
   `post_id` INT NULL,
   `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`));
 ENGINE = InnoDB;
 
 
