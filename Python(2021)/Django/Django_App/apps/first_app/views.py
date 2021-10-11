@@ -16,7 +16,7 @@ def show(request, number):
     return HttpResponse(number)
 
 def edit(request, number):
-    return HttpResponse(f"Placeholder to edit blog number {number}")
+    return HttpResponse("Placeholder to edit blog number {}".format(number))
 
 def destroy(request, number):
     return redirect('/')
