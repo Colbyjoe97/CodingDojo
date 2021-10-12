@@ -1,0 +1,24 @@
+CREATE ENTRIES:
+User.objects.create(first_name="allan",last_name="beck",email="allan@beck.com",age=24) 
+User.objects.create(first_name="colby",last_name="dumonchelle",email="dumonchelle123@gmail.com",age=24) 
+User.objects.create(first_name="john",last_name="griffon",email="john@griffon.com",age=25) 
+User.objects.create(first_name="jack",last_name="snow",email="jack@snow.com",age=12) 
+
+RETRIEVE ALL USERS:
+User.objects.all()
+
+GET LAST USER:
+User.objects.last()
+
+GET FIRST USER:
+User.objects.first()
+
+GET ALL USERS SORTED BY FIRST NAME:
+User.objects.all().order_by('first_name')
+
+GET ALL USERS SORTED BY FIRST NAME REVERSED:
+User.objects.all().order_by('-first_name')
+
+DELETE USER WITH ID = 4:
+User.objects.get(id=4).delete()
+
