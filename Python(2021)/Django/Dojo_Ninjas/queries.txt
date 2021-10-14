@@ -1,0 +1,40 @@
+DOJO:
+Create 3 dojos:
+    Dojo.objects.create(name="CodingDojo Silicon Valley",city="Mountain View",state="CA")
+    Dojo.objects.create(name="CodingDojo Seattle",city="Seattle",state="WA")
+    Dojo.objects.create(name="CodingDojo New York",city="New York",state="NY")
+
+Delete the 3 dojos:
+    Dojo.objects.all().delete()
+
+Recreate 3 dojos:
+    Dojo.objects.create(name="CodingDojo Silicon Valley",city="Mountain View",state="CA")
+    Dojo.objects.create(name="CodingDojo Seattle",city="Seattle",state="WA")
+    Dojo.objects.create(name="CodingDojo New York",city="New York",state="NY")
+
+
+NINJA:
+Create 3 ninjas belonging to the first dojo:
+    Ninja.objects.create(first_name="Jack",last_name="Griffon",dojo=Dojo.objects.first())
+    Ninja.objects.create(first_name="Peter",last_name="Griffon",dojo=Dojo.objects.first())
+    Ninja.objects.create(first_name="Stewie",last_name="Griffon",dojo=Dojo.objects.first())
+
+Create 3 ninjas belonging to the second dojo:
+    Ninja.objects.create(first_name="Eric",last_name="Cartman",dojo=Dojo.objects.get(id=6))
+    Ninja.objects.create(first_name="Stan",last_name="Marsh",dojo=Dojo.objects.get(id=6))
+    Ninja.objects.create(first_name="Kyle",last_name="Broflovski",dojo=Dojo.objects.get(id=6))
+
+Create 3 ninjas belonging to the third dojo:
+    Ninja.objects.create(first_name="Monkey D",last_name="Luffy",dojo=Dojo.objects.get(id=7))
+    Ninja.objects.create(first_name="Roranora",last_name="Zoro",dojo=Dojo.objects.get(id=7))
+    Ninja.objects.create(first_name="Sanji",last_name="Vinsmoke",dojo=Dojo.objects.get(id=7))
+
+Retrieve all ninjas belonging to the first dojo:
+    ninjas = Dojo.objects.first().ninjas.all()
+    (To access data)
+    ninjas[idx].first_name 
+
+Retrieve all ninjas belonging to the last dojo:
+    ninjas = Dojo.objects.last().ninjas.all()
+    (To access data)
+    ninjas[idx].first_name 
