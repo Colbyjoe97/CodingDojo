@@ -1,0 +1,66 @@
+Create 5 books with the following names: C sharp, Java, Python, PHP, Ruby:
+    Book.objects.create(name="C Sharp",desc="A book on C#")
+    Book.objects.create(name="Java",desc="A book on Java")
+    Book.objects.create(name="Python",desc="A book on Python")
+    Book.objects.create(name="PHP",desc="A book on PHP")
+    Book.objects.create(name="Ruby",desc="A book on Ruby")
+
+Create 5 different authors: Mike, Speros, John, Jadee, Jay:
+    Author.objects.create(first_name="mike",last_name="Broflovski",email="mike@b.com")
+    Author.objects.create(first_name="Speros",last_name="Jeffries",email="speros@j.com")
+    Author.objects.create(first_name="John",last_name="Griffon",email="john@g.com")
+    Author.objects.create(first_name="Jadee",last_name="Jacky",email="j@j.com")
+    Author.objects.create(first_name="Jay",last_name="Wittle",email="Jay@wittle.com")
+
+Change the name of the 5th book to C#:
+    book = Book.objects.get(id=5)
+    book.name="C#"
+    book.save()
+
+Change the first_name of the 5th author to Ketul:
+    author = Author.objects.get(id=5)
+    author.first_name="Ketul"
+    author.save()
+
+Assign the first author to the first 2 books:
+    author = Author.objects.get(id=1)
+    author.books.add(Book.objects.get(id=1))
+    author.books.add(Book.objects.get(id=2))
+
+Assign the second author to the first 3 books
+    author = Author.objects.get(id=2)
+    author.books.add(Book.objects.get(id=1))
+    author.books.add(Book.objects.get(id=2))
+    author.books.add(Book.objects.get(id=3))
+
+Assign the third author to the first 4 book
+    author = Author.objects.get(id=3)
+    author.books.add(Book.objects.get(id=1))
+    author.books.add(Book.objects.get(id=2))
+    author.books.add(Book.objects.get(id=3))
+    author.books.add(Book.objects.get(id=4))
+
+Assign the fourth author to the first 5 books (or in other words, all the books)
+    author = Author.objects.get(id=4)
+    author.books.add(Book.objects.get(id=1))
+    author.books.add(Book.objects.get(id=2))
+    author.books.add(Book.objects.get(id=3))
+    author.books.add(Book.objects.get(id=4))
+    author.books.add(Book.objects.get(id=5))
+
+For the 3rd book, retrieve all the authors:
+    Book.objects.get(id=3).authors.all()
+
+For the 3rd book, remove the first author:
+    book = Book.objects.get(id=3)
+    book.authors.remove(Author.objects.get(id=2))
+
+For the 2nd book, add the 5th author as one of the authors:
+    book = Book.objects.get(id=2)
+    book.authors.add(Author.objects.get(id=5))
+
+Find all the books that the 3rd author is part of:
+    Book.objects.filter(authors=Author.objects.get(id=3))
+
+Find all the books that the 2nd author is part of:
+    Book.objects.filter(authors=Author.objects.get(id=2))
