@@ -1,0 +1,47 @@
+Create 3 different user accounts:
+    User.objects.create(first_name="Jack",last_name="Snow",email="jack@snow.com")
+    User.objects.create(first_name="John",last_name="Jacobs",email="john@jacobs.com")
+    User.objects.create(first_name="Altiar",last_name="Altidore",email="altiar@altidore.com")
+
+Have the first user create/upload 2 books:
+    Book.objects.create(name="book 1",desc="first book",uploader=User.objects.first())
+    Book.objects.create(name="book 2",desc="second book",uploader=User.objects.first())
+
+Have the second user create/upload 2 other books:
+    Book.objects.create(name="book 3",desc="third book",uploader=User.objects.get(id=2))
+    Book.objects.create(name="book 4",desc="fourth book",uploader=User.objects.get(id=2))
+
+Have the third user create/upload 2 other books:
+    Book.objects.create(name="book 5",desc="fifth book",uploader=User.objects.get(id=3))
+    Book.objects.create(name="book 6",desc="sixth book",uploader=User.objects.get(id=3))
+
+Have the first user like the last book and the first book:
+    User.objects.first().books_liked.add(Book.objects.first())
+    User.objects.first().books_liked.add(Book.objects.last())
+
+Have the second user like the first book and the third book:
+    User.objects.get(id=2).books_liked.add(Book.objects.first())
+    User.objects.get(id=2).books_liked.add(Book.objects.get(id=3))
+
+Have the third user like all books:
+    User.objects.get(id=3).books_liked.add(Book.objects.first())
+    User.objects.get(id=3).books_liked.add(Book.objects.get(id=2))
+    User.objects.get(id=3).books_liked.add(Book.objects.get(id=3))
+    User.objects.get(id=3).books_liked.add(Book.objects.get(id=4))
+    User.objects.get(id=3).books_liked.add(Book.objects.get(id=5))
+    User.objects.get(id=3).books_liked.add(Book.objects.last())
+
+Display all users who like the first book:
+    users = Book.objects.first().liked_by
+    (access info by:
+        EX: users.first().first_name
+    )
+
+Display the user who uploaded the first book:
+    Book.objects.first().uploader.first_name
+
+Display all users who like the second book:
+    users = Book.objects.get(id=2).liked_by
+
+Display the user who uploaded the second book:
+    Book.objects.get(id=2).uploader.first_name
