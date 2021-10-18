@@ -12,7 +12,11 @@
 <body>
     <div class="wrapper">
         <h1>Add a new user</h1>
-
+        {% if messages %}
+            {% for message in messages %}
+                <p class='text-danger'>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
         <form action="/create" method="POST">
             {% csrf_token %}
             <p>First Name:</p>
