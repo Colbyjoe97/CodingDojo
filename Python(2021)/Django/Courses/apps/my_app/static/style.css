@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 10% 0px 10%;
+}
+.create input, .create textarea {
+    width: 370px;
+}
+.create button {
+    background-color: rgb(135, 224, 135);
+    color: white;
+    box-shadow: 1px 2px black;
+    width: 50px;
+    height: 30px;
+    margin-left: 320px;
+}
+textarea {
+    margin-top: -15px;
+}
