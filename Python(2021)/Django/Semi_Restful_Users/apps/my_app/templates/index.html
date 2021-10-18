@@ -14,7 +14,7 @@
         <h1>Users</h1>
 
         <div class="users">
-            <table class="table table-hover">
+            <table class="table table-hover table-success">
                 <thead>
                     <tr>
                         <td>ID</td>
@@ -25,18 +25,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{user.id}}</td>
+                            <td>{{user.first_name}} {{user.last_name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.created_at}}</td>
+                            <td>
+                                <a href="{% url 'users_show' id=user.id %}">Show</a> | <a href="{% url 'users_edit' id=user.id %}">Edit</a> | <a href="{% url 'users_destroy' id=user.id %}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
 
-        <a href="/users/new">Add New User</a>
+        <a href="{% url 'new_user' %}">Add New User</a>
     </div>
 </body>
 </html>
