@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {% load_static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'destroy.css' %}">
 </head>
 <body>
@@ -14,8 +14,8 @@
         <p>Name: {{course.name}}</p>
         <p>Description: {{course.desc}}</p>
 
-        <label><button>No</button></label>
-        <label><button>Yes! I want to delete this</button></label>
+        <label><a href="/"><button class="no">No</button></a></label>
+        <label><a href="{% url 'courses_destroy' id=course.id %}"><button class="yes">Yes! I want to delete this</button></a></label>
     </div>
 </body>
 </html>
