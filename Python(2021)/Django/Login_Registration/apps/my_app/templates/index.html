@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
-    <h1>Login and Registration</h1>
+    <div class="wrapper">
+        <div class="register">
+            <h1>Registration</h1>
+            {% if messages %}
+                <div>
+                {% for message in messages %}
+                    <p class='text-danger'>{{ message }}</p>
+                {% endfor %}
+                </div>
+            {% endif %}
+            <form action="register" method="POST">
+                {% csrf_token %}
+                <p>First Name:</p>
+                <input type="text" name="fname">
+                <p>Last Name:</p>
+                <input type="text" name="lname">
+                <p>Birthday:</p>
+                <input type="date" name="bday">
+                <p>Email:</p>
+                <input type="text" name="email">
+                <p>Password:</p>
+                <input type="text" name="pass">
+                <p>Password Confirmation:</p>
+                <input type="text" name="confirmPass"><br>
+                <input type="submit" value="Register" id="register">
+            </form>
+        </div>
+
+        <div class="login">
+            <h1>Login</h1>
+            <form action="login" method="POST">
+                {% csrf_token %}
+                <p for="email">Email:</p>
+                <input type="text" name="email">
+                <p for="pass">Password:</p>
+                <input type="text" name="pass"><br>
+                <input type="submit" value="Login" id='login'>
+            </form>
+        </div>
+
+
+    </div>
 </body>
 </html>

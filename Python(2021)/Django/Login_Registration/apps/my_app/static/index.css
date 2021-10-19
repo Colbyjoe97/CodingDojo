@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.register {
+    padding: 15px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+.login {
+    padding: 15px;
+    border: 1px solid black;
+    height: 100%;
+}
+input {
+    margin-bottom: 5px;
+}
+#login {
+    margin: 10px 0px 0px 35%;
+    background-color: rgb(12, 121, 110);
+    box-shadow: 1px 2px black;
+    padding: 5px;
+    color: white;
+}
+#register {
+    margin: 10px 0px 0px 30%;
+    background-color: rgb(12, 121, 110);
+    box-shadow: 1px 2px black;
+    padding: 5px;
+    color: white;
+}
+.text-danger {
+    color: red;
+    margin-bottom: 5px;
+}
