@@ -38,3 +38,10 @@ input {
     color: red;
     margin-bottom: 5px;
 }
+.success {
+    color: rgb(54, 236, 54);
+}
+.home {
+    padding: 20px;
+    font-size: x-large;
+}

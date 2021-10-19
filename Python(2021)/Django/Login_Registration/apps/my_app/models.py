@@ -46,7 +46,6 @@ class UserManager(models.Manager):
 
     def loginValidator(self, postData):
         matchingEmail = User.objects.filter(email=postData['email'])
-        matchingPassword = User.objects.filter(password=postData['password'])
         errors = {}
 
         if len(postData['email']) == 0:
@@ -54,10 +53,10 @@ class UserManager(models.Manager):
         elif len(matchingEmail) == 0:
             errors['email'] = "Email is not yet registered"
 
-        if len(postData['password']) == 0:
-            errors['passwordReq'] = "Password is required"
-        elif len(matchingPassword) == 0:
-            errors['wrongPass'] = "Password is incorrect"
+        if len(postData['pass']) == 0:
+            errors['pass'] = "Password is required"
+        elif not bcrypt.checkpw(postData['pass'].encode(), matchingEmail[0].password.encode()):
+            errors['pass'] = "Password is incorrect"
 
         return errors
 
