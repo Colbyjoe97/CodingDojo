@@ -12,5 +12,4 @@ def toss():
             tailsCount += 1
             print "Attempt #{}: Throwing a coin.. It's Tails! Got {} head(s) so far and {} tail(s) so far".format(i, headsCount, tailsCount)
     print "You got {} total Heads, and {} total Tails!".format(headsCount, tailsCount)
-
 toss()
