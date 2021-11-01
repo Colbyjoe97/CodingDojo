@@ -36,7 +36,7 @@ const Todo = () => {
     }
 
     const itemDelete = (event, itemId, clickedItem) => {
-        console.log(`Deleted ${todoList[itemId].desc} index number`, itemId, "looks like:", clickedItem)
+        console.log(`Deleted ${todoList[itemId].desc}`, itemId, "looks like:", clickedItem)
         let todoListCopy = [...todoList]
         todoListCopy.splice(itemId, 1)
         setTodoList(todoListCopy);
