@@ -2,12 +2,15 @@
     color: white;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     margin-left: 10px;
     margin-bottom: 5px;
-    animation: slide-in 2s
+    animation: slide-in 2s;
+    width: 100vw;
+    flex-wrap: wrap;
 }
-
+.boxStyle h1 {
+    margin: auto;
+}
 .outerDiv{
     display: inline-flex;
 }

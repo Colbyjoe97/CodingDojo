@@ -32,8 +32,10 @@ const Box = () => {
                 <div className="card-body text-center">
                     <form onSubmit={submitHandler}>
                         <h1 className="text-center"> Create A Box</h1>
-                        <p>Color: </p><input className="form-control" type="text" name="color" onChange={ changeHandler } value={boxInfo.color}/>
-                        <p>Height/Width: </p><input className="form-control" type="number" name="size" onChange={ changeHandler } value={boxInfo.size}></input>
+                        <p>Color: </p>
+                        <input className="form-control" type="text" name="color" onChange={ changeHandler }/>
+                        <p>Height/Width: </p>
+                        <input className="form-control" type="number" name="size" onChange={ changeHandler } value={boxInfo.size}></input>
                         <input className="btn btn-success mt-3" type="submit" value="Create Box"></input>
                     </form>
                 </div>
