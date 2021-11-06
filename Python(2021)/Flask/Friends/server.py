@@ -10,7 +10,6 @@ def index():
     friends = mysql.query_db(query)
     return render_template('index.html', friends=friends)
 
-
 @app.route('/friends', methods=['POST'])
 def create():
     query = "INSERT INTO friends (first_name, last_name, occupation, created_at, updated_at) VALUES (:first_name, :last_name, :occupation, NOW(), NOW())"
