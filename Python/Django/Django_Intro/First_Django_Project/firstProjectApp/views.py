@@ -1,4 +1,3 @@
-# This is the app folder!
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 def index(request):
