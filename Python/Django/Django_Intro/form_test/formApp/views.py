@@ -4,7 +4,6 @@ from django.shortcuts import render, redirect
 def index(request):
     return render(request, "index.html")
 
-
 def create_user(request):
     name_from_form = request.POST['name']
     email_from_form = request.POST['email']
@@ -13,7 +12,6 @@ def create_user(request):
     	"email_on_template" : email_from_form
     }
     return redirect("/success", context)
-
 
 def success(request):
     return render(request,"success.html")
