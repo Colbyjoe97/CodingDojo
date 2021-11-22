@@ -1,15 +1,15 @@
 from django.shortcuts import render, HttpResponse, redirect
 
 def index(request):
-    if 'counter' in request.session: # if counter check
+    if 'counter' in request.session:
         request.session['counter'] += 1
-        if 'realCount' in request.session: # If counter check realcount
+        if 'realCount' in request.session:
             request.session['realCount'] += 1
         else:
             request.session['realCount'] = 1
-    else: # else counter check
+    else:
         request.session['counter'] = 1
-        if 'realCount' in request.session: # Else counter check realcount
+        if 'realCount' in request.session:
             request.session['realCount'] += 1
         else:
             request.session['realCount'] = 1
