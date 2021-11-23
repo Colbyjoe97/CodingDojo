@@ -72,11 +72,9 @@
     color: cyan;
     margin-right: 5px;
 }
-
 #info span {
     color: rgb(155, 139, 228);
 }
-
 #end {
     background-color: gray;
     margin-top: 25px;
@@ -85,14 +83,12 @@
     padding: 5px;
     border-radius: 25px;
 }
-
 #end p {
     margin-left: 25px;
     vertical-align: bottom;
     font-size: large;
     color: ghostwhite;
 }
-
 #end a{
     color: cyan;
 }
