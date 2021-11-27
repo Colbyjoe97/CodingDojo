@@ -13,4 +13,6 @@ function binary(str) {
     console.log("sum: ", sum)
     return sum
 }
+
+
 binary("01011001")
