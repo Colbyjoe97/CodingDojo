@@ -12,4 +12,6 @@ def grades():
             print "Score: {}, your grade is D".format(randNum)
         else:
             print("You failed!")
+
+            
 grades()
