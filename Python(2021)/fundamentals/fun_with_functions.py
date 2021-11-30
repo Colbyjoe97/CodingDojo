@@ -7,16 +7,12 @@ def odd_even():
 # odd_even()
 
 
-
-
 def multiply(arr, num):
     newArr = []
     for i in arr:
         newArr.append(i * num)
     return(newArr)
 # print(multiply([1,2,3,4,5], 10))
-
-
 
 
 def layered_multiples(arr):
