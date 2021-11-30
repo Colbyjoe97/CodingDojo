@@ -19,6 +19,8 @@ for i in range(0,len(l)):
             sum = sum+l[i]
             isint = True
         
+
+        
 if (isstring and isint):
     print ("It's a mixed array")
 if (isstring): 
