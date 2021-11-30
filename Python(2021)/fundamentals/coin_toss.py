@@ -14,6 +14,4 @@ def toss():
     print "You got {} total Heads, and {} total Tails!".format(headsCount, tailsCount)
 
 
-
-
 toss()
