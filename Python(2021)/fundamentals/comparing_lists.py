@@ -7,4 +7,5 @@ def compare(list_one, list_two):
     else:
         print("The lists are different")
 
+
 compare(list_one, list_two)
