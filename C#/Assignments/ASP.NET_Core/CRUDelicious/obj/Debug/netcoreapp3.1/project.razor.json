@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\CRUDelicious.csproj",
+  "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\CRUDelicious.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,68 +14402,68 @@
   "RootNamespace": "CRUDelicious",
   "Documents": [
     {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Edit.cshtml",
-      "TargetPath": "Views\\Home\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ChefPage.cshtml",
-      "TargetPath": "Views\\Home\\ChefPage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\CreateDish.cshtml",
-      "TargetPath": "Views\\Home\\CreateDish.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ViewChefs.cshtml",
-      "TargetPath": "Views\\Home\\ViewChefs.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ViewDish.cshtml",
-      "TargetPath": "Views\\Home\\ViewDish.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\EditDish.cshtml",
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\EditDish.cshtml",
       "TargetPath": "Views\\Home\\EditDish.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\CreateDish.cshtml",
+      "TargetPath": "Views\\Home\\CreateDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ViewDish.cshtml",
+      "TargetPath": "Views\\Home\\ViewDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ChefPage.cshtml",
+      "TargetPath": "Views\\Home\\ChefPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\CRUDelicious\\Views\\Home\\ViewChefs.cshtml",
+      "TargetPath": "Views\\Home\\ViewChefs.cshtml",
       "FileKind": "mvc"
     }
   ],

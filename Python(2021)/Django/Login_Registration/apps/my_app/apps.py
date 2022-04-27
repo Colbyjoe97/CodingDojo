@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# # -*- coding: utf-8 -*-
+# from __future__ import unicode_literals
 
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class MyAppConfig(AppConfig):
-    name = 'my_app'
+# class MyAppConfig(AppConfig):
+#     name = 'my_app'

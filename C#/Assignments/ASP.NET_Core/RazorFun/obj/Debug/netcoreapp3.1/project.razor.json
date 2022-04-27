@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\RazorFun.csproj",
+  "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\RazorFun.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,7 +14402,7 @@
   "RootNamespace": "RazorFun",
   "Documents": [
     {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\RazorFun\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
