@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Portfolio_1.csproj",
+  "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Portfolio_1.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,17 +14402,17 @@
   "RootNamespace": "Portfolio_1",
   "Documents": [
     {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Contact\\Contact.cshtml",
-      "TargetPath": "Views\\Contact\\Contact.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Coding_Dojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Projects\\Projects.cshtml",
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Contact\\Contact.cshtml",
+      "TargetPath": "Views\\Contact\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CodingDojo\\C#\\Assignments\\ASP.NET_Core\\Portfolio_1\\Views\\Projects\\Projects.cshtml",
       "TargetPath": "Views\\Projects\\Projects.cshtml",
       "FileKind": "mvc"
     }
