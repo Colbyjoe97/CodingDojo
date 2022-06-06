@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: 800;
+    font-size: xx-large;
+}
+.first {
+    background-color: black;
+    color: white;
+}
+.first > p > span {
+    color: cyan;
+}
+.second {
+    background-color: rgb(87, 11, 87);
+    color: white;
+    text-align: center;
+}
+.third {
+    background-color: lightskyblue;
+    text-align: right;
+}
+.third > p {
+    color: purple;
+    text-decoration: underline;
+}
