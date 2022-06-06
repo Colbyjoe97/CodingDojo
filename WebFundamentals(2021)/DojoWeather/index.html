@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="banner-content flexed">
+            <div class="banner-left">
+                <h1>DojoWeather</h1>
+            </div>
+            <div class="banner-right flexed">
+                <p onclick="alert('Loading weather report for ' + this.innerText)">Burbank</p>
+                <p onclick="alert('Loading weather report for ' + this.innerText)">Chicago</p>
+                <p onclick="alert('Loading weather report for ' + this.innerText)">Dallas</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="container-info flexed">
+            <div class="info-left">
+                <h1>San Jose</h1>
+            </div>
+            <div class="info-right flexed">
+                <p>show temperature in</p>
+                <select name="temperature" onchange="changeWeather(this)">
+                    <option value="C">°C</option>
+                    <option value="F">°F</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- WEATHER -->
+        <div class="container-weather flexed">
+            <div class="box">
+                <h2>Today</h2>
+                <img src="images/some_rain.png" alt="rainy">
+                <p>some rain</p>
+                <div class="weather flexed">
+                    <p class="high"><span class="high1">24</span>°</p>
+                    <p class="low"><span class="low1">18</span>°</p>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Tomorrow</h2>
+                <img src="images/some_sun.png" alt="sunny">
+                <p>some sun</p>
+                <div class="weather flexed">
+                    <p class="high"><span class="high2">27</span>°</p>
+                    <p class="low"><span class="low2">19</span>°</p>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Friday</h2>
+                <img src="images/some_clouds.png" alt="cloudy">
+                <p>some clouds</p>
+                <div class="weather flexed">
+                    <p class="high"><span class="high3">21</span>°</p>
+                    <p class="low"><span class="low3">16</span>°</p>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Saturday</h2>
+                <img src="images/some_sun.png" alt="sunny">
+                <p>some sun</p>
+                <div class="weather flexed">
+                    <p class="high"><span class="high4">26</span>°</p>
+                    <p class="low"><span class="low4">21</span>°</p>
+                </div>
+            </div>
+        </div>
+        <div class="cookies flexed">
+            <div class="cookies-left">
+                <img src="images/cookie.png" alt="">
+            </div>
+            <div class="cookies-mid">
+                <b>Stop! Cookie Time</b>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <div class="cookies-right">
+                <button class="cookiesBtn" onclick="removeCookies()">I Accept</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
