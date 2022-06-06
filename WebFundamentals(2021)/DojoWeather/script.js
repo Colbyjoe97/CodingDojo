@@ -3,8 +3,6 @@ function removeCookies(){
 }
 
 function changeWeather(element){
-    console.log(element.value)
-
     if(element.value == "C") {
         for(let i = 1; i < 5; i++) {
             tempHigh = document.querySelector('.high' + i)
@@ -13,7 +11,7 @@ function changeWeather(element){
             tempHigh.innerText = Math.round((parseInt(tempHigh.innerText) - 32) * 5/9)
             tempLow.innerText = Math.round((parseInt(tempLow.innerText) - 32) * 5/9)
         }
-    }
+    } 
     else{
         for(let i = 1; i < 5; i++) {
             tempHigh= document.querySelector('.high' + i)
